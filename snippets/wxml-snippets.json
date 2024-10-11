@@ -2,7 +2,7 @@
   "TDesign Button": {
     "prefix": "td-button",
     "body": [
-      "<button class='t-button' type='${1|primary,secondary,danger|}' size='${2|medium,small|}'>${3:Button}</button>"
+      "<t-button theme='${1|default,primary,danger,light|}' size='${2:|medium,|}'>${3:填充按钮}</t-button>"
     ],
     "description": "TDesign Button 组件"
   },

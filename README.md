@@ -5,7 +5,9 @@
 
 用于 VS code 的 TDesign 微信小程序组件库的代码片段插件。
 
-由微信官方文档照搬下来的代码片段。  
+![TDesign](assets/images/logo.jpg)
+
+由 TDesign 官方文档照搬下来的代码片段。  
 方便自己使用，同时也给需要者提供帮助。
 
 官方文档: https://tdesign.tencent.com/miniprogram/overview
@@ -18,4 +20,4 @@
 
 如果有问题,请联系 septwong@foxmail.com
 
-**Enjoy!**
+**🎉 Enjoy!**
