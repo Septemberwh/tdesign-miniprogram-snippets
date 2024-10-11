@@ -1,0 +1,29 @@
+# Node modules
+node_modules/
+
+# TypeScript output
+out/
+dist/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Coverage directory used by tools like istanbul
+coverage/
+
+# VS Code workspace settings
+.vscode/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Lock files (optional, based on your dependency management preference)
+# package-lock.json
+# yarn.lock
+
+# Other build artifacts
+*.vsix

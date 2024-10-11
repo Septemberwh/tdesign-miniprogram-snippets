@@ -1,0 +1,16 @@
+{
+  "TDesign Button": {
+    "prefix": "td-button",
+    "body": [
+      "<button class='t-button' type='${1|primary,secondary,danger|}' size='${2|medium,small|}'>${3:Button}</button>"
+    ],
+    "description": "TDesign Button 组件"
+  },
+  "TDesign Icon": {
+    "prefix": "td-icon",
+    "body": [
+      "<icon class='t-icon-${1:home}' size='${2|small,medium,large|}' />"
+    ],
+    "description": "TDesign Icon 组件"
+  }
+}
