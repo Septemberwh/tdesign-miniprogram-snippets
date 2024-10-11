@@ -2,14 +2,14 @@
   "TDesign Button": {
     "prefix": "td-button",
     "body": [
-      "<t-button theme='${1|default,primary,danger,light|}' size='${2:|medium,|}'>${3:填充按钮}</t-button>"
+      "<t-button theme='primary' size='medium'>${3:填充按钮}</t-button>"
     ],
     "description": "TDesign Button 组件"
   },
   "TDesign Icon": {
     "prefix": "td-icon",
     "body": [
-      "<icon class='t-icon-${1:home}' size='${2|small,medium,large|}' />"
+      "<t-icon name=\"${1}\" size=\"\" color=\"\" />"
     ],
     "description": "TDesign Icon 组件"
   }
