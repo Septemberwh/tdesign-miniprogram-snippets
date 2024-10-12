@@ -1,16 +1,169 @@
 {
-  "TDesign Button": {
+  "TDesign Button 按钮": {
     "prefix": "td-button",
     "body": [
       "<t-button theme='primary' size='medium'>${3:填充按钮}</t-button>"
     ],
     "description": "TDesign Button 组件"
   },
-  "TDesign Icon": {
+  "TDesign Divider 分割线": {
+    "prefix": "td-divider",
+    "body": [
+      "<t-divider />"
+    ],
+    "description": "TDesign Divider 组件"
+  },
+  "TDesign Fab 悬浮按钮": {
+    "prefix": "td-fab",
+    "body": [
+      "<t-fab icon=\"add\" bind:click=\"handleClick\" text=\"增加\"></t-fab>"
+    ],
+    "description": "TDesign Fab 组件"
+  },
+  "TDesign Icon 图标": {
     "prefix": "td-icon",
     "body": [
-      "<t-icon name=\"${1}\" size=\"\" color=\"\" />"
+      "<t-icon name=\"${1}\" size=\"48rpx\" color=\"\" />"
     ],
     "description": "TDesign Icon 组件"
+  },
+  "TDesign Layout 布局": {
+    "prefix": "td-layout",
+    "body": [
+      "<t-row>",
+      "  <t-col span=\"8\" t-class=\"\">col-8</t-col>",
+      "  <t-col span=\"8\" t-class=\"\">col-8</t-col>",
+      "  <t-col span=\"8\" t-class=\"\">col-8</t-col>",
+      "</t-row>"
+    ],
+    "description": "TDesign Layout 组件"
+  },
+  "TDesign Row 行": {
+    "prefix": "td-row",
+    "body": [
+      "<t-row>",
+      "${1}",
+      "</t-row>"
+    ],
+    "description": "TDesign Row 组件"
+  },
+  "TDesign Col 列": {
+    "prefix": "td-col",
+    "body": [
+      "<t-col span=\"8\" t-class=\"\">col-8</t-col>"
+    ],
+    "description": "TDesign Col 组件"
+  },
+  "TDesign Link 链接": {
+    "prefix": "td-link",
+    "body": [
+      "<t-link size=\"small\" theme=\"primary\" content=\"跳转链接\" hover />"
+    ],
+    "description": "TDesign Link 组件"
+  },
+  "TDesign BackTop 回到顶部": {
+    "prefix": "td-back-top",
+    "body": [
+      "<t-back-top",
+      "  theme=\"round\"",
+      "  text=\"顶部\"",
+      "  scroll-top=\"{{{ type: Number, value: 0 }}}\"",
+      "  bind:to-top=\"onToTop\"",
+      "></t-back-top>"
+    ],
+    "description": "TDesign BackTop 组件"
+  },
+  "TDesign Drawer 抽屉": {
+    "prefix": "td-drawer",
+    "body": [
+      "<t-drawer",
+      "  visible=\"{{visible}}\"",
+      "  placement=\"left\"",
+      "  items=\"{{[]}}\"",
+      "  usingCustomNavbar",
+      "  bind:overlay-click=\"overlayClick\"",
+      "  bind:item-click=\"itemClick\"",
+      "></t-drawer>"
+    ],
+    "description": "TDesign Drawer 组件"
+  },
+  "TDesign Indexes 索引": {
+    "prefix": "td-indexes",
+    "body": [
+      "<t-indexes bind:select=\"onSelect\" index-list=\"{{indexList}}\" sticky-offset=\"{{stickyOffset}}\">",
+      "  <block wx:for=\"{{list}}\" wx:key=\"index\">",
+      "    <t-indexes-anchor index=\"{{item.index}}\" />",
+      "    <t-cell-group>",
+      "      <t-cell wx:for=\"{{item.children}}\" wx:key=\"city\" wx:for-item=\"city\" title=\"{{city}}\" aria-role=\"button\" />",
+      "    </t-cell-group>",
+      "  </block>",
+      "</t-indexes>"
+    ],
+    "description": "TDesign Indexes 组件"
+  },
+  "TDesign Navbar 导航栏": {
+    "prefix": "td-navbar",
+    "body": [
+      "<t-navbar",
+      "  t-class-placeholder=\"t-navbar-placeholder\"",
+      "  t-class-content=\"t-navbar-content\"",
+      "  class=\"block\"",
+      "  title=\"标题文字\"",
+      "  left-arrow",
+      "  bind:go-back=\"handleBack\"",
+      "/>"
+    ],
+    "description": "TDesign Navbar 组件"
+  },
+  "TDesign SideBar 侧边栏": {
+    "prefix": "td-side-bar",
+    "body": [
+      "<view class=\"side-bar-wrapper\" style=\"height: calc(100vh - {{navbarHeight}}px)\">",
+      "  <t-side-bar value=\"{{sideBarIndex}}\" bind:change=\"onSideBarChange\">",
+      "    <t-side-bar-item",
+      "      wx:for=\"{{categories}}\"",
+      "      wx:key=\"label\"",
+      "      value=\"{{item.value || index}}\"",
+      "      label=\"{{item.label}}\"",
+      "      badge-props=\"{{item.badgeProps}}\"",
+      "    />",
+      "  </t-side-bar>",
+      "  <scroll-view class=\"content\" scroll-y scroll-with-animation scroll-top=\"{{scrollTop}}\" bind:scroll=\"onScroll\">",
+      "    <view wx:for=\"{{categories}}\" wx:key=\"index\" class=\"section\">",
+      "      <view class=\"title\">{{item.title || item.label}}</view>",
+      "    </view>",
+      "  </scroll-view>",
+      "</view>"
+    ],
+    "description": "TDesign SideBar 组件"
+  },
+  "TDesign Steps 步骤条": {
+    "prefix": "td-steps",
+    "body": [
+      "<t-steps current=\"{{first}}\" bind:change=\"onFirstChange\">",
+      "  <t-step-item wx:for=\"{{list}}\" wx:key=\"index\" title=\"{{item.title)}}\" content=\"辅助信息\" />",
+      "</t-steps>"
+    ],
+    "description": "TDesign Steps 组件"
+  },
+  "TDesign TabBar 标签栏": {
+    "prefix": "td-tab-bar",
+    "body": [
+      "<t-tab-bar t-class=\"t-tab-bar\" value=\"{{value}}\" bindchange=\"onChange\" theme=\"tag\" split=\"{{false}}\">",
+      "  <t-tab-bar-item wx:for=\"{{list}}\" wx:key=\"index\" value=\"{{item.value}}\"> {{item.label}} </t-tab-bar-item>",
+      "</t-tab-bar>"
+    ],
+    "description": "TDesign TabBar 组件"
+  },
+  "TDesign Tabs 选项卡": {
+    "prefix": "td-tabs",
+    "body": [
+      "<t-tabs defaultValue=\"{{0}}\" bind:change=\"onTabsChange\" bind:click=\"onTabsClick\" t-class=\"custom-tabs\">",
+      "  <t-tab-panel label=\"选项\" value=\"0\" />",
+      "  <t-tab-panel label=\"选项\" value=\"1\" />",
+      "  <t-tab-panel label=\"上限六个文字\" value=\"2\" />",
+      "</t-tabs>"
+    ],
+    "description": "TDesign Tabs 组件"
   }
 }

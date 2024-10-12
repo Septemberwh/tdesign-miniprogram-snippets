@@ -26,7 +26,13 @@
         "extensions": [
           ".wxml"
         ]
-      }
+      },
+      {
+				"id": "json",
+				"extensions": [
+					".json"
+				]
+			}
     ],
     "snippets": [
       {
@@ -36,7 +42,11 @@
       {
         "language": "wxml",
         "path": "./snippets/wxml-snippets.json"
-      }
+      },
+      {
+				"language": "json",
+        "path": "./snippets/json-snippets.json"
+			}
     ]
   },
   "repository": {

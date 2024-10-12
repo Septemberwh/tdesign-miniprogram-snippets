@@ -1,0 +1,120 @@
+{
+  "TDesign Button 按钮": {
+    "prefix": "td-button",
+    "body": [
+      "\"t-button\": \"tdesign-miniprogram/button/button\""
+    ],
+    "description": "TDesign Button 组件"
+  },
+  "TDesign Divider 分割线": {
+    "prefix": "td-divider",
+    "body": [
+      "\"t-divider\": \"tdesign-miniprogram/divider/divider\""
+    ],
+    "description": "TDesign Divider 组件"
+  },
+  "TDesign Fab 悬浮按钮": {
+    "prefix": "td-fab",
+    "body": [
+      "\"t-fab\": \"tdesign-miniprogram/fab/fab\""
+    ],
+    "description": "TDesign Fab 组件"
+  },
+  "TDesign Icon 图标": {
+    "prefix": "td-icon",
+    "body": [
+      "\"t-icon\": \"tdesign-miniprogram/icon/icon\""
+    ],
+    "description": "TDesign Icon 组件"
+  },
+  "TDesign Layout 布局": {
+    "prefix": "td-layout",
+    "body": [
+      "\"t-row\": \"tdesign-miniprogram/row/row\"",
+      "\"t-col\": \"tdesign-miniprogram/col/col\""
+    ],
+    "description": "TDesign Layout 组件"
+  },
+  "TDesign Row 行": {
+    "prefix": "td-row",
+    "body": [
+      "\"t-row\": \"tdesign-miniprogram/row/row\""
+    ],
+    "description": "TDesign Row 组件"
+  },
+  "TDesign Col 列": {
+    "prefix": "td-col",
+    "body": [
+      "\"t-col\": \"tdesign-miniprogram/col/col\""
+    ],
+    "description": "TDesign Col 组件"
+  },
+  "TDesign Link 链接": {
+    "prefix": "td-link",
+    "body": [
+      "\"t-link\": \"tdesign-miniprogram/link/link\""
+    ],
+    "description": "TDesign Link 组件"
+  },
+  "TDesign BackTop 回到顶部": {
+    "prefix": "td-back-top",
+    "body": [
+      "\"t-back-top\": \"tdesign-miniprogram/back-top/back-top\""
+    ],
+    "description": "TDesign BackTop 组件"
+  },
+  "TDesign Drawer 抽屉": {
+    "prefix": "td-drawer",
+    "body": [
+      "\"t-drawer\": \"tdesign-miniprogram/drawer/drawer\""
+    ],
+    "description": "TDesign Drawer 组件"
+  },
+  "TDesign Indexes 索引": {
+    "prefix": "td-indexes",
+    "body": [
+      "\"t-indexes\": \"tdesign-miniprogram/indexes/indexes\"",
+      "\"t-indexes-anchor\": \"tdesign-miniprogram/indexes-anchor/indexes-anchor\""
+    ],
+    "description": "TDesign Indexes 组件"
+  },
+  "TDesign Navbar 导航栏": {
+    "prefix": "td-navbar",
+    "body": [
+      "\"t-navbar\": \"tdesign-miniprogram/navbar/navbar\""
+    ],
+    "description": "TDesign Navbar 组件"
+  },
+  "TDesign SideBar 侧边栏": {
+    "prefix": "td-side-bar",
+    "body": [
+      "\"t-side-bar\": \"tdesign-miniprogram/side-bar/side-bar\"",
+      "\"t-side-bar-item\": \"tdesign-miniprogram/side-bar-item/side-bar-item\""
+    ],
+    "description": "TDesign SideBar 组件"
+  },
+  "TDesign Steps 步骤条": {
+    "prefix": "td-steps",
+    "body": [
+      "\"t-steps\": \"tdesign-miniprogram/steps/steps\"",
+      "\"t-step-item\": \"tdesign-miniprogram/step-item/step-item\""
+    ],
+    "description": "TDesign Steps 组件"
+  },
+  "TDesign TabBar 标签栏": {
+    "prefix": "td-tab-bar",
+    "body": [
+      "\"t-tab-bar\": \"tdesign-miniprogram/tab-bar/tab-bar\"",
+      "\"t-tab-bar-item\": \"tdesign-miniprogram/tab-bar-item/tab-bar-item\""
+    ],
+    "description": "TDesign TabBar 组件"
+  },
+  "TDesign Tabs 选项卡": {
+    "prefix": "td-tabs",
+    "body": [
+      "\"t-tabs\": \"tdesign-miniprogram/tabs/tabs\"",
+      "\"t-tab-panel\": \"tdesign-miniprogram/tab-panel/tab-panel\""
+    ],
+    "description": "TDesign Tabs 组件"
+  }
+}
