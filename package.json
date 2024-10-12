@@ -2,7 +2,7 @@
   "name": "tdesign-miniprogram-snippets",
   "displayName": "tdesign-miniprogram-snippets",
   "description": "TDesign 微信小程序组件库的代码片段",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "SeptWong",
   "engines": {
     "vscode": "^1.94.0"
@@ -11,12 +11,12 @@
     "Snippets"
   ],
   "keywords": [
-		"tdesign",
+    "tdesign",
     "miniprogram",
-		"小程序",
-		"wechat",
-		"snippets"
-	],
+    "小程序",
+    "wechat",
+    "snippets"
+  ],
   "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {
@@ -28,11 +28,11 @@
         ]
       },
       {
-				"id": "json",
-				"extensions": [
-					".json"
-				]
-			}
+        "id": "json",
+        "extensions": [
+          ".json"
+        ]
+      }
     ],
     "snippets": [
       {
@@ -44,20 +44,20 @@
         "path": "./snippets/wxml-snippets.json"
       },
       {
-				"language": "json",
+        "language": "json",
         "path": "./snippets/json-snippets.json"
-			}
+      }
     ]
   },
   "repository": {
-		"type": "git",
-		"url": "https://github.com/Septemberwh/tdesign-miniprogram-snippets"
-	},
-	"bugs": {
-		"email": "septwong@foxmail.com"
-	},
-	"icon": "assets/images/logo.jpg",
-	"license": "MIT License",
+    "type": "git",
+    "url": "https://github.com/Septemberwh/tdesign-miniprogram-snippets"
+  },
+  "bugs": {
+    "email": "septwong@foxmail.com"
+  },
+  "icon": "assets/images/logo.jpg",
+  "license": "MIT License",
   "scripts": {
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
