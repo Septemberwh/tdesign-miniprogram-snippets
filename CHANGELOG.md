@@ -18,7 +18,7 @@
 
 ### `0.0.3` 2024-10-12
 
-- 
+- 更新补充 [README.md](https://marketplace.visualstudio.com/items?itemName=SeptWong.tdesign-miniprogram-snippets) 和 [CHANGELOG.md](https://marketplace.visualstudio.com/items/SeptWong.tdesign-miniprogram-snippets/changelog)
 
 ### `0.0.2` 2024-10-12
 
