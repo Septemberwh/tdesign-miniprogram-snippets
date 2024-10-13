@@ -116,5 +116,127 @@
       "\"t-tab-panel\": \"tdesign-miniprogram/tab-panel/tab-panel\""
     ],
     "description": "TDesign Tabs 组件"
+  },
+  "TDesign Calendar 日历": {
+    "prefix": "td-calendar",
+    "body": [
+      "\"t-calendar\": \"tdesign-miniprogram/calendar/calendar\""
+    ],
+    "description": "TDesign Calendar 组件"
+  },
+  "TDesign Cascader 级联选择器": {
+    "prefix": "td-cascader",
+    "body": [
+      "\"t-cascader\": \"tdesign-miniprogram/cascader/cascader\""
+    ],
+    "description": "TDesign Cascader 组件"
+  },
+  "TDesign Checkbox 多选框": {
+    "prefix": "td-checkbox",
+    "body": [
+      "\"t-checkbox\": \"tdesign-miniprogram/checkbox/checkbox\""
+    ],
+    "description": "TDesign Checkbox 组件"
+  },
+  "TDesign Checkbox-group 多选框": {
+    "prefix": "td-checkbox:group",
+    "body": [
+      "\"t-checkbox\": \"tdesign-miniprogram/checkbox/checkbox\"",
+      "\"t-checkbox-group\": \"tdesign-miniprogram/checkbox-group/checkbox-group\""
+    ],
+    "description": "TDesign Checkbox 组件"
+  },
+  "TDesign DateTimePicker 时间选择器": {
+    "prefix": "td-date-time-picker",
+    "body": [
+      "\"t-date-time-picker\": \"tdesign-miniprogram/date-time-picker/date-time-picker\""
+    ],
+    "description": "TDesign DateTimePicker 组件"
+  },
+  "TDesign Input 输入框": {
+    "prefix": "td-input",
+    "body": [
+      "\"t-input\": \"tdesign-miniprogram/input/input\""
+    ],
+    "description": "TDesign Input 组件"
+  },
+  "TDesign Picker 选择器": {
+    "prefix": "td-picker",
+    "body": [
+      "\"t-picker\": \"tdesign-miniprogram/picker/picker\"",
+      "\"t-picker-item\": \"tdesign-miniprogram/picker-item/picker-item\""
+    ],
+    "description": "TDesign Picker 组件"
+  },
+  "TDesign Radio 单选框": {
+    "prefix": "td-radio",
+    "body": [
+      "\"t-radio\": \"tdesign-miniprogram/radio/radio\""
+    ],
+    "description": "TDesign Radio 组件"
+  },
+  "TDesign Radio-group 单选框": {
+    "prefix": "td-radio:group",
+    "body": [
+      "\"t-radio\": \"tdesign-miniprogram/radio/radio\"",
+      "\"t-radio-group\": \"tdesign-miniprogram/radio-group/radio-group\""
+    ],
+    "description": "TDesign Radio 组件"
+  },
+  "TDesign Rate 评分": {
+    "prefix": "td-rate",
+    "body": [
+      "\"t-rate\": \"tdesign-miniprogram/rate/rate\""
+    ],
+    "description": "TDesign Rate 组件"
+  },
+  "TDesign Search 搜索框": {
+    "prefix": "td-search",
+    "body": [
+      "\"t-search\": \"tdesign-miniprogram/search/search\""
+    ],
+    "description": "TDesign Search 组件"
+  },
+  "TDesign Slider 滑动选择器": {
+    "prefix": "td-slider",
+    "body": [
+      "\"t-slider\": \"tdesign-miniprogram/slider/slider\""
+    ],
+    "description": "TDesign Slider 组件"
+  },
+  "TDesign Stepper 步进器": {
+    "prefix": "td-stepper",
+    "body": [
+      "\"t-stepper\": \"tdesign-miniprogram/stepper/stepper\""
+    ],
+    "description": "TDesign Stepper 组件"
+  },
+  "TDesign Switch 开关": {
+    "prefix": "td-switch",
+    "body": [
+      "\"t-switch\": \"tdesign-miniprogram/switch/switch\""
+    ],
+    "description": "TDesign Switch 组件"
+  },
+  "TDesign Textarea 多行文本框": {
+    "prefix": "td-textarea",
+    "body": [
+      "\"t-textarea\": \"tdesign-miniprogram/textarea/textarea\""
+    ],
+    "description": "TDesign Textarea 组件"
+  },
+  "TDesign TreeSelect 树形选择": {
+    "prefix": "td-tree-select",
+    "body": [
+      "\"t-tree-select\": \"tdesign-miniprogram/tree-select/tree-select\""
+    ],
+    "description": "TDesign TreeSelect 组件"
+  },
+  "TDesign Upload 上传": {
+    "prefix": "td-upload",
+    "body": [
+      "\"t-upload\": \"tdesign-miniprogram/upload/upload\""
+    ],
+    "description": "TDesign Upload 组件"
   }
 }

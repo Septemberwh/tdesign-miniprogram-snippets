@@ -158,12 +158,284 @@
   "TDesign Tabs 选项卡": {
     "prefix": "td-tabs",
     "body": [
-      "<t-tabs defaultValue=\"{{0}}\" bind:change=\"onTabsChange\" bind:click=\"onTabsClick\" t-class=\"custom-tabs\">",
+      "<t-tabs value=\"{{0}}\" bind:change=\"onTabsChange\" bind:click=\"onTabsClick\" t-class=\"custom-tabs\">",
       "  <t-tab-panel label=\"选项\" value=\"0\" />",
       "  <t-tab-panel label=\"选项\" value=\"1\" />",
       "  <t-tab-panel label=\"上限六个文字\" value=\"2\" />",
       "</t-tabs>"
     ],
     "description": "TDesign Tabs 组件"
+  },
+  "TDesign Calendar 日历": {
+    "prefix": "td-calendar",
+    "body": [
+      "<t-calendar visible=\"{{visible}}\" bind:confirm=\"handleConfirm\" bind:close=\"onClose\" />"
+    ],
+    "description": "TDesign Calendar 组件"
+  },
+  "TDesign Calendar:range 日历": {
+    "prefix": "td-calendar:range",
+    "body": [
+      "<t-calendar visible=\"{{visible}}\" bind:confirm=\"handleConfirm\" type=\"range\" />"
+    ],
+    "description": "TDesign Calendar 组件"
+  },
+  "TDesign Cascader 级联选择器": {
+    "prefix": "td-cascader",
+    "body": [
+      "<t-cascader",
+      "  visible=\"{{visible}}\"",
+      "  value=\"{{value}}\"",
+      "  options=\"{{options}}\"",
+      "  title=\"请选择地址\"",
+      "  bind:change=\"onChange\"",
+      "  bind:pick=\"onPick\"",
+      "/>"
+    ],
+    "description": "TDesign Cascader 组件"
+  },
+  "TDesign Checkbox 多选框": {
+    "prefix": "td-checkbox",
+    "body": [
+      "<t-checkbox value=\"{{checkbox1}}\" label=\"多选\" />"
+    ],
+    "description": "TDesign Checkbox 组件"
+  },
+  "TDesign Checkbox-group 多选框": {
+    "prefix": "td-checkbox:group",
+    "body": [
+      "<t-checkbox-group value=\"{{current}}\" bind:change=\"handleGroupChange\" options=\"{{options}}\" />"
+    ],
+    "description": "TDesign Checkbox 组件"
+  },
+  "TDesign DateTimePicker:date 时间选择器": {
+    "prefix": "td-date-time-picker:date",
+    "body": [
+      "<t-date-time-picker",
+      "  title=\"选择日期\"",
+      "  visible=\"{{dateVisible}}\"",
+      "  mode=\"date\"",
+      "  value=\"{{date}}\"",
+      "  format=\"YYYY-MM-DD\"",
+      "  bindchange=\"onConfirm\"",
+      "  bindpick=\"onColumnChange\"",
+      "  bindcancel=\"hidePicker\"",
+      "  start=\"{{start}}\"",
+      "  end=\"{{end}}\"",
+      "/>"
+    ],
+    "description": "TDesign DateTimePicker 组件"
+  },
+  "TDesign DateTimePicker:second 时间选择器": {
+    "prefix": "td-date-time-picker:second",
+    "body": [
+      "<t-date-time-picker",
+      "  title=\"选择日期和时间\"",
+      "  visible=\"{{datetimeVisible}}\"",
+      "  mode=\"second\"",
+      "  value=\"{{datetime}}\"",
+      "  format=\"YYYY-MM-DD HH:mm:ss\"",
+      "  bindchange=\"onConfirm\"",
+      "  bindpick=\"onColumnChange\"",
+      "  bindcancel=\"hidePicker\"",
+      "/>"
+    ],
+    "description": "TDesign DateTimePicker 组件"
+  },
+  "TDesign Input 输入框": {
+    "prefix": "td-input",
+    "body": [
+      "<t-input label=\"标签文字\" placeholder=\"请输入文字\" clearable />"
+    ],
+    "description": "TDesign Input 组件"
+  },
+  "TDesign Input:password 输入框": {
+    "prefix": "td-input:password",
+    "body": [
+      "<t-input label=\"输入密码\" type=\"password\" value=\"{{textPassword}}\" clearable />"
+    ],
+    "description": "TDesign Input 组件"
+  },
+  "TDesign Input:验证码 输入框": {
+    "prefix": "td-input:code",
+    "body": [
+      "<t-input placeholder=\"输入验证码\" label=\"验证码\">",
+      "  <view slot=\"suffix\" class=\"suffix\">",
+      "    <view class=\"suffix--line\"></view>",
+      "    <image",
+      "      class=\"image\"",
+      "      src=\"https://wwcdn.weixin.qq.com/node/wework/images/202010241547.ac6876be9c.png\"",
+      "      mode=\"heightFix\"",
+      "      aria-role=\"img\"",
+      "      aria-label=\"验证码\"",
+      "    />",
+      "  </view>",
+      "</t-input>"
+    ],
+    "description": "TDesign Input 组件"
+  },
+  "TDesign Input:手机号 输入框": {
+    "prefix": "td-input:phone",
+    "body": [
+      "<t-input",
+      "  label=\"手机号\"",
+      "  placeholder=\"输入手机号码\"",
+      "  value=\"{{phoneNumber}}\"",
+      "  type=\"number\"",
+      "  tips=\"{{phoneError ? '手机号输入不正确' : ''}}\"",
+      "  bindchange=\"onPhoneInput\"",
+      ">",
+      "  <view slot=\"suffix\" style=\"display: flex; align-items: center\">",
+      "    <view class=\"suffix--line\"></view>",
+      "    <view class=\"verify\" aria-role=\"button\"> 发送验证码 </view>",
+      "  </view>",
+      "</t-input>"
+    ],
+    "description": "TDesign Input 组件"
+  },
+  "TDesign Input:价格 输入框": {
+    "prefix": "td-input:price",
+    "body": [
+      "<t-input",
+      "  label=\"价格\"",
+      "  value=\"{{priceNumber}}\"",
+      "  placeholder=\"0.00\"",
+      "  suffix=\"元\"",
+      "  align=\"right\"",
+      "  type=\"number\"",
+      "  bindchange=\"onPriceInput\"",
+      "  tips=\"{{priceError ? '请输入正确的价格' : ''}}\"",
+      "  t-class-tips=\"tips\"",
+      "/>"
+    ],
+    "description": "TDesign Input 组件"
+  },
+  "TDesign Input:数量 输入框": {
+    "prefix": "td-input:number",
+    "body": [
+      "<t-input label=\"数量\" value=\"{{number}}\" placeholder=\"填写个数\" suffix=\"个\" align=\"right\" type=\"number\" />"
+    ],
+    "description": "TDesign Input 组件"
+  },
+  "TDesign Picker 选择器": {
+    "prefix": "td-picker",
+    "body": [
+      "<t-picker",
+      "  visible=\"{{areaVisible}}\"",
+      "  value=\"{{areaValue}}\"",
+      "  title=\"选择地区\"",
+      "  cancelBtn=\"取消\"",
+      "  confirmBtn=\"确认\"",
+      "  usingCustomNavbar",
+      "  bindchange=\"onPickerChange\"",
+      "  bindpick=\"onColumnChange\"",
+      "  bindcancel=\"onPickerCancel\"",
+      ">",
+      "  <t-picker-item options=\"{{provinces}}\"></t-picker-item>",
+      "  <t-picker-item options=\"{{cities}}\"></t-picker-item>",
+      "  <t-picker-item options=\"{{counties}}\"></t-picker-item>",
+      "</t-picker>"
+    ],
+    "description": "TDesign Picker 组件"
+  },
+  "TDesign Radio 单选框": {
+    "prefix": "td-radio",
+    "body": [
+      "<t-radio checked=\"{{true}}\" allow-uncheck label=\"单选\" />"
+    ],
+    "description": "TDesign Radio 组件"
+  },
+  "TDesign Radio-group 单选框": {
+    "prefix": "td-radio:group",
+    "body": [
+      "<t-radio-group bind:change=\"onChange\" allow-uncheck value=\"{{current}}\" options=\"{{options}}\" />"
+    ],
+    "description": "TDesign Radio 组件"
+  },
+  "TDesign Rate 评分": {
+    "prefix": "td-rate",
+    "body": [
+      "<t-rate value=\"{{value}}\" bind:change=\"onChange\" />"
+    ],
+    "description": "TDesign Rate 组件"
+  },
+  "TDesign Search 搜索框": {
+    "prefix": "td-search",
+    "body": [
+      "<t-search placeholder=\"搜索预设文案\" bind:change=\"onChangeValue\" />"
+    ],
+    "description": "TDesign Search 组件"
+  },
+  "TDesign Slider 滑动选择器": {
+    "prefix": "td-slider",
+    "body": [
+      "<t-slider value=\"{{value}}\" label=\"{{value}}\" bind:change=\"handleChange\" />"
+    ],
+    "description": "TDesign Slider 组件"
+  },
+  "TDesign Stepper 步进器": {
+    "prefix": "td-stepper",
+    "body": [
+      "<t-stepper value=\"{{value}}\" theme=\"filled\" min=\"0\" max=\"999\" />"
+    ],
+    "description": "TDesign Stepper 组件"
+  },
+  "TDesign Switch 开关": {
+    "prefix": "td-switch",
+    "body": [
+      "<t-switch value=\"{{true}}\" bindchange=\"handleChange\" />"
+    ],
+    "description": "TDesign Switch 组件"
+  },
+  "TDesign Textarea 多行文本框": {
+    "prefix": "td-textarea",
+    "body": [
+      "<t-textarea t-class=\"external-class\" placeholder=\"请输入文字\" bindchange=\"handleChange\" disableDefaultPadding=\"{{true}}\" />"
+    ],
+    "description": "TDesign Textarea 组件"
+  },
+  "TDesign TreeSelect 树形选择": {
+    "prefix": "td-tree-select",
+    "body": [
+      "<t-tree-select options=\"{{options}}\" value=\"{{value}}\" bind:change=\"onChange\" />"
+    ],
+    "description": "TDesign TreeSelect 组件"
+  },
+  "TDesign TreeSelect:multiple 树形选择": {
+    "prefix": "td-tree-select:multiple",
+    "body": [
+      "<t-tree-select options=\"{{options}}\" value=\"{{value}}\" multiple bind:change=\"onChange\" />"
+    ],
+    "description": "TDesign TreeSelect 组件"
+  },
+  "TDesign Upload 上传": {
+    "prefix": "td-upload",
+    "body": [
+      "<t-upload",
+      "  mediaType=\"{{['video','image']}}\"",
+      "  max=\"{{1}}\"",
+      "  files=\"{{fileList}}\"",
+      "  bind:add=\"handleAdd\"",
+      "  bind:remove=\"handleRemove\"",
+      ">",
+      "</t-upload>"
+    ],
+    "description": "TDesign Upload 组件"
+  },
+  "TDesign Upload:多选 上传": {
+    "prefix": "td-upload:multiple",
+    "body": [
+      "<t-upload",
+      "  media-type=\"{{['video','image']}}\"",
+      "  max=\"{{3}}\"",
+      "  files=\"{{originFiles}}\"",
+      "  gridConfig=\"{{gridConfig}}\"",
+      "  bind:success=\"handleSuccess\"",
+      "  bind:remove=\"handleRemove\"",
+      "  bind:click=\"handleClick\"",
+      "  bind:sort-end=\"handleSortEnd\"",
+      "/>"
+    ],
+    "description": "TDesign Upload 组件"
   }
 }

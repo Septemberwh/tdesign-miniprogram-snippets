@@ -14,15 +14,16 @@
 > A TDesign WeChat MiniProgram code snippets plugin for VS Code.
 <!-- providing autocompletion for TDesign components in WeChat MiniProgram projects. -->
 
-一个用于VS code的TDesign WeChat MiniProgram代码片段插件，为微信小程序项目中的TDesigns组件提供自动补全功能。
+一个用于 VS code 的 TDesign WeChat MiniProgram 代码片段插件，为微信小程序项目中的 TDesigns 组件提供自动补全功能。
 
 <!-- ![TDesign](assets/images/logo.jpg) -->
 
 ## 概述
+
 由 TDesign 官方文档照搬下来的代码片段。  
 方便自己使用，同时也给需要者提供帮助。
 
-当前适配组件库版本: `1.6.1` 2024-09-14  
+当前适配组件库版本: [`1.6.1` 2024-09-14](https://tdesign.tencent.com/miniprogram/changelog#%F0%9F%8C%88-1-6-1-2024-09-14)  
 官方文档: https://tdesign.tencent.com/miniprogram/overview
 
 ## 使用方法
