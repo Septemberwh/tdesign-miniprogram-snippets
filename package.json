@@ -61,7 +61,7 @@
   "bugs": {
     "url": "https://github.com/Septemberwh/tdesign-miniprogram-snippets/issues"
   },
-  "icon": "assets/images/logo.jpg",
+  "icon": "assets/images/logo.png",
   "license": "MIT License",
   "scripts": {
     "vscode:prepublish": "npm run compile",

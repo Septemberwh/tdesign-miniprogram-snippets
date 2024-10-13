@@ -1,4 +1,4 @@
-<img align="right" width="90px" src="assets/images/logo.jpg" alt="wxml language features logo" />
+<img align="right" width="90px" src="assets/images/logo.png" alt="wxml language features logo" />
 
 # tdesign-miniprogram-snippets
 
@@ -16,7 +16,7 @@
 
 一个用于 VS code 的 TDesign WeChat MiniProgram 代码片段插件，为微信小程序项目中的 TDesigns 组件提供自动补全功能。
 
-<!-- ![TDesign](assets/images/logo.jpg) -->
+<!-- ![TDesign](assets/images/logo.png) -->
 
 ## 概述
 
