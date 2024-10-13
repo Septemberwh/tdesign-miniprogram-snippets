@@ -16,6 +16,11 @@
 
 - TDesign 中剩余组件的 `wxml` 和 `json` 代码片段
 
+### `0.0.4` 2024-10-13
+
+- `wxml` - 支持 TDesign 中 输入 大类中的组件
+- `json` - 支持 TDesign 中的 输入 大类中的组件引用
+
 ### `0.0.3` 2024-10-12
 
 - 更新补充 [README.md](https://marketplace.visualstudio.com/items?itemName=SeptWong.tdesign-miniprogram-snippets) 和 [CHANGELOG.md](https://marketplace.visualstudio.com/items/SeptWong.tdesign-miniprogram-snippets/changelog)
