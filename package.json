@@ -15,7 +15,12 @@
     "miniprogram",
     "小程序",
     "wechat",
-    "snippets"
+    "snippets",
+    "Intellisense",
+    "UI框架",
+    "智能提示",
+    "插件",
+    "代码片段"
   ],
   "activationEvents": [],
   "main": "./out/extension.js",
@@ -54,7 +59,7 @@
     "url": "https://github.com/Septemberwh/tdesign-miniprogram-snippets"
   },
   "bugs": {
-    "email": "septwong@foxmail.com"
+    "url": "https://github.com/Septemberwh/tdesign-miniprogram-snippets/issues"
   },
   "icon": "assets/images/logo.jpg",
   "license": "MIT License",
