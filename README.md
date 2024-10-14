@@ -30,6 +30,8 @@
 
 - WXML 片段：输入 `td-button`，`td-icon` 等 `td-` 开头的关键字即可提示代码片段模板。
 - JSON 片段：输入 `td-button`，`td-icon` 等 `td-` 开头的关键字即可提示代码片段模板，适用于 `usingComponents` 中的组件引用。
+- JS 片段：待开发。
+- WXSS 片段：待开发。
 
 ## 联系作者
 
