@@ -20,6 +20,14 @@ export function activate(context: vscode.ExtensionContext) {
 		vscode.window.showInformationMessage('Hello World from tdesign-miniprogram-snippets!');
 	});
 
+	// 注册 HTML 文件中的悬停提示
+	// const htmlHoverProvider = vscode.languages.registerHoverProvider('html', {
+	// 	provideHover(document, position, token) {
+	// 		const word = document.getText(document.getWordRangeAtPosition(position));
+	// 		return getTDesignHoverContent(word);
+	// 	}
+	// });
+
 	// 注册 WXML 文件中的悬停提示
 	const wxmlHoverProvider = vscode.languages.registerHoverProvider('wxml', {
 		provideHover(document, position) {
