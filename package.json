@@ -27,10 +27,26 @@
   "contributes": {
     "languages": [
       {
+        "id": "html",
+        "aliases": [
+          "HTML",
+          "html"
+        ],
+        "extensions": [
+          ".html"
+        ],
+        "configuration": "./language-configuration.json"
+      },
+      {
         "id": "wxml",
+        "aliases": [
+          "WXML",
+          "wxml"
+        ],
         "extensions": [
           ".wxml"
-        ]
+        ],
+        "configuration": "./language-configuration.json"
       },
       {
         "id": "json",
@@ -51,6 +67,18 @@
       {
         "language": "json",
         "path": "./snippets/json-snippets.json"
+      }
+    ],
+    "hover": [
+      {
+        "language": "html",
+        "selector": "*",
+        "provider": true
+      },
+      {
+        "language": "wxml",
+        "selector": "*",
+        "provider": true
       }
     ]
   },

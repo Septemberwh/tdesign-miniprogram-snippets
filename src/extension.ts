@@ -1,6 +1,7 @@
 // The module 'vscode' contains the VS Code extensibility API
 // Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode';
+import { getComponentNameAtPosition, getTDesignHoverContent } from './hover';
 
 // This method is called when your extension is activated
 // Your extension is activated the very first time the command is executed
@@ -19,8 +20,17 @@ export function activate(context: vscode.ExtensionContext) {
 		vscode.window.showInformationMessage('Hello World from tdesign-miniprogram-snippets!');
 	});
 
-	context.subscriptions.push(disposable);
+	// 注册 WXML 文件中的悬停提示
+	const wxmlHoverProvider = vscode.languages.registerHoverProvider('wxml', {
+		provideHover(document, position) {
+			const word = getComponentNameAtPosition(document, position);
+			return getTDesignHoverContent(word);
+		}
+	});
+
+	// 将注册的 功能 加入插件上下文
+	context.subscriptions.push(disposable, wxmlHoverProvider);
 }
 
 // This method is called when your extension is deactivated
-export function deactivate() {}
+export function deactivate() { }
