@@ -20,7 +20,9 @@ export function getTDesignHoverContent(word: string): vscode.Hover | undefined {
 
   if (hoverData[word]) {
     // return new vscode.Hover(hoverData[word]);
-    return new vscode.Hover(new vscode.MarkdownString(hoverData[word])); // Markdown 支持
+    const markdown = new vscode.MarkdownString(hoverData[word]);
+    markdown.isTrusted = true; // 允许使用 Markdown 格式
+    return new vscode.Hover(markdown);
   }
 
   return undefined;

@@ -46,7 +46,7 @@
         "extensions": [
           ".wxml"
         ],
-        "configuration": "./language-configuration.json"
+        "configuration": "./syntaxes/wxml.language-configuration.json"
       },
       {
         "id": "json",
