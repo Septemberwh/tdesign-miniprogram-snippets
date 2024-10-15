@@ -13,7 +13,7 @@ npm-debug.log*
 coverage/
 
 # VS Code workspace settings
-.vscode/
+# .vscode/
 
 # macOS
 .DS_Store
