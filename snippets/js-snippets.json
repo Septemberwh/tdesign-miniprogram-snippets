@@ -1,5 +1,5 @@
 {
-  "getApp": {
+  "TMS getApp": {
     "prefix": "getApp",
     "body": [
       "${1:var app = } getApp();",
