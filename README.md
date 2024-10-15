@@ -1,4 +1,4 @@
-<img align="right" width="90px" src="assets/images/logo.png" alt="wxml language features logo" />
+<img align="right" width="90px" src="assets/images/logo.png" alt="TDesign logo" />
 
 # tdesign-miniprogram-snippets
 

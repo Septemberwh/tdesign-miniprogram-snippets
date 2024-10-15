@@ -46,6 +46,12 @@
 ## Publishing Extensions
 
 ```bash
+# 安装需要的包
+npm install -g yo generator-code
+
+# 运行
+yo code
+
 $ cd myExtension
 
 $ vsce package
