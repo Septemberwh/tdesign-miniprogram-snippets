@@ -67,6 +67,10 @@
       {
         "language": "json",
         "path": "./snippets/json-snippets.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/js-snippets.json"
       }
     ],
     "hover": [
