@@ -6,5 +6,216 @@
       "${2}"
     ],
     "description": "获取小程序示例"
+  },
+  "TDesign ActionSheet:import 动作面板": {
+    "prefix": "td-action-sheet:import",
+    "body": [
+      "import ActionSheet, { ActionSheetTheme } from 'tdesign-miniprogram/action-sheet/index';"
+    ],
+    "description": "TDesign ActionSheet 组件"
+  },
+  "TDesign ActionSheet 动作面板": {
+    "prefix": "td-action-sheet",
+    "body": [
+      "const basicListOption: ActionSheetShowOption = {",
+      "  theme: ActionSheetTheme.List,",
+      "  selector: '#t-action-sheet',",
+      "  items: [",
+      "    {",
+      "      label: '默认选项',",
+      "    },",
+      "    {",
+      "      label: '失效选项',",
+      "      disabled: true,",
+      "    },",
+      "    {",
+      "      label: '警告选项',",
+      "      color: '#e34d59',",
+      "    },",
+      "  ],",
+      "};",
+      "",
+      "const handler = ActionSheet.show(basicListOption);",
+      "// handler.close(); // 手动关闭"
+    ],
+    "description": "TDesign ActionSheet 组件"
+  },
+  "TDesign Dialog:import 对话框": {
+    "prefix": "td-dialog:import",
+    "body": [
+      "import Dialog from 'tdesign-miniprogram/dialog/index';"
+    ],
+    "description": "TDesign Dialog 组件"
+  },
+  "TDesign Dialog 对话框": {
+    "prefix": "td-dialog",
+    "body": [
+      "const dialogConfig = {",
+      "  context: this,",
+      "  title: '弹窗标题',",
+      "  closeOnOverlayClick: true,",
+      "  content: '告知当前状态、信息和解决方法等内容。',",
+      "  confirmBtn: '确定',",
+      "  cancelBtn: '取消',",
+      "};",
+      "",
+      "Dialog.confirm(dialogConfig)",
+      "  .then(() => console.log('点击了确定'))",
+      "  .catch(() => console.log('点击了取消'));"
+    ],
+    "description": "TDesign Dialog 组件"
+  },
+  "TDesign Dialog:openType 对话框": {
+    "prefix": "td-dialog:openType",
+    "body": [
+      "const dialogConfig = {",
+      "  context: this,",
+      "  title: '弹窗标题',",
+      "  content: '告知当前状态、信息和解决方法等内容。',",
+      "  cancelBtn: '取消',",
+      "  confirmBtn: {",
+      "    openType: 'share',",
+      "    content: '分享给朋友',",
+      "    bindgetphonenumber({ detail }) {",
+      "      console.log(detail);",
+      "      if (detail.errMsg.includes('fail')) {",
+      "        console.log('获取失败');",
+      "        return false; // 不关闭弹窗",
+      "      }",
+      "      return true; // 关闭弹窗",
+      "    },",
+      "  },",
+      "};",
+      "",
+      "Dialog.confirm(dialogConfig)",
+      "  .then(() => {",
+      "    console.log('点击确定');",
+      "  })",
+      "  .catch(() => {",
+      "    console.log('点击取消');",
+      "  });"
+    ],
+    "description": "TDesign Dialog 组件"
+  },
+  "TDesign Message:import 消息通知": {
+    "prefix": "td-message:import",
+    "body": [
+      "import Message from 'tdesign-miniprogram/message/index';"
+    ],
+    "description": "TDesign Message 组件"
+  },
+  "TDesign Message 消息通知": {
+    "prefix": "td-message",
+    "body": [
+      "Message.${1|info,warning,success,error|}({",
+      "  context: this,",
+      "  offset: ['180rpx', '32rpx'],",
+      "  duration: 5000,",
+      "  content: '这是一条带图标的消息通知 5s消失',",
+      "  closeBtn: false,",
+      "});"
+    ],
+    "description": "TDesign Message 组件"
+  },
+  "TDesign Toast:import 消息通知": {
+    "prefix": "td-toast:import",
+    "body": [
+      "import Toast from 'tdesign-miniprogram/toast/index';"
+    ],
+    "description": "TDesign Toast 组件"
+  },
+  "TDesign Toast 轻提示": {
+    "prefix": "td-toast",
+    "body": [
+      "Toast({",
+      "  context: this,",
+      "  selector: '#t-toast',",
+      "  message: '最多一行展示十个汉字宽度限制最多不超过三行文字',",
+      "});"
+    ],
+    "description": "TDesign Toast 组件"
+  },
+  "TDesign Toast:icon,row 轻提示": {
+    "prefix": "td-toast:icon,row",
+    "body": [
+      "Toast({",
+      "  context: this,",
+      "  selector: '#t-toast',",
+      "  message: '带横向图',",
+      "  icon: 'check-circle',",
+      "});"
+    ],
+    "description": "TDesign Toast 组件"
+  },
+  "TDesign Toast:icon,column 轻提示": {
+    "prefix": "td-toast:icon,column",
+    "body": [
+      "Toast({",
+      "  context: this,",
+      "  selector: '#t-toast',",
+      "  message: '带竖向图标',",
+      "  icon: 'check-circle',",
+      "  direction: 'column',",
+      "});"
+    ],
+    "description": "TDesign Toast 组件"
+  },
+  "TDesign Toast:loading 轻提示": {
+    "prefix": "td-toast:loading",
+    "body": [
+      "Toast({",
+      "  context: this,",
+      "  selector: '#t-toast',",
+      "  message: '加载中...',",
+      "  theme: 'loading',",
+      "  direction: 'column',",
+      "});"
+    ],
+    "description": "TDesign Toast 组件"
+  },
+  "TDesign Toast:theme 轻提示": {
+    "prefix": "td-toast:theme",
+    "body": [
+      "Toast({",
+      "  context: this,",
+      "  selector: '#t-toast',",
+      "  message: '文案文案',",
+      "  theme: '${1|success,warning,error|}',",
+      "  direction: 'column',",
+      "});"
+    ],
+    "description": "TDesign Toast 组件"
+  },
+  "TDesign Toast:preventScrollThrough 轻提示": {
+    "prefix": "td-toast:preventScrollThrough",
+    "body": [
+      "Toast({",
+      "  context: this,",
+      "  selector: '#t-toast',",
+      "  message: '禁止滑动和点击',",
+      "  direction: 'column',",
+      "  duration: 3000,",
+      "  preventScrollThrough: true,",
+      "  icon: 'poweroff',",
+      "});"
+    ],
+    "description": "TDesign Toast 组件"
+  },
+  "TDesign Toast:import,hide 消息通知": {
+    "prefix": "td-toast:import",
+    "body": [
+      "import Toast, { hideToast } from 'tdesign-miniprogram/toast/index';"
+    ],
+    "description": "TDesign Toast 组件"
+  },
+  "TDesign Toast:hide 轻提示": {
+    "prefix": "td-toast:hide",
+    "body": [
+      "hideToast({",
+      "  context: this,",
+      "  selector: '#t-toast',",
+      "});"
+    ],
+    "description": "TDesign Toast 组件"
   }
 }

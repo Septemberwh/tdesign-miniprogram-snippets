@@ -398,5 +398,68 @@
       "\"t-dropdown-item\": \"tdesign-miniprogram/dropdown-item/dropdown-item\""
     ],
     "description": "TDesign DropdownMenu 组件"
+  },
+  "TDesign Guide 按钮": {
+    "prefix": "td-guide",
+    "body": [
+      "\"t-guide\": \"tdesign-miniprogram/guide/guide\""
+    ],
+    "description": "TDesign Guide 组件"
+  },
+  "TDesign Loading 加载": {
+    "prefix": "td-loading",
+    "body": [
+      "\"t-loading\": \"tdesign-miniprogram/loading/loading\""
+    ],
+    "description": "TDesign Loading 组件"
+  },
+  "TDesign Message 消息通知": {
+    "prefix": "td-message",
+    "body": [
+      "\"t-message\": \"tdesign-miniprogram/message/message\""
+    ],
+    "description": "TDesign Message 组件"
+  },
+  "TDesign NoticeBar 公告栏": {
+    "prefix": "td-notice-bar",
+    "body": [
+      "\"t-notice-bar\": \"tdesign-miniprogram/notice-bar/notice-bar\""
+    ],
+    "description": "TDesign NoticeBar 组件"
+  },
+  "TDesign Overlay 遮罩层": {
+    "prefix": "td-overlay",
+    "body": [
+      "\"t-overlay\": \"tdesign-miniprogram/overlay/overlay\""
+    ],
+    "description": "TDesign Overlay 组件"
+  },
+  "TDesign Popup 弹出层": {
+    "prefix": "td-popup",
+    "body": [
+      "\"t-popup\": \"tdesign-miniprogram/popup/popup\""
+    ],
+    "description": "TDesign Popup 组件"
+  },
+  "TDesign PullDownRefresh 下拉刷新": {
+    "prefix": "td-pull-down-refresh",
+    "body": [
+      "\"t-pull-down-refresh\": \"tdesign-miniprogram/pull-down-refresh/pull-down-refresh\""
+    ],
+    "description": "TDesign PullDownRefresh 组件"
+  },
+  "TDesign SwipeCell 滑动操作": {
+    "prefix": "td-swipe-cell",
+    "body": [
+      "\"t-swipe-cell\": \"tdesign-miniprogram/swipe-cell/swipe-cell\""
+    ],
+    "description": "TDesign SwipeCell 组件"
+  },
+  "TDesign Toast 轻提示": {
+    "prefix": "td-toast",
+    "body": [
+      "\"t-toast\": \"tdesign-miniprogram/toast/toast\""
+    ],
+    "description": "TDesign Toast 组件"
   }
 }

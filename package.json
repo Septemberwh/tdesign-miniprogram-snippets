@@ -2,7 +2,7 @@
   "name": "tdesign-miniprogram-snippets",
   "displayName": "tdesign-miniprogram-snippets",
   "description": "TDesign 微信小程序组件库的代码片段",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "publisher": "SeptWong",
   "engines": {
     "vscode": "^1.94.0"
