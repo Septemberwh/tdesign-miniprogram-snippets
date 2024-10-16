@@ -53,7 +53,13 @@
         "extensions": [
           ".json"
         ]
-      }
+      },
+      {
+				"id": "wxs",
+				"extensions": [
+					".wxs"
+				]
+			}
     ],
     "snippets": [
       {
@@ -71,7 +77,11 @@
       {
         "language": "javascript",
         "path": "./snippets/js-snippets.json"
-      }
+      },
+      {
+				"language": "wxs",
+        "path": "./snippets/js-snippets.json"
+			}
     ],
     "hover": [
       {
