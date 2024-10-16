@@ -1,6 +1,6 @@
 <img align="right" width="90px" src="https://free2.yunpng.top/2024/10/16/670f45cf9a597.png" alt="TDesign logo" />
 
-# tdesign-miniprogram-snippets
+# TDesign Miniprogram Snippets
 
 [![Visual Studio Marketplace](https://img.shields.io/visual-studio-marketplace/v/septwong.tdesign-miniprogram-snippets?color=brightgreen&label=Visual%20Studio%20Marketplace)](https://marketplace.visualstudio.com/items?itemName=septwong.tdesign-miniprogram-snippets)
 ![Marketplace Downloads](https://img.shields.io/visual-studio-marketplace/d/septwong.tdesign-miniprogram-snippets)&nbsp;
