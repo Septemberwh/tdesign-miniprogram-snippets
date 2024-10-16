@@ -94,7 +94,7 @@
     "url": "https://github.com/Septemberwh/tdesign-miniprogram-snippets/issues"
   },
   "icon": "assets/images/logo.png",
-  "license": "MIT License",
+  "license": "MIT",
   "scripts": {
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
