@@ -1,4 +1,4 @@
-<img align="right" width="90px" src="https://free2.yunpng.top/2024/10/16/670f45cf9a597.png" alt="TDesign logo" />
+<img align="right" width="90px" src="https://free2.yunpng.top/2024/10/17/6710e29ecc275.png" alt="TDesign logo" />
 
 # TDesign Miniprogram Snippets
 
