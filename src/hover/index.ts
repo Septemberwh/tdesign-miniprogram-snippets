@@ -18,9 +18,6 @@ export function getComponentNameAtPosition(
 export function getTDesignHoverContent(word: string): vscode.Hover | undefined {
   const hoverData: { [key: string]: string } = _hoverData || {};
 
-  // TODO: 悬停提示 暂时屏蔽
-  return undefined;
-
   if (hoverData[word]) {
     // return new vscode.Hover(hoverData[word]);
     const markdown = new vscode.MarkdownString(hoverData[word]);
