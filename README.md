@@ -14,7 +14,9 @@
 > A TDesign WeChat MiniProgram code snippets plugin for VS Code.
 <!-- providing autocompletion for TDesign components in WeChat MiniProgram projects. -->
 
-一个用于 VS code 的 TDesign WeChat MiniProgram 代码片段插件，为微信小程序项目中的 TDesign 组件提供自动补全功能。
+一个用于 VS code 的 TDesign WeChat MiniProgram 代码片段插件。
+
+为微信小程序项目中的 TDesign 组件提供自动补全功能。
 
 <!-- ![TDesign](assets/images/logo.png) -->
 
@@ -37,6 +39,24 @@
   - WXSS 片段：*待开发*。
 - **其他功能：**
   - `wxml` TDesign 组件标签悬停提示：快捷打开该组件官网。
+
+## 示例
+
+- WXML 片段
+
+![WXML 片段](https://pic.imgdb.cn/item/67136ea6d29ded1a8c642359.gif)
+
+- JSON 片段
+
+![JSON 片段](https://pic.imgdb.cn/item/67136ea7d29ded1a8c642467.gif)
+
+- JS 片段
+
+![JS 片段](https://pic.imgdb.cn/item/67136ea7d29ded1a8c6424c8.gif)
+
+- 组件标签悬停提示
+
+![组件标签悬停提示](https://pic.imgdb.cn/item/67136ea5d29ded1a8c6422cb.gif)
 
 ## 联系作者
 
