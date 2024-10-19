@@ -44,19 +44,19 @@
 
 - WXML 片段
 
-![WXML 片段](https://pic.imgdb.cn/item/67136ea6d29ded1a8c642359.gif)
+![WXML 片段](https://free2.yunpng.top/2024/10/19/671372604f443.gif)
 
 - JSON 片段
 
-![JSON 片段](https://pic.imgdb.cn/item/67136ea7d29ded1a8c642467.gif)
+![JSON 片段](https://free2.yunpng.top/2024/10/19/67137260504c7.gif)
 
 - JS 片段
 
-![JS 片段](https://pic.imgdb.cn/item/67136ea7d29ded1a8c6424c8.gif)
+![JS 片段](https://free2.yunpng.top/2024/10/19/671372861cd43.gif)
 
 - 组件标签悬停提示
 
-![组件标签悬停提示](https://pic.imgdb.cn/item/67136ea5d29ded1a8c6422cb.gif)
+![组件标签悬停提示](https://free2.yunpng.top/2024/10/19/67136b6d475fa.gif)
 
 ## 联系作者
 
