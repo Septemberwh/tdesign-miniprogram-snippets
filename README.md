@@ -21,19 +21,22 @@
 ## 概述
 
 由 TDesign 官方文档照搬下来的代码片段。  
-方便自己使用，同时也给需要者提供帮助。
+<!-- 方便自己使用，同时也给需要者提供帮助。 -->
 
-当前适配组件库版本: [`1.6.2` 2024-10-12](https://tdesign.tencent.com/miniprogram/changelog#%F0%9F%8C%88-1-6-1-2024-09-14)  
-官方文档: https://tdesign.tencent.com/miniprogram/overview
+> 当前适配组件库版本: [`1.6.2` 2024-10-12](https://tdesign.tencent.com/miniprogram/changelog#%F0%9F%8C%88-1-6-1-2024-09-14)  
+> 官方文档: https://tdesign.tencent.com/miniprogram/overview
 
 ## 使用方法
 
-- WXML 片段：输入 `td-button`，`td-icon` 等 `td-` 开头的关键字即可提示代码片段模板。
-- JSON 片段：输入 `td-button`，`td-icon` 等 `td-` 开头的关键字即可提示代码片段模板，适用于 `usingComponents` 中的组件引用。
-- JS 片段：
-  - 输入 `td-dialog`，`td-message` 等 `td-` 开头的关键字即可提示代码片段模板。
-  - 小程序通用代码片段 - 待开发。
-- WXSS 片段：待开发。
+- **代码片段：**
+  - WXML 片段：输入 `td-button`，`td-icon` 等 `td-` 开头的关键字即可提示代码片段模板。
+  - JSON 片段：输入 `td-button`，`td-icon` 等 `td-` 开头的关键字即可提示代码片段模板，适用于 `usingComponents` 中的组件引用。
+  - JS 片段：
+    - 输入 `td-dialog`，`td-message` 等 `td-` 开头的关键字即可提示代码片段模板。
+    - 小程序通用代码片段 - *待开发*。
+  - WXSS 片段：*待开发*。
+- **其他功能：**
+  - `wxml` TDesign 组件标签悬停提示：快捷打开该组件官网。
 
 ## 联系作者
 
