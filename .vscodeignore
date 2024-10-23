@@ -10,4 +10,4 @@ vsc-extension-quickstart.md
 **/*.ts
 **/.vscode-test.*
 
-assets/gif/**
+assets/md_images/**
