@@ -94,7 +94,17 @@
         "selector": "*",
         "provider": true
       }
-    ]
+    ],
+    "configuration": {
+      "title": "悬停提示配置",
+      "properties": {
+        "tdesign-miniprogram-snippets.enableHover": {
+          "type": "boolean",
+          "default": true,
+          "description": "启用或禁用悬停提示"
+        }
+      }
+    }
   },
   "repository": {
     "type": "git",

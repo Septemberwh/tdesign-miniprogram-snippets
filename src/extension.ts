@@ -6,6 +6,8 @@ import { getComponentNameAtPosition, getTDesignHoverContent } from './hover';
 // This method is called when your extension is activated
 // Your extension is activated the very first time the command is executed
 export function activate(context: vscode.ExtensionContext) {
+	// 获取配置
+	const config = vscode.workspace.getConfiguration('tdesign-miniprogram-snippets');
 
 	// Use the console to output diagnostic information (console.log) and errors (console.error)
 	// This line of code will only be executed once when your extension is activated
@@ -35,9 +37,27 @@ export function activate(context: vscode.ExtensionContext) {
 			return getTDesignHoverContent(word);
 		}
 	});
+	// 判断是否启用悬停功能
+	if (config.get<boolean>('enableHover')) {
+		context.subscriptions.push(wxmlHoverProvider);
+	}
 
 	// 将注册的 功能 加入插件上下文
-	context.subscriptions.push(disposable, wxmlHoverProvider);
+	context.subscriptions.push(disposable);
+
+	// 监听配置变化事件，动态控制悬停功能的启用
+	vscode.workspace.onDidChangeConfiguration(event => {
+		if (event.affectsConfiguration('tdesign-miniprogram-snippets.enableHover')) {
+			const enableHover = vscode.workspace.getConfiguration('tdesign-miniprogram-snippets').get<boolean>('enableHover');
+			if (enableHover) {
+				context.subscriptions.push(wxmlHoverProvider);
+				// vscode.window.showInformationMessage('悬停提示已启用');
+			} else {
+				wxmlHoverProvider.dispose();
+				// vscode.window.showInformationMessage('悬停提示已禁用');
+			}
+		}
+	});
 }
 
 // This method is called when your extension is deactivated
