@@ -25,7 +25,7 @@
 由 TDesign 官方文档照搬下来的代码片段。  
 <!-- 方便自己使用，同时也给需要者提供帮助。 -->
 
-> 当前适配组件库版本: [`1.6.2` 2024-10-12](https://tdesign.tencent.com/miniprogram/changelog#%F0%9F%8C%88-1-6-1-2024-09-14)  
+<!-- > 当前适配组件库版本: [`1.6.2` 2024-10-12](https://tdesign.tencent.com/miniprogram/changelog#%F0%9F%8C%88-1-6-1-2024-09-14)   -->
 > 官方文档: https://tdesign.tencent.com/miniprogram/overview
 
 ## 使用方法
