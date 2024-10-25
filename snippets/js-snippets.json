@@ -8,14 +8,14 @@
     "description": "获取小程序示例"
   },
   "TDesign ActionSheet:import 动作面板": {
-    "prefix": "td-action-sheet:import",
+    "prefix": "t-action-sheet:import",
     "body": [
       "import ActionSheet, { ActionSheetTheme } from 'tdesign-miniprogram/action-sheet/index';"
     ],
     "description": "TDesign ActionSheet 组件"
   },
   "TDesign ActionSheet 动作面板": {
-    "prefix": "td-action-sheet",
+    "prefix": "t-action-sheet",
     "body": [
       "const basicListOption: ActionSheetShowOption = {",
       "  theme: ActionSheetTheme.List,",
@@ -41,14 +41,14 @@
     "description": "TDesign ActionSheet 组件"
   },
   "TDesign Dialog:import 对话框": {
-    "prefix": "td-dialog:import",
+    "prefix": "t-dialog:import",
     "body": [
       "import Dialog from 'tdesign-miniprogram/dialog/index';"
     ],
     "description": "TDesign Dialog 组件"
   },
   "TDesign Dialog 对话框": {
-    "prefix": "td-dialog",
+    "prefix": "t-dialog",
     "body": [
       "const dialogConfig = {",
       "  context: this,",
@@ -66,7 +66,7 @@
     "description": "TDesign Dialog 组件"
   },
   "TDesign Dialog:openType 对话框": {
-    "prefix": "td-dialog:openType",
+    "prefix": "t-dialog:openType",
     "body": [
       "const dialogConfig = {",
       "  context: this,",
@@ -98,14 +98,14 @@
     "description": "TDesign Dialog 组件"
   },
   "TDesign Message:import 消息通知": {
-    "prefix": "td-message:import",
+    "prefix": "t-message:import",
     "body": [
       "import Message from 'tdesign-miniprogram/message/index';"
     ],
     "description": "TDesign Message 组件"
   },
   "TDesign Message 消息通知": {
-    "prefix": "td-message",
+    "prefix": "t-message",
     "body": [
       "Message.${1|info,warning,success,error|}({",
       "  context: this,",
@@ -118,14 +118,14 @@
     "description": "TDesign Message 组件"
   },
   "TDesign Toast:import 消息通知": {
-    "prefix": "td-toast:import",
+    "prefix": "t-toast:import",
     "body": [
       "import Toast from 'tdesign-miniprogram/toast/index';"
     ],
     "description": "TDesign Toast 组件"
   },
   "TDesign Toast 轻提示": {
-    "prefix": "td-toast",
+    "prefix": "t-toast",
     "body": [
       "Toast({",
       "  context: this,",
@@ -136,7 +136,7 @@
     "description": "TDesign Toast 组件"
   },
   "TDesign Toast:icon,row 轻提示": {
-    "prefix": "td-toast:icon,row",
+    "prefix": "t-toast:icon,row",
     "body": [
       "Toast({",
       "  context: this,",
@@ -148,7 +148,7 @@
     "description": "TDesign Toast 组件"
   },
   "TDesign Toast:icon,column 轻提示": {
-    "prefix": "td-toast:icon,column",
+    "prefix": "t-toast:icon,column",
     "body": [
       "Toast({",
       "  context: this,",
@@ -161,7 +161,7 @@
     "description": "TDesign Toast 组件"
   },
   "TDesign Toast:loading 轻提示": {
-    "prefix": "td-toast:loading",
+    "prefix": "t-toast:loading",
     "body": [
       "Toast({",
       "  context: this,",
@@ -174,7 +174,7 @@
     "description": "TDesign Toast 组件"
   },
   "TDesign Toast:theme 轻提示": {
-    "prefix": "td-toast:theme",
+    "prefix": "t-toast:theme",
     "body": [
       "Toast({",
       "  context: this,",
@@ -187,7 +187,7 @@
     "description": "TDesign Toast 组件"
   },
   "TDesign Toast:preventScrollThrough 轻提示": {
-    "prefix": "td-toast:preventScrollThrough",
+    "prefix": "t-toast:preventScrollThrough",
     "body": [
       "Toast({",
       "  context: this,",
@@ -202,14 +202,14 @@
     "description": "TDesign Toast 组件"
   },
   "TDesign Toast:import,hide 消息通知": {
-    "prefix": "td-toast:import",
+    "prefix": "t-toast:import",
     "body": [
       "import Toast, { hideToast } from 'tdesign-miniprogram/toast/index';"
     ],
     "description": "TDesign Toast 组件"
   },
   "TDesign Toast:hide 轻提示": {
-    "prefix": "td-toast:hide",
+    "prefix": "t-toast:hide",
     "body": [
       "hideToast({",
       "  context: this,",

@@ -31,16 +31,16 @@
 ## 使用方法
 
 - **代码片段：**
-  - WXML 片段：输入 `td-button`，`td-icon` 等 `td-` 开头的关键字即可提示代码片段模板。
-  - JSON 片段：输入 `td-button`，`td-icon` 等 `td-` 开头的关键字即可提示代码片段模板，适用于 `usingComponents` 中的组件引用。
+  - WXML 片段：输入 `t-button`，`t-icon` 等 `t-` 开头的关键字即可提示代码片段模板。
+  - JSON 片段：输入 `t-button`，`t-icon` 等 `t-` 开头的关键字即可提示代码片段模板，适用于 `usingComponents` 中的组件引用。
   - JS 片段：
-    - 输入 `td-dialog`，`td-message` 等 `td-` 开头的关键字即可提示代码片段模板。
+    - 输入 `t-dialog`，`t-message` 等 `t-` 开头的关键字即可提示代码片段模板。
     - 小程序通用代码片段 - *待开发*。
   - WXSS 片段：*待开发*。
 - **其他功能：**
   - `wxml` TDesign 组件标签悬停提示：快捷打开该组件官网。
 
-### 示例
+<!-- ### 示例
 
 - WXML 片段
 
@@ -56,7 +56,7 @@
 
 - 组件标签悬停提示
 
-![组件标签悬停提示](https://free2.yunpng.top/2024/10/19/67136b6d475fa.gif)
+![组件标签悬停提示](https://free2.yunpng.top/2024/10/19/67136b6d475fa.gif) -->
 
 ## 联系作者
 

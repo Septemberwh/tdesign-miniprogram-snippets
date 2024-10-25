@@ -1,34 +1,34 @@
 {
   "TDesign Button 按钮": {
-    "prefix": "td-button",
+    "prefix": "t-button",
     "body": [
       "\"t-button\": \"tdesign-miniprogram/button/button\""
     ],
     "description": "TDesign Button 组件"
   },
   "TDesign Divider 分割线": {
-    "prefix": "td-divider",
+    "prefix": "t-divider",
     "body": [
       "\"t-divider\": \"tdesign-miniprogram/divider/divider\""
     ],
     "description": "TDesign Divider 组件"
   },
   "TDesign Fab 悬浮按钮": {
-    "prefix": "td-fab",
+    "prefix": "t-fab",
     "body": [
       "\"t-fab\": \"tdesign-miniprogram/fab/fab\""
     ],
     "description": "TDesign Fab 组件"
   },
   "TDesign Icon 图标": {
-    "prefix": "td-icon",
+    "prefix": "t-icon",
     "body": [
       "\"t-icon\": \"tdesign-miniprogram/icon/icon\""
     ],
     "description": "TDesign Icon 组件"
   },
   "TDesign Layout 布局": {
-    "prefix": "td-layout",
+    "prefix": "t-layout",
     "body": [
       "\"t-row\": \"tdesign-miniprogram/row/row\",",
       "\"t-col\": \"tdesign-miniprogram/col/col\""
@@ -36,42 +36,42 @@
     "description": "TDesign Layout 组件"
   },
   "TDesign Row 行": {
-    "prefix": "td-row",
+    "prefix": "t-row",
     "body": [
       "\"t-row\": \"tdesign-miniprogram/row/row\""
     ],
     "description": "TDesign Row 组件"
   },
   "TDesign Col 列": {
-    "prefix": "td-col",
+    "prefix": "t-col",
     "body": [
       "\"t-col\": \"tdesign-miniprogram/col/col\""
     ],
     "description": "TDesign Col 组件"
   },
   "TDesign Link 链接": {
-    "prefix": "td-link",
+    "prefix": "t-link",
     "body": [
       "\"t-link\": \"tdesign-miniprogram/link/link\""
     ],
     "description": "TDesign Link 组件"
   },
   "TDesign BackTop 回到顶部": {
-    "prefix": "td-back-top",
+    "prefix": "t-back-top",
     "body": [
       "\"t-back-top\": \"tdesign-miniprogram/back-top/back-top\""
     ],
     "description": "TDesign BackTop 组件"
   },
   "TDesign Drawer 抽屉": {
-    "prefix": "td-drawer",
+    "prefix": "t-drawer",
     "body": [
       "\"t-drawer\": \"tdesign-miniprogram/drawer/drawer\""
     ],
     "description": "TDesign Drawer 组件"
   },
   "TDesign Indexes 索引": {
-    "prefix": "td-indexes",
+    "prefix": "t-indexes",
     "body": [
       "\"t-indexes\": \"tdesign-miniprogram/indexes/indexes\",",
       "\"t-indexes-anchor\": \"tdesign-miniprogram/indexes-anchor/indexes-anchor\""
@@ -79,14 +79,14 @@
     "description": "TDesign Indexes 组件"
   },
   "TDesign Navbar 导航栏": {
-    "prefix": "td-navbar",
+    "prefix": "t-navbar",
     "body": [
       "\"t-navbar\": \"tdesign-miniprogram/navbar/navbar\""
     ],
     "description": "TDesign Navbar 组件"
   },
   "TDesign SideBar 侧边栏": {
-    "prefix": "td-side-bar",
+    "prefix": "t-side-bar",
     "body": [
       "\"t-side-bar\": \"tdesign-miniprogram/side-bar/side-bar\",",
       "\"t-side-bar-item\": \"tdesign-miniprogram/side-bar-item/side-bar-item\""
@@ -94,7 +94,7 @@
     "description": "TDesign SideBar 组件"
   },
   "TDesign Steps 步骤条": {
-    "prefix": "td-steps",
+    "prefix": "t-steps",
     "body": [
       "\"t-steps\": \"tdesign-miniprogram/steps/steps\",",
       "\"t-step-item\": \"tdesign-miniprogram/step-item/step-item\""
@@ -102,7 +102,7 @@
     "description": "TDesign Steps 组件"
   },
   "TDesign TabBar 标签栏": {
-    "prefix": "td-tab-bar",
+    "prefix": "t-tab-bar",
     "body": [
       "\"t-tab-bar\": \"tdesign-miniprogram/tab-bar/tab-bar\",",
       "\"t-tab-bar-item\": \"tdesign-miniprogram/tab-bar-item/tab-bar-item\""
@@ -110,7 +110,7 @@
     "description": "TDesign TabBar 组件"
   },
   "TDesign Tabs 选项卡": {
-    "prefix": "td-tabs",
+    "prefix": "t-tabs",
     "body": [
       "\"t-tabs\": \"tdesign-miniprogram/tabs/tabs\"",
       "\"t-tab-panel\": \"tdesign-miniprogram/tab-panel/tab-panel\""
@@ -118,28 +118,28 @@
     "description": "TDesign Tabs 组件"
   },
   "TDesign Calendar 日历": {
-    "prefix": "td-calendar",
+    "prefix": "t-calendar",
     "body": [
       "\"t-calendar\": \"tdesign-miniprogram/calendar/calendar\""
     ],
     "description": "TDesign Calendar 组件"
   },
   "TDesign Cascader 级联选择器": {
-    "prefix": "td-cascader",
+    "prefix": "t-cascader",
     "body": [
       "\"t-cascader\": \"tdesign-miniprogram/cascader/cascader\""
     ],
     "description": "TDesign Cascader 组件"
   },
   "TDesign Checkbox 多选框": {
-    "prefix": "td-checkbox",
+    "prefix": "t-checkbox",
     "body": [
       "\"t-checkbox\": \"tdesign-miniprogram/checkbox/checkbox\""
     ],
     "description": "TDesign Checkbox 组件"
   },
   "TDesign Checkbox-group 多选框": {
-    "prefix": "td-checkbox-group",
+    "prefix": "t-checkbox-group",
     "body": [
       "\"t-checkbox\": \"tdesign-miniprogram/checkbox/checkbox\",",
       "\"t-checkbox-group\": \"tdesign-miniprogram/checkbox-group/checkbox-group\""
@@ -147,21 +147,21 @@
     "description": "TDesign Checkbox 组件"
   },
   "TDesign DateTimePicker 时间选择器": {
-    "prefix": "td-date-time-picker",
+    "prefix": "t-date-time-picker",
     "body": [
       "\"t-date-time-picker\": \"tdesign-miniprogram/date-time-picker/date-time-picker\""
     ],
     "description": "TDesign DateTimePicker 组件"
   },
   "TDesign Input 输入框": {
-    "prefix": "td-input",
+    "prefix": "t-input",
     "body": [
       "\"t-input\": \"tdesign-miniprogram/input/input\""
     ],
     "description": "TDesign Input 组件"
   },
   "TDesign Picker 选择器": {
-    "prefix": "td-picker",
+    "prefix": "t-picker",
     "body": [
       "\"t-picker\": \"tdesign-miniprogram/picker/picker\",",
       "\"t-picker-item\": \"tdesign-miniprogram/picker-item/picker-item\""
@@ -169,14 +169,14 @@
     "description": "TDesign Picker 组件"
   },
   "TDesign Radio 单选框": {
-    "prefix": "td-radio",
+    "prefix": "t-radio",
     "body": [
       "\"t-radio\": \"tdesign-miniprogram/radio/radio\""
     ],
     "description": "TDesign Radio 组件"
   },
   "TDesign Radio-group 单选框": {
-    "prefix": "td-radio-group",
+    "prefix": "t-radio-group",
     "body": [
       "\"t-radio\": \"tdesign-miniprogram/radio/radio\",",
       "\"t-radio-group\": \"tdesign-miniprogram/radio-group/radio-group\""
@@ -184,70 +184,70 @@
     "description": "TDesign Radio 组件"
   },
   "TDesign Rate 评分": {
-    "prefix": "td-rate",
+    "prefix": "t-rate",
     "body": [
       "\"t-rate\": \"tdesign-miniprogram/rate/rate\""
     ],
     "description": "TDesign Rate 组件"
   },
   "TDesign Search 搜索框": {
-    "prefix": "td-search",
+    "prefix": "t-search",
     "body": [
       "\"t-search\": \"tdesign-miniprogram/search/search\""
     ],
     "description": "TDesign Search 组件"
   },
   "TDesign Slider 滑动选择器": {
-    "prefix": "td-slider",
+    "prefix": "t-slider",
     "body": [
       "\"t-slider\": \"tdesign-miniprogram/slider/slider\""
     ],
     "description": "TDesign Slider 组件"
   },
   "TDesign Stepper 步进器": {
-    "prefix": "td-stepper",
+    "prefix": "t-stepper",
     "body": [
       "\"t-stepper\": \"tdesign-miniprogram/stepper/stepper\""
     ],
     "description": "TDesign Stepper 组件"
   },
   "TDesign Switch 开关": {
-    "prefix": "td-switch",
+    "prefix": "t-switch",
     "body": [
       "\"t-switch\": \"tdesign-miniprogram/switch/switch\""
     ],
     "description": "TDesign Switch 组件"
   },
   "TDesign Textarea 多行文本框": {
-    "prefix": "td-textarea",
+    "prefix": "t-textarea",
     "body": [
       "\"t-textarea\": \"tdesign-miniprogram/textarea/textarea\""
     ],
     "description": "TDesign Textarea 组件"
   },
   "TDesign TreeSelect 树形选择": {
-    "prefix": "td-tree-select",
+    "prefix": "t-tree-select",
     "body": [
       "\"t-tree-select\": \"tdesign-miniprogram/tree-select/tree-select\""
     ],
     "description": "TDesign TreeSelect 组件"
   },
   "TDesign Upload 上传": {
-    "prefix": "td-upload",
+    "prefix": "t-upload",
     "body": [
       "\"t-upload\": \"tdesign-miniprogram/upload/upload\""
     ],
     "description": "TDesign Upload 组件"
   },
   "TDesign Avatar 头像": {
-    "prefix": "td-avatar",
+    "prefix": "t-avatar",
     "body": [
       "\"t-avatar\": \"tdesign-miniprogram/avatar/avatar\""
     ],
     "description": "TDesign Avatar 组件"
   },
   "TDesign Avatar-group 头像": {
-    "prefix": "td-avatar-group",
+    "prefix": "t-avatar-group",
     "body": [
       "\"t-avatar\": \"tdesign-miniprogram/avatar/avatar\",",
       "\"t-avatar-group\": \"tdesign-miniprogram/avatar-group/avatar-group\""
@@ -255,21 +255,21 @@
     "description": "TDesign Avatar 组件"
   },
   "TDesign Badge 徽标": {
-    "prefix": "td-badge",
+    "prefix": "t-badge",
     "body": [
       "\"t-badge\": \"tdesign-miniprogram/badge/badge\""
     ],
     "description": "TDesign Badge 组件"
   },
   "TDesign Cell 单元格": {
-    "prefix": "td-cell",
+    "prefix": "t-cell",
     "body": [
       "\"t-cell\": \"tdesign-miniprogram/cell/cell\""
     ],
     "description": "TDesign Cell 组件"
   },
   "TDesign Cell-group 单元格": {
-    "prefix": "td-cell-group",
+    "prefix": "t-cell-group",
     "body": [
       "\"t-cell\": \"tdesign-miniprogram/cell/cell\",",
       "\"t-cell-group\": \"tdesign-miniprogram/cell-group/cell-group\""
@@ -277,7 +277,7 @@
     "description": "TDesign Cell 组件"
   },
   "TDesign Collapse 折叠面板": {
-    "prefix": "td-collapse",
+    "prefix": "t-collapse",
     "body": [
       "\"t-collapse\": \"tdesign-miniprogram/collapse/collapse\",",
       "\"t-collapse-panel\": \"tdesign-miniprogram/collapse-panel/collapse-panel\""
@@ -285,28 +285,28 @@
     "description": "TDesign Collapse 组件"
   },
   "TDesign CountDown 倒计时": {
-    "prefix": "td-count-down",
+    "prefix": "t-count-down",
     "body": [
       "\"t-count-down\": \"tdesign-miniprogram/count-down/count-down\""
     ],
     "description": "TDesign CountDown 组件"
   },
   "TDesign Empty 空状态": {
-    "prefix": "td-empty",
+    "prefix": "t-empty",
     "body": [
       "\"t-empty\": \"tdesign-miniprogram/empty/empty\""
     ],
     "description": "TDesign Empty 组件"
   },
   "TDesign Footer 页脚": {
-    "prefix": "td-footer",
+    "prefix": "t-footer",
     "body": [
       "\"t-footer\": \"tdesign-miniprogram/footer/footer\""
     ],
     "description": "TDesign Footer 组件"
   },
   "TDesign Grid 宫格": {
-    "prefix": "td-grid",
+    "prefix": "t-grid",
     "body": [
       "\"t-grid\": \"tdesign-miniprogram/grid/grid\",",
       "\"t-grid-item\": \"tdesign-miniprogram/grid-item/grid-item\""
@@ -314,49 +314,49 @@
     "description": "TDesign Grid 组件"
   },
   "TDesign Image 图片": {
-    "prefix": "td-image",
+    "prefix": "t-image",
     "body": [
       "\"t-image\": \"tdesign-miniprogram/image/image\""
     ],
     "description": "TDesign Image 组件"
   },
   "TDesign ImageViewer 图片预览": {
-    "prefix": "td-image-viewer",
+    "prefix": "t-image-viewer",
     "body": [
       "\"t-image-viewer\": \"tdesign-miniprogram/image-viewer/image-viewer\""
     ],
     "description": "TDesign ImageViewer 组件"
   },
   "TDesign Progress 进度条": {
-    "prefix": "td-progress",
+    "prefix": "t-progress",
     "body": [
       "\"t-progress\": \"tdesign-miniprogram/progress/progress\""
     ],
     "description": "TDesign Progress 组件"
   },
   "TDesign Result 结果": {
-    "prefix": "td-result",
+    "prefix": "t-result",
     "body": [
       "\"t-result\": \"tdesign-miniprogram/result/result\""
     ],
     "description": "TDesign Result 组件"
   },
   "TDesign Skeleton 骨架屏": {
-    "prefix": "td-skeleton",
+    "prefix": "t-skeleton",
     "body": [
       "\"t-skeleton\": \"tdesign-miniprogram/skeleton/skeleton\""
     ],
     "description": "TDesign Skeleton 组件"
   },
   "TDesign Sticky 吸顶": {
-    "prefix": "td-sticky",
+    "prefix": "t-sticky",
     "body": [
       "\"t-sticky\": \"tdesign-miniprogram/sticky/sticky\""
     ],
     "description": "TDesign Sticky 组件"
   },
   "TDesign Swiper 轮播图": {
-    "prefix": "td-swiper",
+    "prefix": "t-swiper",
     "body": [
       "\"t-swiper\": \"tdesign-miniprogram/swiper/swiper\",",
       "\"t-swiper-nav\": \"tdesign-miniprogram/swiper-nav/swiper-nav\""
@@ -364,35 +364,35 @@
     "description": "TDesign Swiper 组件"
   },
   "TDesign Tag 标签": {
-    "prefix": "td-tag",
+    "prefix": "t-tag",
     "body": [
       "\"t-tag\": \"tdesign-miniprogram/tag/tag\""
     ],
     "description": "TDesign Tag 组件"
   },
   "TDesign Tag-check 标签": {
-    "prefix": "td-check-tag",
+    "prefix": "t-check-tag",
     "body": [
       "\"t-check-tag\": \"tdesign-miniprogram/check-tag/check-tag\""
     ],
     "description": "TDesign Tag 组件"
   },
   "TDesign ActionSheet 动作面板": {
-    "prefix": "td-action-sheet",
+    "prefix": "t-action-sheet",
     "body": [
       "\"t-action-sheet\": \"tdesign-miniprogram/action-sheet/action-sheet\""
     ],
     "description": "TDesign ActionSheet 组件"
   },
   "TDesign Dialog 对话框": {
-    "prefix": "td-dialog",
+    "prefix": "t-dialog",
     "body": [
       "\"t-dialog\": \"tdesign-miniprogram/dialog/dialog\""
     ],
     "description": "TDesign Dialog 组件"
   },
   "TDesign DropdownMenu 下拉菜单": {
-    "prefix": "td-dropdown-menu",
+    "prefix": "t-dropdown-menu",
     "body": [
       "\"t-dropdown-menu\": \"tdesign-miniprogram/dropdown-menu/dropdown-menu\",",
       "\"t-dropdown-item\": \"tdesign-miniprogram/dropdown-item/dropdown-item\""
@@ -400,63 +400,63 @@
     "description": "TDesign DropdownMenu 组件"
   },
   "TDesign Guide 按钮": {
-    "prefix": "td-guide",
+    "prefix": "t-guide",
     "body": [
       "\"t-guide\": \"tdesign-miniprogram/guide/guide\""
     ],
     "description": "TDesign Guide 组件"
   },
   "TDesign Loading 加载": {
-    "prefix": "td-loading",
+    "prefix": "t-loading",
     "body": [
       "\"t-loading\": \"tdesign-miniprogram/loading/loading\""
     ],
     "description": "TDesign Loading 组件"
   },
   "TDesign Message 消息通知": {
-    "prefix": "td-message",
+    "prefix": "t-message",
     "body": [
       "\"t-message\": \"tdesign-miniprogram/message/message\""
     ],
     "description": "TDesign Message 组件"
   },
   "TDesign NoticeBar 公告栏": {
-    "prefix": "td-notice-bar",
+    "prefix": "t-notice-bar",
     "body": [
       "\"t-notice-bar\": \"tdesign-miniprogram/notice-bar/notice-bar\""
     ],
     "description": "TDesign NoticeBar 组件"
   },
   "TDesign Overlay 遮罩层": {
-    "prefix": "td-overlay",
+    "prefix": "t-overlay",
     "body": [
       "\"t-overlay\": \"tdesign-miniprogram/overlay/overlay\""
     ],
     "description": "TDesign Overlay 组件"
   },
   "TDesign Popup 弹出层": {
-    "prefix": "td-popup",
+    "prefix": "t-popup",
     "body": [
       "\"t-popup\": \"tdesign-miniprogram/popup/popup\""
     ],
     "description": "TDesign Popup 组件"
   },
   "TDesign PullDownRefresh 下拉刷新": {
-    "prefix": "td-pull-down-refresh",
+    "prefix": "t-pull-down-refresh",
     "body": [
       "\"t-pull-down-refresh\": \"tdesign-miniprogram/pull-down-refresh/pull-down-refresh\""
     ],
     "description": "TDesign PullDownRefresh 组件"
   },
   "TDesign SwipeCell 滑动操作": {
-    "prefix": "td-swipe-cell",
+    "prefix": "t-swipe-cell",
     "body": [
       "\"t-swipe-cell\": \"tdesign-miniprogram/swipe-cell/swipe-cell\""
     ],
     "description": "TDesign SwipeCell 组件"
   },
   "TDesign Toast 轻提示": {
-    "prefix": "td-toast",
+    "prefix": "t-toast",
     "body": [
       "\"t-toast\": \"tdesign-miniprogram/toast/toast\""
     ],

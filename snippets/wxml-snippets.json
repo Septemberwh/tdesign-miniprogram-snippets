@@ -1,34 +1,34 @@
 {
   "TDesign Button 按钮": {
-    "prefix": "td-button",
+    "prefix": "t-button",
     "body": [
       "<t-button theme='primary' size='medium'>${3:填充按钮}</t-button>"
     ],
     "description": "TDesign Button 组件"
   },
   "TDesign Divider 分割线": {
-    "prefix": "td-divider",
+    "prefix": "t-divider",
     "body": [
       "<t-divider />"
     ],
     "description": "TDesign Divider 组件"
   },
   "TDesign Fab 悬浮按钮": {
-    "prefix": "td-fab",
+    "prefix": "t-fab",
     "body": [
       "<t-fab icon=\"add\" bind:click=\"handleClick\" text=\"增加\"></t-fab>"
     ],
     "description": "TDesign Fab 组件"
   },
   "TDesign Icon 图标": {
-    "prefix": "td-icon",
+    "prefix": "t-icon",
     "body": [
       "<t-icon name=\"${1}\" size=\"48rpx\" color=\"\" />"
     ],
     "description": "TDesign Icon 组件"
   },
   "TDesign Layout 布局": {
-    "prefix": "td-layout",
+    "prefix": "t-layout",
     "body": [
       "<t-row>",
       "  <t-col span=\"8\" t-class=\"\">col-8</t-col>",
@@ -39,7 +39,7 @@
     "description": "TDesign Layout 组件"
   },
   "TDesign Row 行": {
-    "prefix": "td-row",
+    "prefix": "t-row",
     "body": [
       "<t-row>",
       "${1}",
@@ -48,21 +48,21 @@
     "description": "TDesign Row 组件"
   },
   "TDesign Col 列": {
-    "prefix": "td-col",
+    "prefix": "t-col",
     "body": [
       "<t-col span=\"8\" t-class=\"\">col-8</t-col>"
     ],
     "description": "TDesign Col 组件"
   },
   "TDesign Link 链接": {
-    "prefix": "td-link",
+    "prefix": "t-link",
     "body": [
       "<t-link size=\"small\" theme=\"primary\" content=\"跳转链接\" hover />"
     ],
     "description": "TDesign Link 组件"
   },
   "TDesign BackTop 回到顶部": {
-    "prefix": "td-back-top",
+    "prefix": "t-back-top",
     "body": [
       "<t-back-top",
       "  theme=\"round\"",
@@ -74,7 +74,7 @@
     "description": "TDesign BackTop 组件"
   },
   "TDesign Drawer 抽屉": {
-    "prefix": "td-drawer",
+    "prefix": "t-drawer",
     "body": [
       "<t-drawer",
       "  visible=\"{{visible}}\"",
@@ -88,7 +88,7 @@
     "description": "TDesign Drawer 组件"
   },
   "TDesign Indexes 索引": {
-    "prefix": "td-indexes",
+    "prefix": "t-indexes",
     "body": [
       "<t-indexes bind:select=\"onSelect\" index-list=\"{{indexList}}\" sticky-offset=\"{{stickyOffset}}\">",
       "  <block wx:for=\"{{list}}\" wx:key=\"index\">",
@@ -102,7 +102,7 @@
     "description": "TDesign Indexes 组件"
   },
   "TDesign Navbar 导航栏": {
-    "prefix": "td-navbar",
+    "prefix": "t-navbar",
     "body": [
       "<t-navbar",
       "  t-class-placeholder=\"t-navbar-placeholder\"",
@@ -116,7 +116,7 @@
     "description": "TDesign Navbar 组件"
   },
   "TDesign SideBar 侧边栏": {
-    "prefix": "td-side-bar",
+    "prefix": "t-side-bar",
     "body": [
       "<view class=\"side-bar-wrapper\" style=\"height: calc(100vh - {{navbarHeight}}px)\">",
       "  <t-side-bar value=\"{{sideBarIndex}}\" bind:change=\"onSideBarChange\">",
@@ -138,7 +138,7 @@
     "description": "TDesign SideBar 组件"
   },
   "TDesign Steps 步骤条": {
-    "prefix": "td-steps",
+    "prefix": "t-steps",
     "body": [
       "<t-steps current=\"{{first}}\" bind:change=\"onFirstChange\">",
       "  <t-step-item wx:for=\"{{list}}\" wx:key=\"index\" title=\"{{item.title)}}\" content=\"辅助信息\" />",
@@ -147,7 +147,7 @@
     "description": "TDesign Steps 组件"
   },
   "TDesign TabBar 标签栏": {
-    "prefix": "td-tab-bar",
+    "prefix": "t-tab-bar",
     "body": [
       "<t-tab-bar t-class=\"t-tab-bar\" value=\"{{value}}\" bindchange=\"onChange\" theme=\"tag\" split=\"{{false}}\">",
       "  <t-tab-bar-item wx:for=\"{{list}}\" wx:key=\"index\" value=\"{{item.value}}\"> {{item.label}} </t-tab-bar-item>",
@@ -156,7 +156,7 @@
     "description": "TDesign TabBar 组件"
   },
   "TDesign Tabs 选项卡": {
-    "prefix": "td-tabs",
+    "prefix": "t-tabs",
     "body": [
       "<t-tabs value=\"{{0}}\" bind:change=\"onTabsChange\" bind:click=\"onTabsClick\" t-class=\"custom-tabs\">",
       "  <t-tab-panel label=\"选项\" value=\"0\" />",
@@ -167,21 +167,21 @@
     "description": "TDesign Tabs 组件"
   },
   "TDesign Calendar 日历": {
-    "prefix": "td-calendar",
+    "prefix": "t-calendar",
     "body": [
       "<t-calendar visible=\"{{visible}}\" bind:confirm=\"handleConfirm\" bind:close=\"onClose\" />"
     ],
     "description": "TDesign Calendar 组件"
   },
   "TDesign Calendar:range 日历": {
-    "prefix": "td-calendar:range",
+    "prefix": "t-calendar:range",
     "body": [
       "<t-calendar visible=\"{{visible}}\" bind:confirm=\"handleConfirm\" type=\"range\" />"
     ],
     "description": "TDesign Calendar 组件"
   },
   "TDesign Cascader 级联选择器": {
-    "prefix": "td-cascader",
+    "prefix": "t-cascader",
     "body": [
       "<t-cascader",
       "  visible=\"{{visible}}\"",
@@ -195,21 +195,21 @@
     "description": "TDesign Cascader 组件"
   },
   "TDesign Checkbox 多选框": {
-    "prefix": "td-checkbox",
+    "prefix": "t-checkbox",
     "body": [
       "<t-checkbox value=\"{{checkbox1}}\" label=\"多选\" />"
     ],
     "description": "TDesign Checkbox 组件"
   },
   "TDesign Checkbox-group 多选框": {
-    "prefix": "td-checkbox-group",
+    "prefix": "t-checkbox-group",
     "body": [
       "<t-checkbox-group value=\"{{current}}\" bind:change=\"handleGroupChange\" options=\"{{options}}\" />"
     ],
     "description": "TDesign Checkbox 组件"
   },
   "TDesign DateTimePicker:date 时间选择器": {
-    "prefix": "td-date-time-picker:date",
+    "prefix": "t-date-time-picker:date",
     "body": [
       "<t-date-time-picker",
       "  title=\"选择日期\"",
@@ -227,7 +227,7 @@
     "description": "TDesign DateTimePicker 组件"
   },
   "TDesign DateTimePicker:second 时间选择器": {
-    "prefix": "td-date-time-picker:second",
+    "prefix": "t-date-time-picker:second",
     "body": [
       "<t-date-time-picker",
       "  title=\"选择日期和时间\"",
@@ -243,21 +243,21 @@
     "description": "TDesign DateTimePicker 组件"
   },
   "TDesign Input 输入框": {
-    "prefix": "td-input",
+    "prefix": "t-input",
     "body": [
       "<t-input label=\"标签文字\" placeholder=\"请输入文字\" clearable />"
     ],
     "description": "TDesign Input 组件"
   },
   "TDesign Input:password 输入框": {
-    "prefix": "td-input:password",
+    "prefix": "t-input:password",
     "body": [
       "<t-input label=\"输入密码\" type=\"password\" value=\"{{textPassword}}\" clearable />"
     ],
     "description": "TDesign Input 组件"
   },
   "TDesign Input:验证码 输入框": {
-    "prefix": "td-input:code",
+    "prefix": "t-input:code",
     "body": [
       "<t-input placeholder=\"输入验证码\" label=\"验证码\">",
       "  <view slot=\"suffix\" class=\"suffix\">",
@@ -275,7 +275,7 @@
     "description": "TDesign Input 组件"
   },
   "TDesign Input:手机号 输入框": {
-    "prefix": "td-input:phone",
+    "prefix": "t-input:phone",
     "body": [
       "<t-input",
       "  label=\"手机号\"",
@@ -294,7 +294,7 @@
     "description": "TDesign Input 组件"
   },
   "TDesign Input:价格 输入框": {
-    "prefix": "td-input:price",
+    "prefix": "t-input:price",
     "body": [
       "<t-input",
       "  label=\"价格\"",
@@ -311,14 +311,14 @@
     "description": "TDesign Input 组件"
   },
   "TDesign Input:数量 输入框": {
-    "prefix": "td-input:number",
+    "prefix": "t-input:number",
     "body": [
       "<t-input label=\"数量\" value=\"{{number}}\" placeholder=\"填写个数\" suffix=\"个\" align=\"right\" type=\"number\" />"
     ],
     "description": "TDesign Input 组件"
   },
   "TDesign Picker 选择器": {
-    "prefix": "td-picker",
+    "prefix": "t-picker",
     "body": [
       "<t-picker",
       "  visible=\"{{areaVisible}}\"",
@@ -339,77 +339,77 @@
     "description": "TDesign Picker 组件"
   },
   "TDesign Radio 单选框": {
-    "prefix": "td-radio",
+    "prefix": "t-radio",
     "body": [
       "<t-radio checked=\"{{true}}\" allow-uncheck label=\"单选\" />"
     ],
     "description": "TDesign Radio 组件"
   },
   "TDesign Radio-group 单选框": {
-    "prefix": "td-radio-group",
+    "prefix": "t-radio-group",
     "body": [
       "<t-radio-group bind:change=\"onChange\" allow-uncheck value=\"{{current}}\" options=\"{{options}}\" />"
     ],
     "description": "TDesign Radio 组件"
   },
   "TDesign Rate 评分": {
-    "prefix": "td-rate",
+    "prefix": "t-rate",
     "body": [
       "<t-rate value=\"{{value}}\" bind:change=\"onChange\" />"
     ],
     "description": "TDesign Rate 组件"
   },
   "TDesign Search 搜索框": {
-    "prefix": "td-search",
+    "prefix": "t-search",
     "body": [
       "<t-search placeholder=\"搜索预设文案\" bind:change=\"onChangeValue\" />"
     ],
     "description": "TDesign Search 组件"
   },
   "TDesign Slider 滑动选择器": {
-    "prefix": "td-slider",
+    "prefix": "t-slider",
     "body": [
       "<t-slider value=\"{{value}}\" label=\"{{value}}\" bind:change=\"handleChange\" />"
     ],
     "description": "TDesign Slider 组件"
   },
   "TDesign Stepper 步进器": {
-    "prefix": "td-stepper",
+    "prefix": "t-stepper",
     "body": [
       "<t-stepper value=\"{{value}}\" theme=\"filled\" min=\"0\" max=\"999\" />"
     ],
     "description": "TDesign Stepper 组件"
   },
   "TDesign Switch 开关": {
-    "prefix": "td-switch",
+    "prefix": "t-switch",
     "body": [
       "<t-switch value=\"{{true}}\" bindchange=\"handleChange\" />"
     ],
     "description": "TDesign Switch 组件"
   },
   "TDesign Textarea 多行文本框": {
-    "prefix": "td-textarea",
+    "prefix": "t-textarea",
     "body": [
       "<t-textarea t-class=\"external-class\" placeholder=\"请输入文字\" bindchange=\"handleChange\" disableDefaultPadding=\"{{true}}\" />"
     ],
     "description": "TDesign Textarea 组件"
   },
   "TDesign TreeSelect 树形选择": {
-    "prefix": "td-tree-select",
+    "prefix": "t-tree-select",
     "body": [
       "<t-tree-select options=\"{{options}}\" value=\"{{value}}\" bind:change=\"onChange\" />"
     ],
     "description": "TDesign TreeSelect 组件"
   },
   "TDesign TreeSelect:multiple 树形选择": {
-    "prefix": "td-tree-select:multiple",
+    "prefix": "t-tree-select:multiple",
     "body": [
       "<t-tree-select options=\"{{options}}\" value=\"{{value}}\" multiple bind:change=\"onChange\" />"
     ],
     "description": "TDesign TreeSelect 组件"
   },
   "TDesign Upload 上传": {
-    "prefix": "td-upload",
+    "prefix": "t-upload",
     "body": [
       "<t-upload",
       "  mediaType=\"{{['video','image']}}\"",
@@ -423,7 +423,7 @@
     "description": "TDesign Upload 组件"
   },
   "TDesign Upload:多选 上传": {
-    "prefix": "td-upload:multiple",
+    "prefix": "t-upload:multiple",
     "body": [
       "<t-upload",
       "  media-type=\"{{['video','image']}}\"",
@@ -439,14 +439,14 @@
     "description": "TDesign Upload 组件"
   },
   "TDesign Avatar 头像": {
-    "prefix": "td-avatar",
+    "prefix": "t-avatar",
     "body": [
       "<t-avatar class=\"avatar-example\" shape=\"${1|circle,round|}\" image=\"{{image}}\" size=\"medium\" />"
     ],
     "description": "TDesign Avatar 组件"
   },
   "TDesign Avatar-group 头像": {
-    "prefix": "td-avatar-group",
+    "prefix": "t-avatar-group",
     "body": [
       "<t-avatar-group max=\"5\" collapseAvatar=\"+5\">",
       "  <t-avatar wx:for=\"{{pics}}\" wx:for-item=\"pic\" wx:key=\"index\" image=\"{{pic}}\" />",
@@ -455,28 +455,28 @@
     "description": "TDesign Avatar 组件"
   },
   "TDesign Badge:红点 徽标": {
-    "prefix": "td-badge:dot",
+    "prefix": "t-badge:dot",
     "body": [
       "<t-badge dot class=\"\" content=\"消息\" />"
     ],
     "description": "TDesign Badge 组件"
   },
   "TDesign Badge:数字 徽标": {
-    "prefix": "td-badge:count",
+    "prefix": "t-badge:count",
     "body": [
       "<t-badge count=\"8\" content=\"消息\" offset=\"{{ [4] }}\" class=\"\" />"
     ],
     "description": "TDesign Badge 组件"
   },
   "TDesign Cell 单元格": {
-    "prefix": "td-cell",
+    "prefix": "t-cell",
     "body": [
       "<t-cell title=\"单行标题\" note=\"辅助信息\" description=\"\" hover arrow />"
     ],
     "description": "TDesign Cell 组件"
   },
   "TDesign Cell:switch 单元格": {
-    "prefix": "td-cell:switch",
+    "prefix": "t-cell:switch",
     "body": [
       "<t-cell title=\"单行标题\" hover>",
       "  <t-switch value=\"{{true}}\" slot=\"note\" />",
@@ -485,7 +485,7 @@
     "description": "TDesign Cell 组件"
   },
   "TDesign Cell-group 单元格": {
-    "prefix": "td-cell-group",
+    "prefix": "t-cell-group",
     "body": [
       "<t-cell-group theme=\"card\">",
       "  <t-cell title=\"单行标题\" leftIcon=\"service\" hover arrow />",
@@ -496,7 +496,7 @@
     "description": "TDesign Cell 组件"
   },
   "TDesign Collapse 折叠面板": {
-    "prefix": "td-collapse",
+    "prefix": "t-collapse",
     "body": [
       "<view class=\"\">",
       "  <t-collapse value=\"{{activeValues}}\" bind:change=\"handleChange\">",
@@ -509,7 +509,7 @@
     "description": "TDesign Collapse 组件"
   },
   "TDesign Collapse:操作说明 折叠面板": {
-    "prefix": "td-collapse:right-content",
+    "prefix": "t-collapse:right-content",
     "body": [
       "<wxs module=\"_\"> module.exports.contains = function(arr, target) { return arr.indexOf(target) > -1; } </wxs>",
       "<view class=\"wrapper\">",
@@ -528,49 +528,49 @@
     "description": "TDesign Collapse 组件"
   },
   "TDesign CountDown 倒计时": {
-    "prefix": "td-count-down",
+    "prefix": "t-count-down",
     "body": [
       "<t-count-down time=\"{{ time }}\" size=\"small\" />"
     ],
     "description": "TDesign CountDown 组件"
   },
   "TDesign CountDown:millisecond 倒计时": {
-    "prefix": "td-count-down:millisecond",
+    "prefix": "t-count-down:millisecond",
     "body": [
       "<t-count-down format\"HH:mm:ss:SSS\" time=\"{{ time }}\" millisecond />"
     ],
     "description": "TDesign CountDown 组件"
   },
   "TDesign CountDown:theme 倒计时": {
-    "prefix": "td-count-down:theme",
+    "prefix": "t-count-down:theme",
     "body": [
       "<t-count-down content=\"default\" time=\"{{ time }}\" theme=\"${1|default,round,square|}\"> </t-count-down>"
     ],
     "description": "TDesign CountDown 组件"
   },
   "TDesign CountDown:unit 倒计时": {
-    "prefix": "td-count-down:unit",
+    "prefix": "t-count-down:unit",
     "body": [
       "<t-count-down content=\"default\" time=\"{{ time }}\" splitWithUnit theme=\"round\" />"
     ],
     "description": "TDesign CountDown 组件"
   },
   "TDesign Empty 空状态": {
-    "prefix": "td-empty",
+    "prefix": "t-empty",
     "body": [
       "<t-empty icon=\"info-circle-filled\" description=\"描述文字\" />"
     ],
     "description": "TDesign Empty 组件"
   },
   "TDesign Footer 页脚": {
-    "prefix": "td-footer",
+    "prefix": "t-footer",
     "body": [
       "<t-footer text=\"{{text}}\" links=\"{{[]}}\" logo=\"{{{}}}\"></t-footer>"
     ],
     "description": "TDesign Footer 组件"
   },
   "TDesign Grid 宫格": {
-    "prefix": "td-grid",
+    "prefix": "t-grid",
     "body": [
       "<t-grid class=\"block\">",
       "  <t-grid-item text=\"标题文字\" description=\"描述文字\" image=\"{{img1}}\" />",
@@ -582,14 +582,14 @@
     "description": "TDesign Grid 组件"
   },
   "TDesign Image 图片": {
-    "prefix": "td-image",
+    "prefix": "t-image",
     "body": [
       "<t-image src=\"{{imageSrc}}\" mode=\"${1|scaleToFill,aspectFit,aspectFill,widthFix,heightFix|}\" width=\"72\" height=\"72\" />"
     ],
     "description": "TDesign Image 组件"
   },
   "TDesign ImageViewer 图片预览": {
-    "prefix": "td-image-viewer",
+    "prefix": "t-image-viewer",
     "body": [
       "<t-image-viewer",
       "  usingCustomNavbar",
@@ -606,49 +606,49 @@
     "description": "TDesign ImageViewer 组件"
   },
   "TDesign Progress 进度条": {
-    "prefix": "td-progress",
+    "prefix": "t-progress",
     "body": [
       "<t-progress theme=\"plump\" percentage=\"80\" />"
     ],
     "description": "TDesign Progress 组件"
   },
   "TDesign Progress:theme 进度条": {
-    "prefix": "td-progress:theme",
+    "prefix": "t-progress:theme",
     "body": [
       "<t-progress theme=\"${1|line,plump,circle|}\" percentage=\"30\" trackColor=\"\" color=\"\" />"
     ],
     "description": "TDesign Progress 组件"
   },
   "TDesign Progress:status 进度条": {
-    "prefix": "td-progress:status",
+    "prefix": "t-progress:status",
     "body": [
       "<t-progress theme=\"plump\" percentage=\"88\" status=\"${1|warning,error,success,active|}\" color=\"\"/>"
     ],
     "description": "TDesign Progress 组件"
   },
   "TDesign Result 结果": {
-    "prefix": "td-result",
+    "prefix": "t-result",
     "body": [
       "<t-result theme=\"${1|default,success,warning,error|}\" title=\"状态\" description=\"\" />"
     ],
     "description": "TDesign Result 组件"
   },
   "TDesign Skeleton 骨架屏": {
-    "prefix": "td-skeleton",
+    "prefix": "t-skeleton",
     "body": [
       "<t-skeleton theme=\"${1|avatar,image,text,paragraph|}\" animation=\"${2|gradient,flashed|}\" loading></t-skeleton>"
     ],
     "description": "TDesign Skeleton 组件"
   },
   "TDesign Skeleton:rowCol 骨架屏": {
-    "prefix": "td-skeleton:rowCol",
+    "prefix": "t-skeleton:rowCol",
     "body": [
       "<t-skeleton class=\"col-content\" rowCol=\"{{rowColsContent}}\" loading></t-skeleton>"
     ],
     "description": "TDesign Skeleton 组件"
   },
   "TDesign Sticky 吸顶": {
-    "prefix": "td-sticky",
+    "prefix": "t-sticky",
     "body": [
       "<t-sticky offset-top=\"{{navbarHeight}}\">",
       "  <t-button size=\"large\" theme=\"primary\" t-class=\"\">基础吸顶</t-button>",
@@ -657,7 +657,7 @@
     "description": "TDesign Sticky 组件"
   },
   "TDesign Swiper 轮播图": {
-    "prefix": "td-swiper",
+    "prefix": "t-swiper",
     "body": [
       "<t-swiper",
       "  current=\"{{current}}\"",
@@ -675,7 +675,7 @@
     "description": "TDesign Swiper 组件"
   },
   "TDesign Swiper:fraction 轮播图": {
-    "prefix": "td-swiper:fraction",
+    "prefix": "t-swiper:fraction",
     "body": [
       "<t-swiper",
       "  current=\"{{current}}\"",
@@ -694,7 +694,7 @@
     "description": "TDesign Swiper 组件"
   },
   "TDesign Swiper:controls 轮播图": {
-    "prefix": "td-swiper:controls",
+    "prefix": "t-swiper:controls",
     "body": [
       "<t-swiper",
       "  current=\"{{current}}\"",
@@ -713,7 +713,7 @@
     "description": "TDesign Swiper 组件"
   },
   "TDesign Swiper:cards 轮播图": {
-    "prefix": "td-swiper:cards",
+    "prefix": "t-swiper:cards",
     "body": [
       "<t-swiper",
       "  current=\"{{current}}\"",
@@ -732,7 +732,7 @@
     "description": "TDesign Swiper 组件"
   },
   "TDesign Swiper:vertical 轮播图": {
-    "prefix": "td-swiper:vertical",
+    "prefix": "t-swiper:vertical",
     "body": [
       "<t-swiper",
       "  current=\"{{1}}\"",
@@ -749,7 +749,7 @@
     "description": "TDesign Swiper 组件"
   },
   "TDesign Tag 标签": {
-    "prefix": "td-tag",
+    "prefix": "t-tag",
     "body": [
       "<t-tag class=\"\"",
       "  variant=\"${1|light,outline|}\"",
@@ -765,14 +765,14 @@
     "description": "TDesign Tag 组件"
   },
   "TDesign Tag:theme 标签": {
-    "prefix": "td-tag:theme",
+    "prefix": "t-tag:theme",
     "body": [
       "<t-tag class=\"\" variant=\"light\" theme=\"${1|default,primary,warning,danger,success|}\">主题</t-tag>"
     ],
     "description": "TDesign Tag 组件"
   },
   "TDesign Tag-check 标签": {
-    "prefix": "td-check-tag",
+    "prefix": "t-check-tag",
     "body": [
       "<t-check-tag",
       "  class=\"\"",
@@ -785,14 +785,14 @@
     "description": "TDesign Tag 组件"
   },
   "TDesign ActionSheet 动作面板": {
-    "prefix": "td-action-sheet",
+    "prefix": "t-action-sheet",
     "body": [
       "<t-action-sheet id=\"t-action-sheet\" usingCustomNavbar bind:selected=\"handleSelected\" />"
     ],
     "description": "TDesign ActionSheet 组件"
   },
   "TDesign Dialog:confirm 对话框": {
-    "prefix": "td-dialog:confirm",
+    "prefix": "t-dialog:confirm",
     "body": [
       "<t-dialog",
       "  visible=\"{{showTextAndTitle}}\"",
@@ -805,7 +805,7 @@
     "description": "TDesign Dialog 组件"
   },
   "TDesign Dialog:confirm,cancel 对话框": {
-    "prefix": "td-dialog:confirm,cancel",
+    "prefix": "t-dialog:confirm,cancel",
     "body": [
       "<t-dialog",
       "  visible=\"{{showTextAndTitle}}\"",
@@ -820,7 +820,7 @@
     "description": "TDesign Dialog 组件"
   },
   "TDesign Dialog:input 对话框": {
-    "prefix": "td-dialog:input",
+    "prefix": "t-dialog:input",
     "body": [
       "<t-dialog",
       "  visible=\"{{showTextAndTitleWithInput}}\"",
@@ -844,7 +844,7 @@
     "description": "TDesign Dialog 组件"
   },
   "TDesign Dialog:image 对话框": {
-    "prefix": "td-dialog:image",
+    "prefix": "t-dialog:image",
     "body": [
       "<t-dialog",
       "  visible=\"{{imageOnTop}}\"",
@@ -861,14 +861,14 @@
     "description": "TDesign Dialog 组件"
   },
   "TDesign Dialog 对话框": {
-    "prefix": "td-dialog",
+    "prefix": "t-dialog",
     "body": [
       "<t-dialog id=\"t-dialog\" />"
     ],
     "description": "TDesign Dialog 组件"
   },
   "TDesign DropdownMenu 下拉菜单": {
-    "prefix": "td-dropdown-menu",
+    "prefix": "t-dropdown-menu",
     "body": [
       "<t-dropdown-menu",
       "  <t-dropdown-item options=\"{{product.options}}\" value=\"{{product.value}}\" bindchange=\"onChange\" />",
@@ -878,7 +878,7 @@
     "description": "TDesign DropdownMenu 组件"
   },
   "TDesign DropdownMenu:optionsColumns 下拉菜单": {
-    "prefix": "td-dropdown-menu:optionsColumns",
+    "prefix": "t-dropdown-menu:optionsColumns",
     "body": [
       "<t-dropdown-menu>",
       "  <t-dropdown-item",
@@ -907,7 +907,7 @@
     "description": "TDesign DropdownMenu 组件"
   },
   "TDesign DropdownMenu:tree 下拉菜单": {
-    "prefix": "td-dropdown-menu:tree",
+    "prefix": "t-dropdown-menu:tree",
     "body": [
       "<t-dropdown-menu>",
       "  <t-dropdown-item",
@@ -929,7 +929,7 @@
     "description": "TDesign DropdownMenu 组件"
   },
   "TDesign Guide 按钮": {
-    "prefix": "td-guide",
+    "prefix": "t-guide",
     "body": [
       "<t-guide current=\"{{current}}\" steps=\"{{steps}}\" show-overlay=\"{{false}}\" bind:skip=\"close\" bind:finish=\"close\">",
       "  <view slot=\"body-2\" class=\"slot-body\">slot展示 用户引导的说明文案</view>",
@@ -938,7 +938,7 @@
     "description": "TDesign Guide 组件"
   },
   "TDesign Guide:dialog 按钮": {
-    "prefix": "td-guide:dialog",
+    "prefix": "t-guide:dialog",
     "body": [
       "<t-guide current=\"{{current}}\" steps=\"{{steps}}\" mode=\"dialog\" bind:skip=\"close\" bind:finish=\"close\">",
       "  <view slot=\"body-0\" class=\"slot-body\">",
@@ -973,14 +973,14 @@
     "description": "TDesign Guide 组件"
   },
   "TDesign Loading 加载": {
-    "prefix": "td-loading",
+    "prefix": "t-loading",
     "body": [
       "<t-loading theme=\"${1|circular,spinner,dots|}\" size=\"40rpx\" class=\"\" />"
     ],
     "description": "TDesign Loading 组件"
   },
   "TDesign Loading:custom 加载": {
-    "prefix": "td-loading:custom",
+    "prefix": "t-loading:custom",
     "body": [
       "<t-loading theme=\"custom\" class=\"wrapper\">",
       "  <t-image",
@@ -993,28 +993,28 @@
     "description": "TDesign Loading 组件"
   },
   "TDesign Loading:text 加载": {
-    "prefix": "td-loading:text",
+    "prefix": "t-loading:text",
     "body": [
       "<t-loading theme=\"spinner\" size=\"40rpx\" text=\"加载中...\" layout=\"${1|horizontal,vertical|}\" inheritColor class=\"wrapper\" />"
     ],
     "description": "TDesign Loading 组件"
   },
   "TDesign Message 消息通知": {
-    "prefix": "td-message",
+    "prefix": "t-message",
     "body": [
       "<t-message id=\"t-message\" />"
     ],
     "description": "TDesign Message 组件"
   },
   "TDesign Message:visible 消息通知": {
-    "prefix": "td-message:visible",
+    "prefix": "t-message:visible",
     "body": [
       "<t-message visible=\"{{visible}}\" offset=\"{{[90, 32]}}\" content=\"这是一条通过组件调用的消息通知\" />"
     ],
     "description": "TDesign Message 组件"
   },
   "TDesign NoticeBar 公告栏": {
-    "prefix": "td-notice-bar",
+    "prefix": "t-notice-bar",
     "body": [
       "<t-notice-bar visible=\"{{visible}}\" prefixIcon=\"{{false}}\" content=\"提示文字描述提示文字描述提示文字描述\">",
       "  <view slot=\"prefix-icon\">",
@@ -1025,7 +1025,7 @@
     "description": "TDesign NoticeBar 组件"
   },
   "TDesign NoticeBar:close 公告栏": {
-    "prefix": "td-notice-bar:close",
+    "prefix": "t-notice-bar:close",
     "body": [
       "<t-notice-bar",
       "  visible=\"{{visible}}\"",
@@ -1037,14 +1037,14 @@
     "description": "TDesign NoticeBar 组件"
   },
   "TDesign NoticeBar:theme 公告栏": {
-    "prefix": "td-notice-bar:theme",
+    "prefix": "t-notice-bar:theme",
     "body": [
       "<t-notice-bar visible=\"{{true}}\" theme=\"${1|info,success,warning,error|}\" content=\"默认状态公告栏默认状态公告栏\"></t-notice-bar>"
     ],
     "description": "TDesign NoticeBar 组件"
   },
   "TDesign NoticeBar:horizontal 公告栏": {
-    "prefix": "td-notice-bar:horizontal",
+    "prefix": "t-notice-bar:horizontal",
     "body": [
       "<t-notice-bar",
       "  visible=\"{{true}}\"",
@@ -1055,7 +1055,7 @@
     "description": "TDesign NoticeBar 组件"
   },
   "TDesign NoticeBar:vertical 公告栏": {
-    "prefix": "td-notice-bar:vertical",
+    "prefix": "t-notice-bar:vertical",
     "body": [
       "<t-notice-bar",
       "  visible=\"{{true}}\"",
@@ -1069,14 +1069,14 @@
     "description": "TDesign NoticeBar 组件"
   },
   "TDesign Overlay 遮罩层": {
-    "prefix": "td-overlay",
+    "prefix": "t-overlay",
     "body": [
       "<t-overlay visible=\"{{visible}}\" duration=\"{{500}}\" bind:click=\"handleOverlayClick\" />"
     ],
     "description": "TDesign Overlay 组件"
   },
   "TDesign Popup 弹出层": {
-    "prefix": "td-popup",
+    "prefix": "t-popup",
     "body": [
       "<t-popup",
       "  visible=\"{{visible}}\"",
@@ -1090,7 +1090,7 @@
     "description": "TDesign Popup 组件"
   },
   "TDesign Popup:title 弹出层": {
-    "prefix": "td-popup:title",
+    "prefix": "t-popup:title",
     "body": [
       "<t-popup visible=\"{{visible}}\" bind:visible-change=\"onVisibleChange\" placement=\"bottom\">",
       "  <view class=\"block\">",
@@ -1105,7 +1105,7 @@
     "description": "TDesign Popup 组件"
   },
   "TDesign Popup:center,close 弹出层": {
-    "prefix": "td-popup:center,close",
+    "prefix": "t-popup:center,close",
     "body": [
       "<t-popup visible=\"{{visible}}\" bind:visible-change=\"onVisibleChange\" placement=\"center\">",
       "  <view class=\"block\">",
@@ -1116,7 +1116,7 @@
     "description": "TDesign Popup 组件"
   },
   "TDesign PullDownRefresh 下拉刷新": {
-    "prefix": "td-pull-down-refresh",
+    "prefix": "t-pull-down-refresh",
     "body": [
       "<t-pull-down-refresh",
       "  value=\"{{enable}}\"",
@@ -1134,7 +1134,7 @@
     "description": "TDesign PullDownRefresh 组件"
   },
   "TDesign SwipeCell 滑动操作": {
-    "prefix": "td-swipe-cell",
+    "prefix": "t-swipe-cell",
     "body": [
       "<t-swipe-cell>",
       "  <t-cell title=\"左/右滑单操作\" note=\"辅助信息\" bordered=\"{{false}}\" />",
@@ -1144,7 +1144,7 @@
     "description": "TDesign SwipeCell 组件"
   },
   "TDesign SwipeCell:image 滑动操作": {
-    "prefix": "td-swipe-cell:image",
+    "prefix": "t-swipe-cell:image",
     "body": [
       "<t-swipe-cell>",
       "  <t-cell",
@@ -1160,7 +1160,7 @@
     "description": "TDesign SwipeCell 组件"
   },
   "TDesign SwipeCell:two 滑动操作": {
-    "prefix": "td-swipe-cell:two",
+    "prefix": "t-swipe-cell:two",
     "body": [
       "<t-swipe-cell right=\"{{ [{text: '编辑',className: 'btn edit-btn'},{text: '删除',className: 'btn delete-btn'}] }}\" bind:click=\"onActionClick\">",
       "  <t-cell title=\"左滑双操作\" note=\"辅助信息\" bordered=\"{{false}}\" />",
@@ -1169,7 +1169,7 @@
     "description": "TDesign SwipeCell 组件"
   },
   "TDesign SwipeCell:more 滑动操作": {
-    "prefix": "td-swipe-cell:more",
+    "prefix": "t-swipe-cell:more",
     "body": [
       "<t-swipe-cell>",
       "  <t-cell title=\"左滑多操作\" note=\"辅助信息\" bordered=\"{{false}}\" />",
@@ -1183,7 +1183,7 @@
     "description": "TDesign SwipeCell 组件"
   },
   "TDesign SwipeCell:left,right 滑动操作": {
-    "prefix": "td-swipe-cell:left,right",
+    "prefix": "t-swipe-cell:left,right",
     "body": [
       "<t-swipe-cell right=\"{{ [{text: '删除',className: 'btn delete-btn'}] }}\" left=\"{{ [{text: '编辑',className: 'btn edit-btn'}] }}\" bind:click=\"onActionClick\">",
       "  <t-cell title=\"左右滑操作\" note=\"辅助信息\" bordered=\"{{false}}\" />",
@@ -1192,7 +1192,7 @@
     "description": "TDesign SwipeCell 组件"
   },
   "TDesign SwipeCell:icon 滑动操作": {
-    "prefix": "td-swipe-cell:icon",
+    "prefix": "t-swipe-cell:icon",
     "body": [
       "<t-swipe-cell right=\"{{ [{text: '编辑',icon: {name: 'edit',size: 16},className: 'btn edit-btn'},{text: '删除',icon: {name: 'delete',size: 16},className: 'btn delete-btn'}] }}\" bind:click=\"onActionClick\">",
       "  <t-cell title=\"左右滑操作\" note=\"辅助信息\" bordered=\"{{false}}\" />",
@@ -1201,7 +1201,7 @@
     "description": "TDesign SwipeCell 组件"
   },
   "TDesign Toast 轻提示": {
-    "prefix": "td-toast",
+    "prefix": "t-toast",
     "body": [
       "<t-toast id=\"t-toast\" />"
     ],
