@@ -256,7 +256,7 @@
     ],
     "description": "TDesign Input 组件"
   },
-  "TDesign Input:验证码 输入框": {
+  "TDesign Input:code 输入框": {
     "prefix": "t-input:code",
     "body": [
       "<t-input placeholder=\"输入验证码\" label=\"验证码\">",
@@ -274,7 +274,7 @@
     ],
     "description": "TDesign Input 组件"
   },
-  "TDesign Input:手机号 输入框": {
+  "TDesign Input:phone 输入框": {
     "prefix": "t-input:phone",
     "body": [
       "<t-input",
@@ -293,7 +293,7 @@
     ],
     "description": "TDesign Input 组件"
   },
-  "TDesign Input:价格 输入框": {
+  "TDesign Input:price 输入框": {
     "prefix": "t-input:price",
     "body": [
       "<t-input",
@@ -310,7 +310,7 @@
     ],
     "description": "TDesign Input 组件"
   },
-  "TDesign Input:数量 输入框": {
+  "TDesign Input:number 输入框": {
     "prefix": "t-input:number",
     "body": [
       "<t-input label=\"数量\" value=\"{{number}}\" placeholder=\"填写个数\" suffix=\"个\" align=\"right\" type=\"number\" />"
@@ -422,7 +422,7 @@
     ],
     "description": "TDesign Upload 组件"
   },
-  "TDesign Upload:多选 上传": {
+  "TDesign Upload:multiple 上传": {
     "prefix": "t-upload:multiple",
     "body": [
       "<t-upload",
@@ -454,14 +454,14 @@
     ],
     "description": "TDesign Avatar 组件"
   },
-  "TDesign Badge:红点 徽标": {
+  "TDesign Badge:dot 徽标": {
     "prefix": "t-badge:dot",
     "body": [
       "<t-badge dot class=\"\" content=\"消息\" />"
     ],
     "description": "TDesign Badge 组件"
   },
-  "TDesign Badge:数字 徽标": {
+  "TDesign Badge:count 徽标": {
     "prefix": "t-badge:count",
     "body": [
       "<t-badge count=\"8\" content=\"消息\" offset=\"{{ [4] }}\" class=\"\" />"
@@ -508,7 +508,7 @@
     ],
     "description": "TDesign Collapse 组件"
   },
-  "TDesign Collapse:操作说明 折叠面板": {
+  "TDesign Collapse:rightContent 折叠面板": {
     "prefix": "t-collapse:right-content",
     "body": [
       "<wxs module=\"_\"> module.exports.contains = function(arr, target) { return arr.indexOf(target) > -1; } </wxs>",
