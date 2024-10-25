@@ -1,6 +1,8 @@
 import * as vscode from 'vscode';
 import { hoverData as _hoverData } from './hoverData';
 
+let hoverProvider: vscode.Disposable | undefined; // 存储悬停提供器
+
 /**
  * 获取当前光标位置的完整组件名称（支持 `t-button` 等）。
  */
@@ -27,3 +29,27 @@ export function getTDesignHoverContent(word: string): vscode.Hover | undefined {
 
   return undefined;
 }
+
+// 注册悬停提供器的函数
+export function registerHoverProvider(context: vscode.ExtensionContext) {
+  if (!hoverProvider) { // 避免重复注册
+    hoverProvider = vscode.languages.registerHoverProvider('wxml', {
+      provideHover(document, position) {
+        const word = getComponentNameAtPosition(document, position);
+        return getTDesignHoverContent(word);
+      }
+    });
+
+    // 注册到 context.subscriptions，确保插件停用时自动清理
+    context.subscriptions.push(hoverProvider);
+  }
+}
+
+// 销毁悬停提供器的函数
+export function disposeHoverProvider() {
+  if (hoverProvider) {
+    hoverProvider.dispose(); // 销毁提供器
+    hoverProvider = undefined;
+  }
+}
+

@@ -1,7 +1,7 @@
 // The module 'vscode' contains the VS Code extensibility API
 // Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode';
-import { getComponentNameAtPosition, getTDesignHoverContent } from './hover';
+import { registerHoverProvider, disposeHoverProvider } from './hover/hoverProvider';
 
 // This method is called when your extension is activated
 // Your extension is activated the very first time the command is executed
@@ -22,38 +22,23 @@ export function activate(context: vscode.ExtensionContext) {
 		vscode.window.showInformationMessage('Hello World from tdesign-miniprogram-snippets!');
 	});
 
-	// 注册 HTML 文件中的悬停提示
-	// const htmlHoverProvider = vscode.languages.registerHoverProvider('html', {
-	// 	provideHover(document, position, token) {
-	// 		const word = document.getText(document.getWordRangeAtPosition(position));
-	// 		return getTDesignHoverContent(word);
-	// 	}
-	// });
-
-	// 注册 WXML 文件中的悬停提示
-	const wxmlHoverProvider = vscode.languages.registerHoverProvider('wxml', {
-		provideHover(document, position) {
-			const word = getComponentNameAtPosition(document, position);
-			return getTDesignHoverContent(word);
-		}
-	});
-	// 判断是否启用悬停功能
-	if (config.get<boolean>('enableHover')) {
-		context.subscriptions.push(wxmlHoverProvider);
-	}
-
 	// 将注册的 功能 加入插件上下文
 	context.subscriptions.push(disposable);
 
-	// 监听配置变化事件，动态控制悬停功能的启用
+	// 初始化时判断是否启用悬停提示
+	if (config.get<boolean>('enableHover')) {
+		registerHoverProvider(context);
+	}
+
+	// 监听配置变化，动态启用或禁用悬停提示
 	vscode.workspace.onDidChangeConfiguration(event => {
 		if (event.affectsConfiguration('tdesign-miniprogram-snippets.enableHover')) {
 			const enableHover = vscode.workspace.getConfiguration('tdesign-miniprogram-snippets').get<boolean>('enableHover');
 			if (enableHover) {
-				context.subscriptions.push(wxmlHoverProvider);
+				registerHoverProvider(context);
 				// vscode.window.showInformationMessage('悬停提示已启用');
 			} else {
-				wxmlHoverProvider.dispose();
+				disposeHoverProvider();
 				// vscode.window.showInformationMessage('悬停提示已禁用');
 			}
 		}
@@ -61,4 +46,6 @@ export function activate(context: vscode.ExtensionContext) {
 }
 
 // This method is called when your extension is deactivated
-export function deactivate() { }
+export function deactivate() {
+	disposeHoverProvider(); // 插件停用时销毁悬停提供器
+}
