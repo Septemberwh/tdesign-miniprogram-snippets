@@ -40,23 +40,23 @@
 - **其他功能：**
   - `wxml` TDesign 组件标签悬停提示：快捷打开该组件官网。
 
-<!-- ### 示例
+### 示例
 
 - WXML 片段
 
-![WXML 片段](https://free2.yunpng.top/2024/10/19/671372604f443.gif)
+![WXML 片段](https://free2.yunpng.top/2024/10/25/671b3e889ec36.gif)
 
 - JSON 片段
 
-![JSON 片段](https://free2.yunpng.top/2024/10/19/67137260504c7.gif)
+![JSON 片段](https://free2.yunpng.top/2024/10/25/671b3e88a8dc4.gif)
 
 - JS 片段
 
-![JS 片段](https://free2.yunpng.top/2024/10/19/671372861cd43.gif)
+![JS 片段](https://free2.yunpng.top/2024/10/25/671b3e9d84363.gif)
 
 - 组件标签悬停提示
 
-![组件标签悬停提示](https://free2.yunpng.top/2024/10/19/67136b6d475fa.gif) -->
+![组件标签悬停提示](https://free2.yunpng.top/2024/10/25/671b3e9c3a4e5.gif)
 
 ## 联系作者
 
