@@ -27,3 +27,5 @@ Thumbs.db
 
 # Other build artifacts
 *.vsix
+
+.vscode-test/
