@@ -83,6 +83,12 @@
         "path": "./snippets/js-snippets.json"
       }
     ],
+    "completionItemProvider": [
+      {
+        "language": "wxml",
+        "provider": true
+      }
+    ],
     "hover": [
       {
         "language": "html",

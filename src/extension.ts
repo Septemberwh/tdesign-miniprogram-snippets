@@ -2,6 +2,7 @@
 // Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode';
 import { registerHoverProvider, disposeHoverProvider } from './hover/hoverProvider';
+import { registerCompletionItemProvider } from './completionItem/completionItemProvider';
 
 // This method is called when your extension is activated
 // Your extension is activated the very first time the command is executed
@@ -22,8 +23,14 @@ export function activate(context: vscode.ExtensionContext) {
 		vscode.window.showInformationMessage('Hello World from tdesign-miniprogram-snippets!');
 	});
 
+	const completionItemProvider = vscode.languages.registerCompletionItemProvider(
+		{ language: 'wxml', scheme: 'file' }, 
+		registerCompletionItemProvider, 
+		'<', ' ' // 在 < 和空格处触发补全
+	);
+
 	// 将注册的 功能 加入插件上下文
-	context.subscriptions.push(disposable);
+	context.subscriptions.push(disposable, completionItemProvider);
 
 	// 初始化时判断是否启用悬停提示
 	if (config.get<boolean>('enableHover')) {
