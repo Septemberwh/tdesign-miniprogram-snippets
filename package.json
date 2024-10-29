@@ -102,7 +102,7 @@
       }
     ],
     "configuration": {
-      "title": "悬停提示配置",
+      "title": "tdesign-miniprogram-snippets",
       "properties": {
         "tdesign-miniprogram-snippets.enableHover": {
           "type": "boolean",
