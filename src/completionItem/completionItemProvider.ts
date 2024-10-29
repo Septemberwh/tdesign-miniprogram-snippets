@@ -1,12 +1,13 @@
 import * as vscode from 'vscode';
 import { CompletionData } from './completionItemData';
+import { type CompletionObject, type Attributes } from './types';
 
 /**
  * 判断光标是否在指定标签内。
  */
 function isInsideTag(
-  document: vscode.TextDocument, 
-  position: vscode.Position, 
+  document: vscode.TextDocument,
+  position: vscode.Position,
   tagName: string
 ): boolean {
   const text = document.getText();
@@ -27,7 +28,7 @@ function isInsideTag(
  * 判断光标是否在自定义组件标签内。
  */
 function getTagNameAtPosition(
-  document: vscode.TextDocument, 
+  document: vscode.TextDocument,
   position: vscode.Position
 ): string | null {
   const text = document.getText();
@@ -50,13 +51,17 @@ function getTagNameAtPosition(
  * 创建 CompletionItem 实例。
  */
 function createCompletionItem(
-  label: string,
-  detail: string,
-  documentation: string
+  { name, type, default: defaultValue, desc, required }: Attributes
 ): vscode.CompletionItem {
-  const item = new vscode.CompletionItem(label, vscode.CompletionItemKind.Property);
-  item.detail = detail;
-  item.documentation = new vscode.MarkdownString(documentation);
+  const item = new vscode.CompletionItem(name, vscode.CompletionItemKind.Property);
+  // 设置详细信息
+  item.detail = `${type} (默认: ${defaultValue})`;
+  item.documentation = new vscode.MarkdownString(
+    desc + "\n\n**是否必填**: " + required
+  );
+  // 设置插入的文本
+  const snippet = `${name}=${defaultValue === '-' ? "''" : `'${defaultValue}'`}`;
+  item.insertText = new vscode.SnippetString(snippet);
   return item;
 }
 
@@ -74,9 +79,9 @@ export const registerCompletionItemProvider: vscode.CompletionItemProvider = {
 
       const completionItems: vscode.CompletionItem[] = [];
 
-      for (const attr of tagData.attrs) {
-        if (attr.name) {
-          completionItems.push(createCompletionItem(attr.name, attr.content, attr.desc));
+      for (const attrObj of tagData.attrs) {
+        if (attrObj.name) {
+          completionItems.push(createCompletionItem(attrObj));
         }
       }
       console.log(`Providing ${completionItems.length} completion items`); // 打印日志
