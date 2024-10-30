@@ -208,6 +208,20 @@
     ],
     "description": "TDesign Checkbox 组件"
   },
+  "TDesign ColorPicker 颜色选择器": {
+    "prefix": "t-color-picker",
+    "body": [
+      "<t-color-picker bind:change=\"onChange\" />"
+    ],
+    "description": "TDesign ColorPicker 组件"
+  },
+  "TDesign ColorPicker:multiple 颜色选择器": {
+    "prefix": "t-color-picker:multiple",
+    "body": [
+      "<t-color-picker enableAlpha type=\"multiple\" bind:change=\"onChange\" bind:palette-bar-change=\"onPaletteBarChange\" />"
+    ],
+    "description": "TDesign ColorPicker 组件"
+  },
   "TDesign DateTimePicker:date 时间选择器": {
     "prefix": "t-date-time-picker:date",
     "body": [

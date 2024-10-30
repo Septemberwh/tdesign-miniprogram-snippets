@@ -1688,6 +1688,53 @@ export const CompletionData: CompletionObject = {
       },
     ],
   },
+  "t-color-picker": {
+    attrs: [
+      {
+        name: "enable-alpha",
+        type: "Boolean",
+        default: "false",
+        desc: "是否开启透明通道",
+        required: "N",
+      },
+      {
+        name: "format",
+        type: "String",
+        default: "RGB",
+        desc: "格式化色值。`enableAlpha` 为真时，`RGBA/HSLA/HSVA` 等值有效。可选项：RGB/RGBA/HSL/HSLA/HSB/HSV/HSVA/HEX/CMYK/CSS",
+        required: "N",
+      },
+      {
+        name: "swatch-colors",
+        type: "Array",
+        default: "-",
+        desc: "系统预设的颜色样例，值为 `null` 或 `[]` 则不显示系统色，值为 `undefined` 会显示组件内置的系统默认色。TS 类型：`Array<string> \\",
+        required: "null`",
+      },
+      {
+        name: "type",
+        type: "String",
+        default: "base",
+        desc: "颜色选择器类型。（base 表示仅展示系统预设内容; multiple 表示展示色板和系统预设内容。。可选项：base/multiple。TS 类型：`TypeEnum ` `type TypeEnum = 'base' \\",
+        required:
+          "'multiple'`。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/color-picker/type.ts)",
+      },
+      {
+        name: "value",
+        type: "String",
+        default: "-",
+        desc: "色值",
+        required: "N",
+      },
+      {
+        name: "default-value",
+        type: "String",
+        default: "undefined",
+        desc: "色值。非受控属性",
+        required: "N",
+      },
+    ],
+  },
   "t-date-time-picker": {
     attrs: [
       {

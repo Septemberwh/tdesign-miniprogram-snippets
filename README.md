@@ -31,8 +31,11 @@
 ## 使用方法
 
 - **代码片段：**
-  - WXML 片段：输入 `t-button`，`t-icon` 等 `t-` 开头的关键字即可提示代码片段模板。
-  - JSON 片段：输入 `t-button`，`t-icon` 等 `t-` 开头的关键字即可提示代码片段模板，适用于 `usingComponents` 中的组件引用。
+  - WXML 片段：
+    - 输入 `t-button`，`t-icon` 等 `t-` 开头的关键字即可提示代码片段模板。
+    - 组件中输入`空格`可触发属性值自动补全。
+  - JSON 片段：
+    - 输入 `t-button`，`t-icon` 等 `t-` 开头的关键字即可提示代码片段模板，适用于 `usingComponents` 中的组件引用。
   - JS 片段：
     - 输入 `t-dialog`，`t-message` 等 `t-` 开头的关键字即可提示代码片段模板。
     - 小程序通用代码片段 - *待开发*。
@@ -44,19 +47,25 @@
 
 - WXML 片段
 
-![WXML 片段](https://free2.yunpng.top/2024/10/25/671b3e889ec36.gif)
+  - `t-` 关键字代码片段
+
+  ![WXML 片段](https://free2.yunpng.top/2024/10/25/671b3e889ec36.gif)
+
+  - 组件属性自动补全
+
+  ![WXML 组件属性](https://free4.yunpng.top/2024/10/30/6721aaa230f20.gif)
 
 - JSON 片段
 
-![JSON 片段](https://free2.yunpng.top/2024/10/25/671b3e88a8dc4.gif)
+  ![JSON 片段](https://free2.yunpng.top/2024/10/25/671b3e88a8dc4.gif)
 
 - JS 片段
 
-![JS 片段](https://free2.yunpng.top/2024/10/25/671b3e9d84363.gif)
+  ![JS 片段](https://free2.yunpng.top/2024/10/25/671b3e9d84363.gif)
 
 - 组件标签悬停提示
 
-![组件标签悬停提示](https://free2.yunpng.top/2024/10/25/671b3e9c3a4e5.gif)
+  ![组件标签悬停提示](https://free2.yunpng.top/2024/10/25/671b3e9c3a4e5.gif)
 
 ## 联系作者
 

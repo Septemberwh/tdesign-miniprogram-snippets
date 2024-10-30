@@ -146,6 +146,13 @@
     ],
     "description": "TDesign Checkbox 组件"
   },
+  "TDesign ColorPicker 颜色选择器": {
+    "prefix": "t-color-picker",
+    "body": [
+      "\"t-color-picker\": \"tdesign-miniprogram/color-picker/color-picker\""
+    ],
+    "description": "TDesign ColorPicker 组件"
+  },
   "TDesign DateTimePicker 时间选择器": {
     "prefix": "t-date-time-picker",
     "body": [

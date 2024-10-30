@@ -37,6 +37,7 @@ export const hoverData = {
   't-cascader': '打开 [TDesign Cascader](https://tdesign.tencent.com/miniprogram/components/cascader)',
   't-checkbox': '打开 [TDesign Checkbox](https://tdesign.tencent.com/miniprogram/components/checkbox)',
   't-checkbox-group': '打开 [TDesign Checkbox](https://tdesign.tencent.com/miniprogram/components/checkbox)',
+  't-color-picker': '打开 [TDesign ColorPicker](https://tdesign.tencent.com/miniprogram/components/color-picker)',
   't-date-time-picker': '打开 [TDesign DateTimePicker](https://tdesign.tencent.com/miniprogram/components/date-time-picker)',
   't-input': '打开 [TDesign Input](https://tdesign.tencent.com/miniprogram/components/input)',
   't-picker': '打开 [TDesign Picker](https://tdesign.tencent.com/miniprogram/components/picker)',
