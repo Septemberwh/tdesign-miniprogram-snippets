@@ -114,10 +114,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Septemberwh/tdesign-miniprogram-snippets"
+    "url": "https://github.com/septwong/tdesign-miniprogram-snippets"
   },
   "bugs": {
-    "url": "https://github.com/Septemberwh/tdesign-miniprogram-snippets/issues"
+    "url": "https://github.com/septwong/tdesign-miniprogram-snippets/issues"
   },
   "icon": "assets/images/logo.png",
   "license": "MIT",
