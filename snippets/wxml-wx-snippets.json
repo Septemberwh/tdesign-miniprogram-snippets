@@ -31,5 +31,12 @@
       "<include src=\"header.wxml\"/>"
     ],
     "description": "WXML 语法：引入"
+  },
+  "WXS 语法 wxs": {
+    "prefix": "wxs",
+    "body": [
+      "<wxs src=\"./tools.wxs\" module=\"tools\" />"
+    ],
+    "description": "WXS 语法：模块"
   }
 }

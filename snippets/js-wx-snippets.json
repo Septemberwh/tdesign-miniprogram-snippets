@@ -1,0 +1,10 @@
+{
+  "TMS getApp": {
+    "prefix": "getApp",
+    "body": [
+      "${1:var app = } getApp();",
+      "${2}"
+    ],
+    "description": "获取小程序示例"
+  }
+}

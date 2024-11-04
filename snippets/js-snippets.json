@@ -1,12 +1,4 @@
 {
-  "TMS getApp": {
-    "prefix": "getApp",
-    "body": [
-      "${1:var app = } getApp();",
-      "${2}"
-    ],
-    "description": "获取小程序示例"
-  },
   "TDesign ActionSheet:import 动作面板": {
     "prefix": "t-action-sheet:import",
     "body": [

@@ -87,6 +87,10 @@
         "path": "./snippets/js-snippets.json"
       },
       {
+        "language": "javascript",
+        "path": "./snippets/js-wx-snippets.json"
+      },
+      {
         "language": "wxs",
         "path": "./snippets/js-snippets.json"
       }
