@@ -4,6 +4,7 @@ export interface Attributes {
   default: string;
   desc: string;
   required: string;
+  body?: string; // 可选 属性片段
 }
 
 export interface CompletionObject {

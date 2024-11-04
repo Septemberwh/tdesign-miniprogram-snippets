@@ -1,0 +1,77 @@
+// https://developers.weixin.qq.com/miniprogram/dev/reference/wxml/
+import { type Attributes } from "./types";
+
+export const WxmlDataList: Attributes[] = [
+  {
+    name: '{{}}',
+    type: "",
+    default: "",
+    desc: "数据绑定",
+    required: "",
+    body: '{{message}}',
+  },
+  {
+    name: 'wx:for',
+    type: "",
+    default: "",
+    desc: "列表渲染",
+    required: "",
+    body: 'wx:for="{{array}}"',
+  },
+  {
+    name: 'wx:for-index',
+    type: "",
+    default: "",
+    desc: "列表渲染 index",
+    required: "",
+    body: 'wx:for-index="idx"',
+  },
+  {
+    name: 'wx:for-item',
+    type: "",
+    default: "",
+    desc: "列表渲染 item",
+    required: "",
+    body: 'wx:for-item="itemName"',
+  },
+  {
+    name: 'wx:key',
+    type: "",
+    default: "",
+    desc: "列表渲染 key",
+    required: "",
+    body: 'wx:key="index"',
+  },
+  {
+    name: 'wx:for-index-item',
+    type: "",
+    default: "",
+    desc: "列表渲染 index item",
+    required: "",
+    body: 'wx:for="{{array}}" wx:for-index="idx" wx:for-item="itemName"',
+  },
+  {
+    name: 'wx:if',
+    type: "",
+    default: "",
+    desc: "条件渲染",
+    required: "",
+    body: 'wx:if="{{condition}}"',
+  },
+  {
+    name: 'wx:elif',
+    type: "",
+    default: "",
+    desc: "条件渲染 elif",
+    required: "",
+    body: 'wx:elif="{{condition}}"',
+  },
+  {
+    name: 'wx:else',
+    type: "",
+    default: "",
+    desc: "条件渲染 else",
+    required: "",
+    body: 'wx:else',
+  },
+];

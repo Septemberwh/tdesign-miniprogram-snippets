@@ -67,8 +67,16 @@
         "path": "./snippets/wxml-snippets.json"
       },
       {
+        "language": "html",
+        "path": "./snippets/wxml-wx-snippets.json"
+      },
+      {
         "language": "wxml",
         "path": "./snippets/wxml-snippets.json"
+      },
+      {
+        "language": "wxml",
+        "path": "./snippets/wxml-wx-snippets.json"
       },
       {
         "language": "json",

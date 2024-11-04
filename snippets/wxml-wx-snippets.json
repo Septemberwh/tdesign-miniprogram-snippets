@@ -1,0 +1,35 @@
+{
+  "WXML 语法 template": {
+    "prefix": "wxml-template",
+    "body": [
+      "<template name=\"msgItem\">",
+      "  <view>",
+      "    <text> {{index}}: {{msg}} </text>",
+      "    <text> Time: {{time}} </text>",
+      "  </view>",
+      "</template>"
+    ],
+    "description": "WXML 语法：模板"
+  },
+  "WXML 语法 template:is": {
+    "prefix": "wxml-template:is",
+    "body": [
+      "<template is=\"msgItem\" data=\"{{...item}}\"/>"
+    ],
+    "description": "WXML 语法 template"
+  },
+  "WXML 语法 template:import": {
+    "prefix": "wxml-template:import",
+    "body": [
+      "<import src=\"item.wxml\"/>"
+    ],
+    "description": "WXML 语法：引入"
+  },
+  "WXML 语法 include": {
+    "prefix": "wxml-include",
+    "body": [
+      "<include src=\"header.wxml\"/>"
+    ],
+    "description": "WXML 语法：引入"
+  }
+}
