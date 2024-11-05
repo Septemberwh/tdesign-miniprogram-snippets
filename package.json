@@ -7,6 +7,15 @@
   "engines": {
     "vscode": "^1.90.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/septwong/tdesign-miniprogram-snippets"
+  },
+  "bugs": {
+    "url": "https://github.com/septwong/tdesign-miniprogram-snippets/issues"
+  },
+  "icon": "assets/images/logo.png",
+  "license": "MIT",
   "categories": [
     "Snippets"
   ],
@@ -49,6 +58,14 @@
         "configuration": "./syntaxes/wxml.language-configuration.json"
       },
       {
+        "id": "wxml-pug",
+        "extensions": [
+          ".wpug",
+          ".pug"
+        ],
+        "configuration": "./syntaxes/wxml-pug.language-configuration.json"
+      },
+      {
         "id": "json",
         "extensions": [
           ".json"
@@ -66,6 +83,15 @@
         "language": "wxml",
         "scopeName": "text.html.wxml",
         "path": "./syntaxes/wxml.tmLanguage.json",
+        "embeddedLanguages": {
+          "text.html": "html",
+          "source.js": "js"
+        }
+      },
+      {
+        "language": "wxml-pug",
+        "scopeName": "text.jade.wxml",
+        "path": "./syntaxes/wxml-pug.tmLanguage.json",
         "embeddedLanguages": {
           "text.html": "html",
           "source.js": "js"
@@ -135,15 +161,6 @@
       }
     }
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/septwong/tdesign-miniprogram-snippets"
-  },
-  "bugs": {
-    "url": "https://github.com/septwong/tdesign-miniprogram-snippets/issues"
-  },
-  "icon": "assets/images/logo.png",
-  "license": "MIT",
   "scripts": {
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
