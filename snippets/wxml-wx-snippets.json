@@ -1,5 +1,5 @@
 {
-  "WXML 语法 template": {
+  "TMS: template": {
     "prefix": "wxml-template",
     "body": [
       "<template name=\"msgItem\">",
@@ -9,34 +9,34 @@
       "  </view>",
       "</template>"
     ],
-    "description": "WXML 语法：模板"
+    "description": "Reference: WXML 语法：模板"
   },
-  "WXML 语法 template:is": {
+  "TMS: template:is": {
     "prefix": "wxml-template:is",
     "body": [
       "<template is=\"msgItem\" data=\"{{...item}}\"/>"
     ],
-    "description": "WXML 语法 template"
+    "description": "Reference: WXML 语法 template"
   },
-  "WXML 语法 template:import": {
+  "TMS: template:import": {
     "prefix": "wxml-template:import",
     "body": [
       "<import src=\"item.wxml\"/>"
     ],
-    "description": "WXML 语法：引入"
+    "description": "Reference: WXML 语法：引入"
   },
-  "WXML 语法 include": {
+  "TMS: include": {
     "prefix": "wxml-include",
     "body": [
       "<include src=\"header.wxml\"/>"
     ],
-    "description": "WXML 语法：引入"
+    "description": "Reference: WXML 语法：引入"
   },
-  "WXS 语法 wxs": {
+  "TMS: wxs": {
     "prefix": "wxs",
     "body": [
       "<wxs src=\"./tools.wxs\" module=\"tools\" />"
     ],
-    "description": "WXS 语法：模块"
+    "description": "Reference: WXS 语法：模块"
   }
 }
