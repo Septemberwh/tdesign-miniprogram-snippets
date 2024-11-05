@@ -1,46 +1,44 @@
-// The module 'vscode' contains the VS Code extensibility API
-// Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode';
-import { registerHoverProvider, disposeHoverProvider } from './hover/hoverProvider';
-import { registerCompletionItemProvider } from './completionItem/completionItemProvider';
+import { autoConfig, schemes } from './utils';
+import { config, getConfig, configActivate, configDeactivate } from './config';
+import { HoverProvider, registerHoverProvider, disposeHoverProvider } from './hover/hoverProvider';
+import { WxmlCompletionProvider } from './completionItem/wxmlCompletionProvider';
 
-// This method is called when your extension is activated
-// Your extension is activated the very first time the command is executed
+const { languages } = vscode;
+
 export function activate(context: vscode.ExtensionContext) {
-	// 获取配置
-	const config = vscode.workspace.getConfiguration('tdesign-miniprogram-snippets');
-
-	// Use the console to output diagnostic information (console.log) and errors (console.error)
-	// This line of code will only be executed once when your extension is activated
 	console.log('Congratulations, your extension "tdesign-miniprogram-snippets" is now active!');
+	configActivate();
 
-	// The command has been defined in the package.json file
-	// Now provide the implementation of the command with registerCommand
-	// The commandId parameter must match the command field in package.json
-	const disposable = vscode.commands.registerCommand('tdesign-miniprogram-snippets.helloWorld', () => {
-		// The code you place here will be executed every time your command is executed
-		// Display a message box to the user
-		vscode.window.showInformationMessage('Hello World from tdesign-miniprogram-snippets!');
-	});
+	if (!config.disableAutoConfig) {
+    autoConfig();
+  }
 
-	const completionItemProvider = vscode.languages.registerCompletionItemProvider(
-		{ language: 'wxml', scheme: 'file' }, 
-		registerCompletionItemProvider, 
-		'<', ' ' // 在 < 和空格处触发补全
-	);
+	vscode.languages.getLanguages().then(resp => {
+    console.log(JSON.stringify(resp));
+  });
+
+	const wxmlCompletionProvider = new WxmlCompletionProvider(config);
+	// const hoverProvider = new HoverProvider(config);
+
+	const wxml = config.documentSelector.map(l => schemes(l));
 
 	// 将注册的 功能 加入插件上下文
-	context.subscriptions.push(disposable, completionItemProvider);
+	context.subscriptions.push(
+		// hover
+		// languages.registerHoverProvider(wxml, hoverProvider),
+ 		// 自动补全
+		languages.registerCompletionItemProvider(wxml, wxmlCompletionProvider, '<', ' '),// 在 < 和空格处触发补全
+	);
 
 	// 初始化时判断是否启用悬停提示
-	if (config.get<boolean>('enableHover')) {
+	if (getConfig('enableHover')) {
 		registerHoverProvider(context);
 	}
-
 	// 监听配置变化，动态启用或禁用悬停提示
 	vscode.workspace.onDidChangeConfiguration(event => {
 		if (event.affectsConfiguration('tdesign-miniprogram-snippets.enableHover')) {
-			const enableHover = vscode.workspace.getConfiguration('tdesign-miniprogram-snippets').get<boolean>('enableHover');
+			const enableHover = getConfig('enableHover');
 			if (enableHover) {
 				registerHoverProvider(context);
 				// vscode.window.showInformationMessage('悬停提示已启用');
@@ -54,5 +52,6 @@ export function activate(context: vscode.ExtensionContext) {
 
 // This method is called when your extension is deactivated
 export function deactivate() {
+	configDeactivate();
 	disposeHoverProvider(); // 插件停用时销毁悬停提供器
 }

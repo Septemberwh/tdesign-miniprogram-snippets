@@ -1,4 +1,5 @@
 import * as vscode from 'vscode';
+import { Config } from '../config';
 import { CompletionData } from './itemData';
 import { WxmlDataList } from './wxmlData';
 import { type CompletionObject, type Attributes } from './types';
@@ -119,7 +120,10 @@ function createWxmlCompletionItem(
 /**
  * 提供 WXML 组件属性补全。
  */
-export const registerCompletionItemProvider: vscode.CompletionItemProvider = {
+// export const RegisterCompletionItemProvider: vscode.CompletionItemProvider = {
+export class WxmlCompletionProvider implements vscode.CompletionItemProvider {
+  constructor(public config: Config) {}
+  
   provideCompletionItems(document: vscode.TextDocument, position: vscode.Position) {
     const tagName: string = getTagNameAtPosition(document, position) ?? '';
     const completionItems: vscode.CompletionItem[] = [];

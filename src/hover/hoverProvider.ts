@@ -1,4 +1,5 @@
 import * as vscode from 'vscode';
+import { Config } from '../config';
 import { hoverData as _hoverData } from './hoverData';
 
 let hoverProvider: vscode.Disposable | undefined; // 存储悬停提供器
@@ -28,6 +29,16 @@ export function getTDesignHoverContent(word: string): vscode.Hover | undefined {
   }
 
   return undefined;
+}
+
+export class HoverProvider implements HoverProvider {
+  constructor(public config: Config) {}
+
+  provideHover(document: vscode.TextDocument, position: vscode.Position) {
+    const word = getComponentNameAtPosition(document, position);
+    const hoverData = getTDesignHoverContent(word);
+    return hoverData;
+  }
 }
 
 // 注册悬停提供器的函数
