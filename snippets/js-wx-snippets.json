@@ -1,10 +1,263 @@
 {
-  "TMS: getApp": {
-    "prefix": "getApp",
+  "TMS: App:onLaunch": {
+    "prefix": "wx-onLaunch",
     "body": [
-      "${1:var app = } getApp();",
+      "onLaunch: function (options) {",
+      "  ${1}",
+      "},"
+    ],
+    "description": "App: 生命周期回调——监听小程序初始化。"
+  },
+  "TMS: App:onShow": {
+    "prefix": "wx-onShow",
+    "body": [
+      "onShow: function (options) {",
+      "  ${1}",
+      "},"
+    ],
+    "description": "App: 生命周期回调——监听小程序启动或切前台。"
+  },
+  "TMS: App:onHide": {
+    "prefix": "wx-onHide",
+    "body": [
+      "onHide: function () {",
+      "  ${1}",
+      "},"
+    ],
+    "description": "App: 生命周期回调——监听小程序切后台。"
+  },
+  "TMS: App:onError": {
+    "prefix": "wx-onError",
+    "body": [
+      "onError: function (error) {",
+      "  ${1}",
+      "},"
+    ],
+    "description": "App: 错误监听函数。"
+  },
+  "TMS: App:onPageNotFound": {
+    "prefix": "wx-onPageNotFound",
+    "body": [
+      "onPageNotFound(res) {",
+      "  ${1}",
+      "},"
+    ],
+    "description": "App: 页面不存在监听函数。"
+  },
+  "TMS: App:onUnhandledRejection": {
+    "prefix": "wx-onUnhandledRejection",
+    "body": [
+      "onUnhandledRejection(res) {",
+      "  ${1}",
+      "},"
+    ],
+    "description": "App: 未处理的 Promise 拒绝事件监听函数。"
+  },
+  "TMS: App:onThemeChange": {
+    "prefix": "wx-onThemeChange",
+    "body": [
+      "onThemeChange(res) {",
+      "  ${1}",
+      "},"
+    ],
+    "description": "App: 未处理的 Promise 拒绝事件监听函数。"
+  },
+  "TMS: App:globalData": {
+    "prefix": "wx-globalData",
+    "body": [
+      "globalData: {",
+      "  ${1}",
+      "},"
+    ],
+    "description": "App: global data"
+  },
+  "TMS: App:getApp": {
+    "prefix": "wx-getApp",
+    "body": [
+      "const app = getApp();",
       "${2}"
     ],
-    "description": "获取小程序示例"
+    "description": "App: 获取小程序全局唯一的 App 实例。"
+  },
+  "TMS: Page:data": {
+    "prefix": "wx-data",
+    "body": [
+      "data: {",
+      "  ${1}",
+      "},"
+    ],
+    "description": "Page: 页面的初始数据"
+  },
+  "TMS: Page:options": {
+    "prefix": "wx-options",
+    "body": [
+      "options: {",
+      "  ${1}",
+      "},"
+    ],
+    "description": "Page: 页面的组件选项，同 Component 构造器 中的 options ，需要基础库版本 2.10.1"
+  },
+  "TMS: Page:behaviors": {
+    "prefix": "wx-behaviors",
+    "body": [
+      "behaviors: [],"
+    ],
+    "description": "Page: 类似于mixins和traits的组件间代码复用机制，参见 behaviors，需要基础库版本 2.9.2"
+  },
+  "TMS: Page:onLoad": {
+    "prefix": "wx-onLoad",
+    "body": [
+      "onLoad: function(options) {",
+      "  ${1}",
+      "},"
+    ],
+    "description": "Page: 生命周期回调—监听页面加载"
+  },
+  "TMS: Page:onShow": {
+    "prefix": "wx-onShow",
+    "body": [
+      "onShow: function() {",
+      "  ${1}",
+      "},"
+    ],
+    "description": "Page: 生命周期回调—监听页面显示"
+  },
+  "TMS: Page:onReady": {
+    "prefix": "wx-onReady",
+    "body": [
+      "onReady: function() {",
+      "  ${1}",
+      "},"
+    ],
+    "description": "Page: 生命周期回调—监听页面初次渲染完成"
+  },
+  "TMS: Page:onHide": {
+    "prefix": "wx-onHide",
+    "body": [
+      "onHide: function() {",
+      "  ${1}",
+      "},"
+    ],
+    "description": "Page: 生命周期回调—监听页面隐藏"
+  },
+  "TMS: Page:onUnload": {
+    "prefix": "wx-onUnload",
+    "body": [
+      "onUnload: function() {",
+      "  ${1}",
+      "},"
+    ],
+    "description": "Page: 生命周期回调—监听页面卸载"
+  },
+  "TMS: Page:onRouteDone": {
+    "prefix": "wx-onRouteDone",
+    "body": [
+      "onRouteDone: function() {",
+      "  ${1}",
+      "},"
+    ],
+    "description": "Page: 生命周期回调—监听路由动画完成"
+  },
+  "TMS: Page:onPullDownRefresh": {
+    "prefix": "wx-onPullDownRefresh",
+    "body": [
+      "onPullDownRefresh: function() {",
+      "  ${1}",
+      "},"
+    ],
+    "description": "Page: 监听用户下拉动作"
+  },
+  "TMS: Page:onReachBottom": {
+    "prefix": "wx-onReachBottom",
+    "body": [
+      "onReachBottom: function() {",
+      "  ${1}",
+      "},"
+    ],
+    "description": "Page: 页面上拉触底事件的处理函数"
+  },
+  "TMS: Page:onShareAppMessage": {
+    "prefix": "wx-onShareAppMessage",
+    "body": [
+      "onShareAppMessage: function() {",
+      "  return {",
+      "    title: '自定义转发标题',",
+      "    path: '/page/user?id=123',",
+      "    imageUrl: '', // 自定义图片路径",
+      "  }",
+      "},"
+    ],
+    "description": "Page: 用户点击右上角转发"
+  },
+  "TMS: Page:onShareTimeline": {
+    "prefix": "wx-onShareTimeline",
+    "body": [
+      "onShareTimeline: function() {",
+      "  return {",
+      "    title: '自定义标题',",
+      "    imageUrl: 'http://demo.png',",
+      "    query: 'name=xxx&age=xxx',",
+      "  }",
+      "},"
+    ],
+    "description": "Page: 用户点击右上角转发到朋友圈"
+  },
+  "TMS: Page:onAddToFavorites": {
+    "prefix": "wx-onAddToFavorites",
+    "body": [
+      "onAddToFavorites(res) {",
+      "  // webview 页面返回 webViewUrl",
+      "  console.log('webViewUrl: ', res.webViewUrl)",
+      "  return {",
+      "    title: '自定义标题',",
+      "    imageUrl: 'http://demo.png',",
+      "    query: 'name=xxx&age=xxx',",
+      "  }",
+      "},"
+    ],
+    "description": "Page: 用户点击右上角收藏"
+  },
+  "TMS: Page:onPageScroll": {
+    "prefix": "wx-onPageScroll",
+    "body": [
+      "onPageScroll: function() {",
+      "  ${1}",
+      "},"
+    ],
+    "description": "Page: 页面滚动触发事件的处理函数"
+  },
+  "TMS: Page:onResize": {
+    "prefix": "wx-onResize",
+    "body": [
+      "onResize: function() {",
+      "  ${1}",
+      "},"
+    ],
+    "description": "Page: 页面尺寸改变时触发，详见 响应显示区域变化"
+  },
+  "TMS: Page:onTabItemTap": {
+    "prefix": "wx-onTabItemTap",
+    "body": [
+      "onTabItemTap(item) {",
+      "  ${1}",
+      "},"
+    ],
+    "description": "Page: 当前是 tab 页时，点击 tab 时触发"
+  },
+  "TMS: Page:onSaveExitState": {
+    "prefix": "wx-onSaveExitState",
+    "body": [
+      "onSaveExitState: function() {",
+      "  ${1}",
+      "},"
+    ],
+    "description": "Page: 页面销毁前保留状态回调"
+  },
+  "TMS: Page:getCurrentPages": {
+    "prefix": "wx-getCurrentPages",
+    "body": [
+      "const pages = getCurrentPages();"
+    ],
+    "description": "Page: 获取当前页面栈"
   }
 }
