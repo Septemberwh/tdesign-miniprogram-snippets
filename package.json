@@ -150,6 +150,44 @@
         "provider": true
       }
     ],
+    "commands": [
+      {
+        "category": "TDesign Miniprogram Snippets",
+        "command": "tdesign-miniprogram-snippets.formatWxml",
+        "title": "format wxml"
+      },
+      {
+        "category": "TDesign Miniprogram Snippets",
+        "command": "tdesign-miniprogram-snippets.createPage",
+        "title": "创建小程序页面"
+      },
+      {
+        "category": "TDesign Miniprogram Snippets",
+        "command": "tdesign-miniprogram-snippets.createComponent",
+        "title": "创建小程序组件"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "tdesign-miniprogram-snippets.formatWxml",
+          "group": "navigation",
+          "when": "editorLangId == wxml"
+        }
+      ],
+      "explorer/context": [
+        {
+          "command": "tdesign-miniprogram-snippets.createPage",
+          "group": "navigation",
+          "when": "explorerResourceIsFolder == true"
+        },
+        {
+          "command": "tdesign-miniprogram-snippets.createComponent",
+          "group": "navigation",
+          "when": "explorerResourceIsFolder == true"
+        }
+      ]
+    },
     "configuration": {
       "title": "tdesign-miniprogram-snippets",
       "properties": {
@@ -184,6 +222,31 @@
             "wxml"
           ],
           "description": "关联的文件类型，默认关联 wxml，如可以加上 html，这样在 html 中也可以有 wxml 的功能"
+        },
+        "tdesign-miniprogram-snippets.enableFormatWxml": {
+          "type": "boolean",
+          "description": "启用或禁用右键格式化 wxml",
+          "default": true
+        },
+        "miniprogramAssistant.createComponentSource": {
+          "default": "",
+          "description": "新建组件时使用的模板来源，路径必须为目录，至少包含index.js、index.wxml、index.wxss、index.json这四个文件",
+          "type": "string"
+        },
+        "miniprogramAssistant.createPageSource": {
+          "default": "",
+          "description": "新建页面时使用的模板来源，路径必须为目录，至少包含index.js、index.wxml、index.wxss、index.json这四个文件",
+          "type": "string"
+        },
+        "tdesign-miniprogram-snippets.enableCreatePage": {
+          "type": "boolean",
+          "description": "启用或禁用右键创建小程序页面",
+          "default": true
+        },
+        "tdesign-miniprogram-snippets.enableCreateComponent": {
+          "type": "boolean",
+          "description": "启用或禁用右键创建小程序组件",
+          "default": true
         }
       }
     }
@@ -206,5 +269,9 @@
     "@vscode/test-electron": "^2.4.1",
     "eslint": "^9.11.1",
     "typescript": "^5.6.2"
+  },
+  "dependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "fs-extra": "^11.2.0"
   }
 }

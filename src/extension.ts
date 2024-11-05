@@ -3,6 +3,7 @@ import { autoConfig, schemes } from './utils';
 import { config, getConfig, configActivate, configDeactivate } from './config';
 import { HoverProvider, registerHoverProvider, disposeHoverProvider } from './hover/hoverProvider';
 import { WxmlCompletionProvider } from './completionItem/wxmlCompletionProvider';
+import { Commands } from './commands/index';
 
 const { languages } = vscode;
 
@@ -29,6 +30,10 @@ export function activate(context: vscode.ExtensionContext) {
 		// languages.registerHoverProvider(wxml, hoverProvider),
  		// 自动补全
 		languages.registerCompletionItemProvider(wxml, wxmlCompletionProvider, '<', ' '),// 在 < 和空格处触发补全
+		// 注册创建页面命令
+		vscode.commands.registerCommand(`tdesign-miniprogram-snippets.createPage`, Commands.page),
+		// 注册创建组件命令
+		vscode.commands.registerCommand(`tdesign-miniprogram-snippets.createComponent`,Commands.component),
 	);
 
 	// 初始化时判断是否启用悬停提示
