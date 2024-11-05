@@ -18,6 +18,14 @@
 - `js` 通用代码片段
 - `wxss` 通用代码片段
 
+#### `0.0.17` 2024-11-05
+
+- 支持语法高亮
+- [微信小程序原生](https://developers.weixin.qq.com/miniprogram/dev/reference/) `框架接口` 片段，`js` 中使用 `wx-` 触发提示，如：`wx-onLoad`, `wx-onShow`
+- 微信小程序原生 `WXMl 语法参考` 片段，`wxml` 中使用 `wx:`，`wxml-` 触发提示，如：`wx:if`, `wxml-template`
+- 微信小程序原生 `WXS 语法参考` 片段，`wxml` 中使用 `wxs` 触发提示
+
+
 #### `0.0.16` 2024-11-01
 
 - Update some resource files
