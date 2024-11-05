@@ -61,6 +61,17 @@
         ]
       }
     ],
+    "grammars": [
+      {
+        "language": "wxml",
+        "scopeName": "text.html.wxml",
+        "path": "./syntaxes/wxml.tmLanguage.json",
+        "embeddedLanguages": {
+          "text.html": "html",
+          "source.js": "js"
+        }
+      }
+    ],
     "snippets": [
       {
         "language": "html",
