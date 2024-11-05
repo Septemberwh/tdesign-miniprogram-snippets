@@ -1,6 +1,7 @@
 import * as vscode from 'vscode';
 import * as path from 'path';
 import * as fs from 'fs-extra';
+import { config } from '../config';
 
 const types = {
   page: '页面',
@@ -47,14 +48,11 @@ const createPage = function(type: Type, url: any) {
   // console.log('createPage: ', type, url);
   
   if (type === 'page') {
-    pageSource = vscode.workspace
-      .getConfiguration()
-      .get('"tdesign-miniprogram-snippets.createPageSource') as string;
+    pageSource = config.createPageSource;
   } else {
-    pageSource = vscode.workspace
-      .getConfiguration()
-      .get('"tdesign-miniprogram-snippets.createComponentSource') as string;
+    pageSource = config.createComponentSource;
   }
+  console.log("🚀 ~ createPage ~ pageSource:", pageSource);
 
   // 目录不存在时，使用默认模板
   if (!fs.pathExistsSync(pageSource)) {

@@ -7,56 +7,70 @@ import { Commands } from './commands/index';
 
 const { languages } = vscode;
 
+let hoverProvider: vscode.Disposable | undefined; // 存储悬停提供器
+let createPageCommand: vscode.Disposable | undefined;
+let createComponentCommand: vscode.Disposable | undefined;
+
 export function activate(context: vscode.ExtensionContext) {
 	console.log('Congratulations, your extension "tdesign-miniprogram-snippets" is now active!');
-	configActivate();
-
-	if (!config.disableAutoConfig) {
-    autoConfig();
-  }
 
 	vscode.languages.getLanguages().then(resp => {
     console.log(JSON.stringify(resp));
   });
 
-	const wxmlCompletionProvider = new WxmlCompletionProvider(config);
-	// const hoverProvider = new HoverProvider(config);
-
 	const wxml = config.documentSelector.map(l => schemes(l));
 
+	// wxml 自动补全
+	const wxmlCompletionProvider = languages.registerCompletionItemProvider(wxml, new WxmlCompletionProvider(config), '<', ' '); // 在 < 和空格处触发补全
+
+	
 	// 将注册的 功能 加入插件上下文
 	context.subscriptions.push(
-		// hover
-		// languages.registerHoverProvider(wxml, hoverProvider),
- 		// 自动补全
-		languages.registerCompletionItemProvider(wxml, wxmlCompletionProvider, '<', ' '),// 在 < 和空格处触发补全
-		// 注册创建页面命令
-		vscode.commands.registerCommand(`tdesign-miniprogram-snippets.createPage`, Commands.page),
-		// 注册创建组件命令
-		vscode.commands.registerCommand(`tdesign-miniprogram-snippets.createComponent`,Commands.component),
+		wxmlCompletionProvider
 	);
 
-	// 初始化时判断是否启用悬停提示
-	if (getConfig('enableHover')) {
-		registerHoverProvider(context);
-	}
-	// 监听配置变化，动态启用或禁用悬停提示
-	vscode.workspace.onDidChangeConfiguration(event => {
-		if (event.affectsConfiguration('tdesign-miniprogram-snippets.enableHover')) {
-			const enableHover = getConfig('enableHover');
-			if (enableHover) {
-				registerHoverProvider(context);
-				// vscode.window.showInformationMessage('悬停提示已启用');
+	configActivate((configs) => listenerFunc(configs));
+
+	if (!config.disableAutoConfig) {
+    autoConfig();
+  }
+
+	// listener 监听
+	function listenerFunc(configs: any) {
+			// console.log("🚀 ~ configActivate ~ config:", configs);
+			const { enableHover, enableCreatePage, enableCreateComponent } = configs;
+			console.log("🚀 ~ listenerFunc ~ :", enableHover, enableCreatePage, enableCreateComponent);
+			if (enableHover) { // hover
+				if(!hoverProvider) { // 避免重复注册
+					hoverProvider = languages.registerHoverProvider(wxml, new HoverProvider(config));
+				}
+				context.subscriptions.push(hoverProvider);
 			} else {
-				disposeHoverProvider();
-				// vscode.window.showInformationMessage('悬停提示已禁用');
+				hoverProvider && hoverProvider.dispose();
+				hoverProvider = undefined;
 			}
-		}
-	});
+			if (enableCreatePage) { // 注册创建页面命令
+				if(!createPageCommand) {
+					createPageCommand = vscode.commands.registerCommand(`tdesign-miniprogram-snippets.createPage`, Commands.page);
+				}
+				context.subscriptions.push(createPageCommand);
+			} else {
+				createPageCommand && createPageCommand.dispose();
+				createPageCommand = undefined;
+			}
+			if (enableCreateComponent) { // 注册创建组件命令
+				if(!createComponentCommand) {
+					createComponentCommand = vscode.commands.registerCommand(`tdesign-miniprogram-snippets.createComponent`,Commands.component);
+				}
+				context.subscriptions.push(createComponentCommand);
+			} else {
+				createComponentCommand && createComponentCommand.dispose();
+				createComponentCommand = undefined;
+			}
+	}
 }
 
 // This method is called when your extension is deactivated
 export function deactivate() {
 	configDeactivate();
-	disposeHoverProvider(); // 插件停用时销毁悬停提供器
 }

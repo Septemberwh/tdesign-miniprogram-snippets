@@ -11,6 +11,11 @@ export interface Config {
   disableAutoConfig: boolean,
   /** 关联类型 */
   documentSelector: string[],
+  enableFormatWxml: boolean,
+  createPageSource: string,
+  createComponentSource: string,
+  enableCreatePage: boolean,
+  enableCreateComponent: boolean,
 }
 
 export const config: Config = {
@@ -19,14 +24,27 @@ export const config: Config = {
   enableHover: true,
   disableAutoConfig: false,
   documentSelector: ['wxml'],
+  enableFormatWxml: true,
+  createPageSource: '',
+  createComponentSource: '',
+  enableCreatePage: true,
+  enableCreateComponent: true,
 };
 
-function getAllConfig() {
+function getAllConfig(e?: vscode.ConfigurationChangeEvent, cb?: ((config: Config) => void) | undefined) {
   const TMS = vscode.workspace.getConfiguration('tdesign-miniprogram-snippets');
   config.enableHover = TMS.get('enableHover', true);
   config.resolveRoots = TMS.get('resolveRoots', ['src', 'node_modules']);
   config.disableAutoConfig = TMS.get('disableAutoConfig', false);
   config.documentSelector = TMS.get('documentSelector', ['wxml']);
+  config.enableFormatWxml = TMS.get('enableFormatWxml', true);
+  config.createPageSource = TMS.get('createPageSource', '');
+  config.createComponentSource = TMS.get('createComponentSource', '');
+  config.enableCreatePage = TMS.get('enableCreatePage', true);
+  config.enableCreateComponent = TMS.get('enableCreateComponent', true);
+
+  // console.log("🚀 ~ getAllConfig ~ config:", JSON.stringify(config));
+  cb && cb(config);
 }
 
 export function getConfig(key: string) {
@@ -40,8 +58,10 @@ function getResolveRoots(doc: vscode.TextDocument) {
   return root ? config.resolveRoots.map(r => path.resolve(root.uri.fsPath, r)) : [];
 }
 
-export function configActivate() {
-  listener = vscode.workspace.onDidChangeConfiguration(getAllConfig);
+export function configActivate(cb?: (config: Config) => void) {
+  listener = vscode.workspace.onDidChangeConfiguration(event => {
+    getAllConfig(event, cb);
+  });
   getAllConfig();
 }
 
