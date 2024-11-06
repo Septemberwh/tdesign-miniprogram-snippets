@@ -52,7 +52,6 @@ const createPage = function(type: Type, url: any) {
   } else {
     pageSource = config.createComponentSource;
   }
-  console.log("🚀 ~ createPage ~ pageSource:", pageSource);
 
   // 目录不存在时，使用默认模板
   if (!fs.pathExistsSync(pageSource)) {
