@@ -29,3 +29,4 @@ Thumbs.db
 *.vsix
 
 .vscode-test/
+unreleased/
