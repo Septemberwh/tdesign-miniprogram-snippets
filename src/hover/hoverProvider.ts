@@ -1,5 +1,14 @@
+/*
+ * @Author: Wong septwong@foxmail.com
+ * @Date: 2024-10-14 16:02:24
+ * @LastEditors: Wong septwong@foxmail.com
+ * @LastEditTime: 2024-11-06 11:04:25
+ * @FilePath: /tdesign-miniprogram-snippets/src/hover/hoverProvider.ts
+ * @Description: 
+ */
 import * as vscode from 'vscode';
-import { Config } from '../config';
+import { schemes } from '../utils';
+import { config, Config } from '../config';
 import { hoverData as _hoverData } from './hoverData';
 
 let hoverProvider: vscode.Disposable | undefined; // 存储悬停提供器
@@ -31,16 +40,6 @@ export function getTDesignHoverContent(word: string): vscode.Hover | undefined {
   return undefined;
 }
 
-export class HoverProvider implements HoverProvider {
-  constructor(public config: Config) {}
-
-  provideHover(document: vscode.TextDocument, position: vscode.Position) {
-    const word = getComponentNameAtPosition(document, position);
-    const hoverData = getTDesignHoverContent(word);
-    return hoverData;
-  }
-}
-
 // 注册悬停提供器的函数
 export function registerHoverProvider(context: vscode.ExtensionContext) {
   if (!hoverProvider) { // 避免重复注册
@@ -64,3 +63,35 @@ export function disposeHoverProvider() {
   }
 }
 
+/**
+ * @description: class
+ * @return {*}
+ */
+export class HoverProvider implements HoverProvider {
+  constructor(public config: Config) {}
+  provideHover(document: vscode.TextDocument, position: vscode.Position) {
+    const word = getComponentNameAtPosition(document, position);
+    const hoverData = getTDesignHoverContent(word);
+    return hoverData;
+  }
+}
+
+/**
+ *  hover  listener
+ * @param enableHover  hover 
+ * @param context vscode  context
+ */
+export function hoverListener(enableHover: boolean, context: vscode.ExtensionContext) {
+  const { languages } = vscode;
+  const wxml = config.documentSelector.map(l => schemes(l));
+  // languages.registerHoverProvider(wxml, new HoverProvider(config));
+  if (enableHover) { // hover
+    if(!hoverProvider) { // 避免重复注册
+      hoverProvider = languages.registerHoverProvider(wxml, new HoverProvider(config));
+    }
+    context.subscriptions.push(hoverProvider);
+  } else {
+    hoverProvider && hoverProvider.dispose();
+    hoverProvider = undefined;
+  }
+}

@@ -1,7 +1,18 @@
+/*
+ * @Author: Wong septwong@foxmail.com
+ * @Date: 2024-11-05 18:26:31
+ * @LastEditors: Wong septwong@foxmail.com
+ * @LastEditTime: 2024-11-06 11:15:30
+ * @FilePath: /tdesign-miniprogram-snippets/src/commands/index.ts
+ * @Description: 
+ */
 import * as vscode from 'vscode';
 import * as path from 'path';
 import * as fs from 'fs-extra';
 import { config } from '../config';
+
+let createPageCommand: vscode.Disposable | undefined;
+let createComponentCommand: vscode.Disposable | undefined;
 
 const types = {
   page: '页面',
@@ -105,3 +116,39 @@ export const Commands = {
     return createPage('component', url);
   },
 };
+
+/**
+ * If enableCreatePage is true, register the create page command.
+ * Otherwise, dispose the command if it exists.
+ * @param enableCreatePage - Whether to enable the create page command.
+ * @param context - The VSCode extension context.
+ */
+export function createPageListener(enableCreatePage: boolean, context: vscode.ExtensionContext) {
+  if (enableCreatePage) { // 注册创建页面命令
+    if(!createPageCommand) {
+      createPageCommand = vscode.commands.registerCommand(`tdesign-miniprogram-snippets.createPage`, Commands.page);
+    }
+    context.subscriptions.push(createPageCommand);
+  } else {
+    createPageCommand && createPageCommand.dispose();
+    createPageCommand = undefined;
+  }
+}
+
+/**
+ * If enableCreateComponent is true, register the create component command.
+ * Otherwise, dispose the command if it exists.
+ * @param enableCreateComponent - Whether to enable the create component command.
+ * @param context - The VSCode extension context.
+ */
+export function createComponentListener(enableCreateComponent: boolean, context: vscode.ExtensionContext) {
+  if (enableCreateComponent) { // 注册创建组件命令
+    if(!createComponentCommand) {
+      createComponentCommand = vscode.commands.registerCommand(`tdesign-miniprogram-snippets.createComponent`,Commands.component);
+    }
+    context.subscriptions.push(createComponentCommand);
+  } else {
+    createComponentCommand && createComponentCommand.dispose();
+    createComponentCommand = undefined;
+  }
+}
