@@ -2,7 +2,7 @@
  * @Author: Wong septwong@foxmail.com
  * @Date: 2024-10-14 16:02:24
  * @LastEditors: Wong septwong@foxmail.com
- * @LastEditTime: 2024-11-06 11:04:25
+ * @LastEditTime: 2024-11-06 16:54:15
  * @FilePath: /tdesign-miniprogram-snippets/src/hover/hoverProvider.ts
  * @Description: 
  */
@@ -42,8 +42,9 @@ export function getTDesignHoverContent(word: string): vscode.Hover | undefined {
 
 // 注册悬停提供器的函数
 export function registerHoverProvider(context: vscode.ExtensionContext) {
-  if (!hoverProvider) { // 避免重复注册
-    hoverProvider = vscode.languages.registerHoverProvider('wxml', {
+  // if (!hoverProvider) { // 避免重复注册
+    const wxml = config.documentSelector.map(l => schemes(l));
+    hoverProvider = vscode.languages.registerHoverProvider(wxml, {
       provideHover(document, position) {
         const word = getComponentNameAtPosition(document, position);
         return getTDesignHoverContent(word);
@@ -52,22 +53,22 @@ export function registerHoverProvider(context: vscode.ExtensionContext) {
 
     // 注册到 context.subscriptions，确保插件停用时自动清理
     context.subscriptions.push(hoverProvider);
-  }
+  // }
 }
 
 // 销毁悬停提供器的函数
-export function disposeHoverProvider() {
-  if (hoverProvider) {
-    hoverProvider.dispose(); // 销毁提供器
-    hoverProvider = undefined;
-  }
-}
+// export function disposeHoverProvider() {
+//   if (hoverProvider) {
+//     hoverProvider.dispose(); // 销毁提供器
+//     hoverProvider = undefined;
+//   }
+// }
 
 /**
  * @description: class
  * @return {*}
  */
-export class HoverProvider implements HoverProvider {
+export class wxmlHoverProvider implements vscode.HoverProvider {
   constructor(public config: Config) {}
   provideHover(document: vscode.TextDocument, position: vscode.Position) {
     const word = getComponentNameAtPosition(document, position);
@@ -84,12 +85,13 @@ export class HoverProvider implements HoverProvider {
 export function hoverListener(enableHover: boolean, context: vscode.ExtensionContext) {
   const { languages } = vscode;
   const wxml = config.documentSelector.map(l => schemes(l));
-  // languages.registerHoverProvider(wxml, new HoverProvider(config));
   if (enableHover) { // hover
     if(!hoverProvider) { // 避免重复注册
-      hoverProvider = languages.registerHoverProvider(wxml, new HoverProvider(config));
+      // console.log("🚀 ~ hoverListener ~ hoverProvider:", hoverProvider);
+      hoverProvider = languages.registerHoverProvider(wxml, new wxmlHoverProvider(config));
+      context.subscriptions.push(hoverProvider);
+      // registerHoverProvider(context);
     }
-    context.subscriptions.push(hoverProvider);
   } else {
     hoverProvider && hoverProvider.dispose();
     hoverProvider = undefined;

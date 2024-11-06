@@ -2,7 +2,7 @@
  * @Author: Wong septwong@foxmail.com
  * @Date: 2024-11-05 18:26:31
  * @LastEditors: Wong septwong@foxmail.com
- * @LastEditTime: 2024-11-06 16:33:17
+ * @LastEditTime: 2024-11-06 16:45:42
  * @FilePath: /tdesign-miniprogram-snippets/src/commands/index.ts
  * @Description: 
  */
@@ -128,8 +128,8 @@ export function createPageListener(enableCreatePage: boolean, context: vscode.Ex
     if(!createPageCommand) {
       vscode.commands.executeCommand('setContext', 'tdesign-miniprogram-snippets.showCreatePageCommand', true);
       createPageCommand = vscode.commands.registerCommand(`tdesign-miniprogram-snippets.createPage`, Commands.page);
+      context.subscriptions.push(createPageCommand);
     }
-    context.subscriptions.push(createPageCommand);
   } else {
     vscode.commands.executeCommand('setContext', 'tdesign-miniprogram-snippets.showCreatePageCommand', false);
     createPageCommand && createPageCommand.dispose();
@@ -148,8 +148,8 @@ export function createComponentListener(enableCreateComponent: boolean, context:
     if(!createComponentCommand) {
       vscode.commands.executeCommand('setContext', 'tdesign-miniprogram-snippets.showCreateComponentCommand', true);
       createComponentCommand = vscode.commands.registerCommand(`tdesign-miniprogram-snippets.createComponent`,Commands.component);
+      context.subscriptions.push(createComponentCommand);
     }
-    context.subscriptions.push(createComponentCommand);
   } else {
     vscode.commands.executeCommand('setContext', 'tdesign-miniprogram-snippets.showCreateComponentCommand', false);
     createComponentCommand && createComponentCommand.dispose();
