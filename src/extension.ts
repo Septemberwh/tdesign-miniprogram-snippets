@@ -2,7 +2,7 @@
  * @Author: Wong septwong@foxmail.com
  * @Date: 2024-10-14 17:59:26
  * @LastEditors: Wong septwong@foxmail.com
- * @LastEditTime: 2024-11-06 11:14:59
+ * @LastEditTime: 2024-11-06 16:29:09
  * @FilePath: /tdesign-miniprogram-snippets/src/extension.ts
  * @Description: 
  */
@@ -43,12 +43,12 @@ export function activate(context: vscode.ExtensionContext) {
 			// console.log("🚀 ~ configActivate ~ config:", configs);
 			const { enableHover, enableCreatePage, enableCreateComponent } = configs;
 			console.log("🚀 ~ listenerFunc ~ :", enableHover, enableCreatePage, enableCreateComponent);
-			
-			hoverListener(enableHover, context); // hover 悬停
-
-			createPageListener(enableHover, context); // 注册创建页面命令
-
-			createComponentListener(enableHover, context); // 注册创建组件命令
+			// hover 悬停
+			hoverListener(enableHover, context);
+			// 注册创建页面命令
+			createPageListener(enableCreatePage, context);
+			// 注册创建组件命令
+			createComponentListener(enableCreateComponent, context);
 	}
 }
 

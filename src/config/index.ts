@@ -24,11 +24,11 @@ export const config: Config = {
   enableHover: true,
   disableAutoConfig: false,
   documentSelector: ['wxml'],
-  enableFormatWxml: true,
+  enableFormatWxml: false,
   createPageSource: '',
   createComponentSource: '',
-  enableCreatePage: true,
-  enableCreateComponent: true,
+  enableCreatePage: false,
+  enableCreateComponent: false,
 };
 
 function getAllConfig(e?: vscode.ConfigurationChangeEvent, cb?: ((config: Config) => void) | undefined) {
@@ -37,11 +37,11 @@ function getAllConfig(e?: vscode.ConfigurationChangeEvent, cb?: ((config: Config
   config.resolveRoots = TMS.get('resolveRoots', ['src', 'node_modules']);
   config.disableAutoConfig = TMS.get('disableAutoConfig', false);
   config.documentSelector = TMS.get('documentSelector', ['wxml']);
-  config.enableFormatWxml = TMS.get('enableFormatWxml', true);
+  config.enableFormatWxml = TMS.get('enableFormatWxml', false);
   config.createPageSource = TMS.get('createPageSource', '');
   config.createComponentSource = TMS.get('createComponentSource', '');
-  config.enableCreatePage = TMS.get('enableCreatePage', true);
-  config.enableCreateComponent = TMS.get('enableCreateComponent', true);
+  config.enableCreatePage = TMS.get('enableCreatePage', false);
+  config.enableCreateComponent = TMS.get('enableCreateComponent', false);
 
   // console.log("🚀 ~ getAllConfig ~ config:", JSON.stringify(config));
   cb && cb(config);

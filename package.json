@@ -167,12 +167,12 @@
         {
           "command": "tdesign-miniprogram-snippets.createPage",
           "group": "navigation",
-          "when": "explorerResourceIsFolder == true"
+          "when": "explorerResourceIsFolder == true && tdesign-miniprogram-snippets.showCreatePageCommand == true"
         },
         {
           "command": "tdesign-miniprogram-snippets.createComponent",
           "group": "navigation",
-          "when": "explorerResourceIsFolder == true"
+          "when": "explorerResourceIsFolder == true && tdesign-miniprogram-snippets.showCreateComponentCommand == true"
         }
       ]
     },
@@ -187,12 +187,12 @@
         "tdesign-miniprogram-snippets.enableCreatePage": {
           "type": "boolean",
           "description": "启用或禁用右键创建小程序页面",
-          "default": true
+          "default": false
         },
         "tdesign-miniprogram-snippets.enableCreateComponent": {
           "type": "boolean",
           "description": "启用或禁用右键创建小程序组件",
-          "default": true
+          "default": false
         }
       }
     }
