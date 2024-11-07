@@ -2,7 +2,7 @@
  * @Author: Wong septwong@foxmail.com
  * @Date: 2024-11-06 11:39:45
  * @LastEditors: Wong septwong@foxmail.com
- * @LastEditTime: 2024-11-07 15:25:44
+ * @LastEditTime: 2024-11-07 16:50:59
  * @FilePath: /tdesign-miniprogram-snippets/src/config/index.ts
  * @Description: 
  */
@@ -12,47 +12,75 @@ import * as path from 'path';
 let listener: vscode.Disposable;
 
 export interface Config {
-  getResolveRoots: (doc: vscode.TextDocument) => string[]
-  resolveRoots: string[], // 解析自定义组件的根目录
-  enableHover: boolean, // 启用或禁用悬停提示
-  /** 默认在启动时会自动相关文件关联的配置项，配置成功后会将此配置自动设置成 true，避免下次启动再重新配置 */
-  disableAutoConfig: boolean,
-  /** 关联类型 */
-  documentSelector: string[],
-  enableFormatWxml: boolean,
-  createPageSource: string,
-  createComponentSource: string,
-  enableCreatePage: boolean,
-  enableCreateComponent: boolean,
-  enableJumpComponent: boolean,
+  getResolveRoots: (doc: vscode.TextDocument) => string[];
+  resolveRoots: string[]; // 解析自定义组件的根目录
+  disableAutoConfig: boolean; // /** 默认在启动时会自动相关文件关联的配置项，配置成功后会将此配置自动设置成 true，避免下次启动再重新配置 */
+  documentSelector: string[]; /** 关联类型 */
+  enableFormatWxml: boolean;
+  //
+  enableHover: boolean; // 启用或禁用悬停提示
+  //
+  createPageSource: string;
+  createComponentSource: string;
+  enableCreatePage: boolean;
+  enableCreateComponent: boolean;
+  //
+  enableJumpComponent: boolean;
+  // 组件高亮
+  activeColor: object;
+  activeDisable: Boolean;
+  tagNoActiveArray: string[];
+  cache: Boolean;
 }
 
 export const config: Config = {
   getResolveRoots,
   resolveRoots: [],
-  enableHover: true,
   disableAutoConfig: false,
   documentSelector: ['wxml'],
   enableFormatWxml: false,
+  //
+  enableHover: true,
+  //
   createPageSource: '',
   createComponentSource: '',
   enableCreatePage: false,
   enableCreateComponent: false,
+  //
   enableJumpComponent: false,
+  // 组件高亮
+  activeColor: {},
+  activeDisable: false,
+  tagNoActiveArray: [],
+  cache: false,
+  //
 };
 
 function getAllConfig(e?: vscode.ConfigurationChangeEvent, cb?: ((config: Config) => void) | undefined) {
+  // if (e && !e.affectsConfiguration('tdesign-miniprogram-snippets')) {
+  //   console.log("🚀 ~ getAllConfig ~ No affectsConfiguration: tdesign-miniprogram-snippets");
+  //   return;
+  // }
   const TMS = vscode.workspace.getConfiguration('tdesign-miniprogram-snippets');
-  config.enableHover = TMS.get('enableHover', true);
+  //
   config.resolveRoots = TMS.get('resolveRoots', ['src', 'node_modules']);
   config.disableAutoConfig = TMS.get('disableAutoConfig', false);
   config.documentSelector = TMS.get('documentSelector', ['wxml']);
   config.enableFormatWxml = TMS.get('enableFormatWxml', false);
+  //
+  config.enableHover = TMS.get('enableHover', true);
+  //
   config.createPageSource = TMS.get('createPageSource', '');
   config.createComponentSource = TMS.get('createComponentSource', '');
   config.enableCreatePage = TMS.get('enableCreatePage', false);
   config.enableCreateComponent = TMS.get('enableCreateComponent', false);
+  //
   config.enableJumpComponent = TMS.get('enableJumpComponent', false);
+  //
+  config.activeColor = TMS.get('activeColor', {});
+  config.activeDisable = TMS.get('activeDisable', false);
+  config.tagNoActiveArray = TMS.get('tagNoActiveArray', []);
+  config.cache = false;
 
   // console.log("🚀 ~ getAllConfig ~ config:", JSON.stringify(config));
   cb && cb(config);
@@ -70,8 +98,8 @@ function getResolveRoots(doc: vscode.TextDocument) {
 }
 
 export function configActivate(cb?: (config: Config) => void) {
-  listener = vscode.workspace.onDidChangeConfiguration(event => {
-    getAllConfig(event, cb);
+  listener = vscode.workspace.onDidChangeConfiguration((e: vscode.ConfigurationChangeEvent) => {
+    getAllConfig(e, cb);
   });
   getAllConfig();
 }
