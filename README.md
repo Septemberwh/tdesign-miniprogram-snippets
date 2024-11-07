@@ -1,3 +1,11 @@
+<!--
+ * @Author: Wong septwong@foxmail.com
+ * @Date: 2024-10-19 15:20:37
+ * @LastEditors: Wong septwong@foxmail.com
+ * @LastEditTime: 2024-11-07 15:43:10
+ * @FilePath: /tdesign-miniprogram-snippets/README.md
+ * @Description: 
+-->
 <img align="right" width="90px" src="https://free2.yunpng.top/2024/10/17/6710e29ecc275.png" alt="TDesign logo" />
 
 # TDesign Miniprogram Snippets
@@ -45,6 +53,8 @@
 - **其他功能：**
   - `wxml` TDesign 组件标签悬停提示：快捷打开该组件官网
   - 支持语法高亮
+  - 资源管理器中右键目录，新增两个菜单: `创建小程序页面` , `创建小程序组件` (可能其他插件有支持，默认`关闭`，可在插件 `设置` 中开启) 
+  - 支持在 `wxml` 页面，`alt + 点击自定义组件的标签名` 跳转到相对应的组件页面 (可能其他插件有支持，默认`关闭`，可在插件 `设置` 中开启) 
 
 ### 示例
 

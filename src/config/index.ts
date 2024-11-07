@@ -1,3 +1,11 @@
+/*
+ * @Author: Wong septwong@foxmail.com
+ * @Date: 2024-11-06 11:39:45
+ * @LastEditors: Wong septwong@foxmail.com
+ * @LastEditTime: 2024-11-07 15:25:44
+ * @FilePath: /tdesign-miniprogram-snippets/src/config/index.ts
+ * @Description: 
+ */
 import * as vscode from 'vscode';
 import * as path from 'path';
 
@@ -16,6 +24,7 @@ export interface Config {
   createComponentSource: string,
   enableCreatePage: boolean,
   enableCreateComponent: boolean,
+  enableJumpComponent: boolean,
 }
 
 export const config: Config = {
@@ -29,6 +38,7 @@ export const config: Config = {
   createComponentSource: '',
   enableCreatePage: false,
   enableCreateComponent: false,
+  enableJumpComponent: false,
 };
 
 function getAllConfig(e?: vscode.ConfigurationChangeEvent, cb?: ((config: Config) => void) | undefined) {
@@ -42,6 +52,7 @@ function getAllConfig(e?: vscode.ConfigurationChangeEvent, cb?: ((config: Config
   config.createComponentSource = TMS.get('createComponentSource', '');
   config.enableCreatePage = TMS.get('enableCreatePage', false);
   config.enableCreateComponent = TMS.get('enableCreateComponent', false);
+  config.enableJumpComponent = TMS.get('enableJumpComponent', false);
 
   // console.log("🚀 ~ getAllConfig ~ config:", JSON.stringify(config));
   cb && cb(config);

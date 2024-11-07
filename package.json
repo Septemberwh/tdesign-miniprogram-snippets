@@ -2,7 +2,7 @@
   "name": "tdesign-miniprogram-snippets",
   "displayName": "TDesign Miniprogram Snippets",
   "description": "TDesign 微信小程序组件库的代码片段",
-  "version": "0.0.17",
+  "version": "0.0.18",
   "publisher": "SeptWong",
   "engines": {
     "vscode": "^1.90.0"
@@ -192,6 +192,11 @@
         "tdesign-miniprogram-snippets.enableCreateComponent": {
           "type": "boolean",
           "description": "启用或禁用右键创建小程序组件",
+          "default": false
+        },
+        "tdesign-miniprogram-snippets.enableJumpComponent": {
+          "type": "boolean",
+          "description": "启用或禁用 'alt + 点击自定义组件的标签名' 跳转到相对应的组件页面",
           "default": false
         }
       }
