@@ -2,7 +2,7 @@
  * @Author: Wong septwong@foxmail.com
  * @Date: 2024-11-07 14:48:49
  * @LastEditors: Wong septwong@foxmail.com
- * @LastEditTime: 2024-11-08 15:54:23
+ * @LastEditTime: 2024-11-08 17:48:47
  * @FilePath: /tdesign-miniprogram-snippets/src/jumpComponent/jumpComponentProvider.ts
  * @Description: 在 wxml 页面，'alt + 点击自定义组件的标签名'跳转到对应的组件页面
  */
@@ -92,13 +92,19 @@ export class jumpCompDefinitionProvider implements vscode.DefinitionProvider {
 
 /**
  *  wxml  'alt + '  Component
+ * @param e - The configuration change event.
  * @param enableJumpComponent  Component
  * @param context vscode  context
  */
 export function jumpCompListener(
+  e: vscode.ConfigurationChangeEvent,
   enableJumpComponent: boolean,
   context: vscode.ExtensionContext
 ) {
+  if (!e.affectsConfiguration('tdesign-miniprogram-snippets.enableJumpComponent')) {
+    console.log("🚀 ~ affectsConfiguration: enableJumpComponent");
+    return;
+  }
   const { languages } = vscode;
   const wxml = [{ scheme: "file", language: "wxml", pattern: "**/*.wxml" }];
   if (enableJumpComponent) {

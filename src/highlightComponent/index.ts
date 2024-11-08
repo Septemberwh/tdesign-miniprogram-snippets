@@ -2,7 +2,7 @@
  * @Author: Wong septwong@foxmail.com
  * @Date: 2024-11-07 15:55:25
  * @LastEditors: Wong septwong@foxmail.com
- * @LastEditTime: 2024-11-08 15:55:03
+ * @LastEditTime: 2024-11-08 17:50:50
  * @FilePath: /tdesign-miniprogram-snippets/src/highlightComponent/index.ts
  * @Description: 组件高亮，支持自定义颜色，支持配置不需要高亮的组件
  */
@@ -205,13 +205,19 @@ function shouldCreateRange(word: string) {
 
 /**
  *  VSCode  context
+ * @param e - The configuration change event.
  * @param enableHighlightComponent  Component
  * @param context VSCode  context
  */
 export function highlightCompListener(
+  e: vscode.ConfigurationChangeEvent,
   enableHighlightComponent: boolean,
   context: vscode.ExtensionContext
 ) {
+  if (!e.affectsConfiguration('tdesign-miniprogram-snippets.highlightComponent.enableHighlightComponent')) {
+    console.log("🚀 ~ affectsConfiguration: highlightComponent.enableHighlightComponent");
+    return;
+  }
   let tid: NodeJS.Timer = null as any;
   if (tid) {}
   const highlightComponent = new HighlightComponent(config);

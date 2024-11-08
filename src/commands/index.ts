@@ -2,7 +2,7 @@
  * @Author: Wong septwong@foxmail.com
  * @Date: 2024-11-05 18:26:31
  * @LastEditors: Wong septwong@foxmail.com
- * @LastEditTime: 2024-11-08 15:56:12
+ * @LastEditTime: 2024-11-08 17:46:30
  * @FilePath: /tdesign-miniprogram-snippets/src/commands/index.ts
  * @Description: 指令
  */
@@ -118,40 +118,86 @@ export const Commands = {
 };
 
 /**
- * If enableCreatePage is true, register the create page command.
- * Otherwise, dispose the command if it exists.
- * @param enableCreatePage - Whether to enable the create page command.
- * @param context - The VSCode extension context.
+ * Registers or disposes the create page command based on the configuration.
+ * If `enableCreatePage` is true, it registers the command to create a page,
+ * otherwise, it disposes of the command if it exists.
+ * 
+ * @param e - The configuration change event.
+ * @param enableCreatePage - A boolean indicating whether to enable the create page command.
+ * @param context - The VSCode extension context for managing disposables.
  */
-export function createPageListener(enableCreatePage: boolean, context: vscode.ExtensionContext) {
-  if (enableCreatePage) { // 注册创建页面命令
-    if(!createPageCommand) {
-      vscode.commands.executeCommand('setContext', 'tdesign-miniprogram-snippets.showCreatePageCommand', true);
-      createPageCommand = vscode.commands.registerCommand(`tdesign-miniprogram-snippets.createPage`, Commands.page);
+export function createPageListener(
+  e: vscode.ConfigurationChangeEvent,
+  enableCreatePage: boolean,
+  context: vscode.ExtensionContext
+) {
+  if (!e.affectsConfiguration('tdesign-miniprogram-snippets.enableCreatePage')) {
+    console.log("🚀 ~ affectsConfiguration: enableCreatePage");
+    return;
+  }
+  if (enableCreatePage) {
+    // 注册创建页面命令
+    if (!createPageCommand) {
+      vscode.commands.executeCommand(
+        "setContext",
+        "tdesign-miniprogram-snippets.showCreatePageCommand",
+        true
+      );
+      createPageCommand = vscode.commands.registerCommand(
+        `tdesign-miniprogram-snippets.createPage`,
+        Commands.page
+      );
       context.subscriptions.push(createPageCommand);
     }
   } else {
-    vscode.commands.executeCommand('setContext', 'tdesign-miniprogram-snippets.showCreatePageCommand', false);
+    vscode.commands.executeCommand(
+      "setContext",
+      "tdesign-miniprogram-snippets.showCreatePageCommand",
+      false
+    );
     createPageCommand && createPageCommand.dispose();
     createPageCommand = undefined;
   }
 }
 
 /**
- * If enableCreateComponent is true, register the create component command.
- * Otherwise, dispose the command if it exists.
- * @param enableCreateComponent - Whether to enable the create component command.
- * @param context - The VSCode extension context.
+ * Registers or disposes the create component command based on the configuration.
+ * If `enableCreateComponent` is true, it registers the command to create a component,
+ * otherwise, it disposes of the command if it exists.
+ * 
+ * @param e - The configuration change event.
+ * @param enableCreateComponent - A boolean indicating whether to enable the create component command.
+ * @param context - The VSCode extension context for managing disposables.
  */
-export function createComponentListener(enableCreateComponent: boolean, context: vscode.ExtensionContext) {
-  if (enableCreateComponent) { // 注册创建组件命令
-    if(!createComponentCommand) {
-      vscode.commands.executeCommand('setContext', 'tdesign-miniprogram-snippets.showCreateComponentCommand', true);
-      createComponentCommand = vscode.commands.registerCommand(`tdesign-miniprogram-snippets.createComponent`,Commands.component);
+export function createComponentListener(
+  e: vscode.ConfigurationChangeEvent,
+  enableCreateComponent: boolean,
+  context: vscode.ExtensionContext
+) {
+  if (!e.affectsConfiguration('tdesign-miniprogram-snippets.enableCreateComponent')) {
+    console.log("🚀 ~ affectsConfiguration: enableCreateComponent");
+    return;
+  }
+  if (enableCreateComponent) {
+    // 注册创建组件命令
+    if (!createComponentCommand) {
+      vscode.commands.executeCommand(
+        "setContext",
+        "tdesign-miniprogram-snippets.showCreateComponentCommand",
+        true
+      );
+      createComponentCommand = vscode.commands.registerCommand(
+        `tdesign-miniprogram-snippets.createComponent`,
+        Commands.component
+      );
       context.subscriptions.push(createComponentCommand);
     }
   } else {
-    vscode.commands.executeCommand('setContext', 'tdesign-miniprogram-snippets.showCreateComponentCommand', false);
+    vscode.commands.executeCommand(
+      "setContext",
+      "tdesign-miniprogram-snippets.showCreateComponentCommand",
+      false
+    );
     createComponentCommand && createComponentCommand.dispose();
     createComponentCommand = undefined;
   }

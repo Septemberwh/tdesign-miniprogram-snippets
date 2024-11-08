@@ -2,12 +2,13 @@
  * @Author: Wong septwong@foxmail.com
  * @Date: 2024-11-06 11:39:45
  * @LastEditors: Wong septwong@foxmail.com
- * @LastEditTime: 2024-11-08 15:55:56
+ * @LastEditTime: 2024-11-08 17:56:15
  * @FilePath: /tdesign-miniprogram-snippets/src/config/index.ts
  * @Description: 配置项
  */
 import * as vscode from 'vscode';
 import * as path from 'path';
+import { debounce } from '../utils';
 
 let listener: vscode.Disposable;
 
@@ -27,8 +28,8 @@ export interface Config {
   //
   enableJumpComponent: boolean;
   // 组件高亮
-  editTagName: object;
   enableHighlightComponent: Boolean;
+  editTagName: object;
   ignoreHighlightComponentArray: string[];
   cache: Boolean;
 }
@@ -49,14 +50,14 @@ export const config: Config = {
   //
   enableJumpComponent: false,
   // 组件高亮
-  editTagName: {},
   enableHighlightComponent: false,
+  editTagName: {},
   ignoreHighlightComponentArray: [],
   cache: false,
   //
 };
 
-function getAllConfig(e?: vscode.ConfigurationChangeEvent, cb?: ((config: Config) => void) | undefined) {
+function getAllConfig(e?: vscode.ConfigurationChangeEvent, cb?: (e?: vscode.ConfigurationChangeEvent, config?: Config | undefined) => void) {
   // if (e && !e.affectsConfiguration('tdesign-miniprogram-snippets')) {
   //   console.log("🚀 ~ getAllConfig ~ No affectsConfiguration: tdesign-miniprogram-snippets");
   //   return;
@@ -77,13 +78,13 @@ function getAllConfig(e?: vscode.ConfigurationChangeEvent, cb?: ((config: Config
   //
   config.enableJumpComponent = TMS.get('enableJumpComponent', false);
   //
-  config.editTagName = TMS.get('highlightComponent.editTagName', {});
   config.enableHighlightComponent = TMS.get('highlightComponent.enableHighlightComponent', false);
+  config.editTagName = TMS.get('highlightComponent.editTagName', {});
   config.ignoreHighlightComponentArray = TMS.get('highlightComponent.ignoreHighlightComponentArray', []);
   config.cache = false;
 
   // console.log("🚀 ~ getAllConfig ~ config:", JSON.stringify(config));
-  cb && cb(config);
+  cb && cb(e, config);
 }
 
 export function getConfig(key: string) {
@@ -97,11 +98,16 @@ function getResolveRoots(doc: vscode.TextDocument) {
   return root ? config.resolveRoots.map(r => path.resolve(root.uri.fsPath, r)) : [];
 }
 
-export function configActivate(cb?: (config: Config) => void) {
-  listener = vscode.workspace.onDidChangeConfiguration((e: vscode.ConfigurationChangeEvent) => {
-    getAllConfig(e, cb);
-  });
-  getAllConfig();
+export function configActivate(cb?: (e?: vscode.ConfigurationChangeEvent, config?: Config | undefined) => void) {
+  // 防抖
+  try {
+    listener = vscode.workspace.onDidChangeConfiguration(debounce((e: vscode.ConfigurationChangeEvent) => {
+      getAllConfig(e, cb);
+    }, 150));
+    getAllConfig();
+  } catch (error) {
+    console.error("🚀 ~ Error in async operation:", error);
+  }
 }
 
 export function configDeactivate() {

@@ -2,7 +2,7 @@
  * @Author: Wong septwong@foxmail.com
  * @Date: 2024-10-14 17:59:26
  * @LastEditors: Wong septwong@foxmail.com
- * @LastEditTime: 2024-11-08 15:54:19
+ * @LastEditTime: 2024-11-08 17:40:25
  * @FilePath: /tdesign-miniprogram-snippets/src/extension.ts
  * @Description: 
  */
@@ -34,14 +34,14 @@ export function activate(context: vscode.ExtensionContext) {
 		wxmlCompletionProvider
 	);
 
-	configActivate((configs) => listenFunc(configs));
+	configActivate((e, configs) => listenFunc(e,configs));
 
 	if (!config.disableAutoConfig) {
     autoConfig();
   }
 
 	// listener 监听
-	function listenFunc(configs: any) {
+	function listenFunc(e?:vscode.ConfigurationChangeEvent, configs?: any) {
 		// console.log("🚀 ~ configActivate ~ config:", configs);
 		const {
       enableHover,
@@ -51,23 +51,26 @@ export function activate(context: vscode.ExtensionContext) {
       enableHighlightComponent,
     } = configs;
     console.log(
-      "🚀 ~ listenerFunc ~ :",
-      enableHover,
-      enableCreatePage,
-      enableCreateComponent,
-      enableJumpComponent,
-			enableHighlightComponent,
+      "🚀 ~ listenerFunc ~ : ",
+      "1:", enableHover,
+			"2:", enableCreatePage,
+			"3:", enableCreateComponent,
+			"4:", enableJumpComponent,
+			"5:", enableHighlightComponent,
     );
+		if(!e) {
+			return;
+		}
 		// hover 悬停
-		hoverListener(enableHover, context);
+		hoverListener(e, enableHover, context);
 		// 注册创建页面命令
-		createPageListener(enableCreatePage, context);
+		createPageListener(e, enableCreatePage, context);
 		// 注册创建组件命令
-		createComponentListener(enableCreateComponent, context);
+		createComponentListener(e, enableCreateComponent, context);
 		// 在 wxml 页面，'alt + 点击自定义组件的标签名'跳转到对应的组件页面
-		jumpCompListener(enableJumpComponent, context);
+		jumpCompListener(e, enableJumpComponent, context);
 		// 高亮组件
-		highlightCompListener(enableHighlightComponent, context);
+		highlightCompListener(e, enableHighlightComponent, context);
 	}
 }
 

@@ -2,7 +2,7 @@
  * @Author: Wong septwong@foxmail.com
  * @Date: 2024-10-14 16:02:24
  * @LastEditors: Wong septwong@foxmail.com
- * @LastEditTime: 2024-11-08 15:54:44
+ * @LastEditTime: 2024-11-08 17:58:27
  * @FilePath: /tdesign-miniprogram-snippets/src/hover/hoverProvider.ts
  * @Description: 悬停提示
  */
@@ -79,16 +79,31 @@ export class wxmlHoverProvider implements vscode.HoverProvider {
 
 /**
  *  hover  listener
+ * @param e - The configuration change event.
  * @param enableHover  hover 
  * @param context vscode  context
  */
-export function hoverListener(enableHover: boolean, context: vscode.ExtensionContext) {
+export function hoverListener(
+  e: vscode.ConfigurationChangeEvent,
+  enableHover: boolean,
+  context: vscode.ExtensionContext
+) {
+  // 检查是否影响了需要的配置项
+  if (!e.affectsConfiguration('tdesign-miniprogram-snippets.enableHover')) {
+    console.log("🚀 ~ affectsConfiguration: enableHover");
+    return;
+  }
   const { languages } = vscode;
-  const wxml = config.documentSelector.map(l => schemes(l));
-  if (enableHover) { // hover
-    if(!hoverProvider) { // 避免重复注册
+  const wxml = config.documentSelector.map((l) => schemes(l));
+  if (enableHover) {
+    // hover
+    if (!hoverProvider) {
+      // 避免重复注册
       // console.log("🚀 ~ hoverListener ~ hoverProvider:", hoverProvider);
-      hoverProvider = languages.registerHoverProvider(wxml, new wxmlHoverProvider(config));
+      hoverProvider = languages.registerHoverProvider(
+        wxml,
+        new wxmlHoverProvider(config)
+      );
       context.subscriptions.push(hoverProvider);
       // registerHoverProvider(context);
     }
