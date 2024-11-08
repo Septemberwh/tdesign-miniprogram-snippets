@@ -1,4 +1,32 @@
 {
+  "TMS: view": {
+    "prefix": "view",
+    "body": [
+      "<view>$1</view>"
+    ],
+    "description": "WXML: view"
+  },
+  "TMS: text": {
+    "prefix": "text",
+    "body": [
+      "<text>$1</text>"
+    ],
+    "description": "WXML: text"
+  },
+  "TMS: block": {
+    "prefix": "block",
+    "body": [
+      "<block>$1</block>"
+    ],
+    "description": "WXML: block"
+  },
+  "TMS: image": {
+    "prefix": "image",
+    "body": [
+      "<image class=\"\" src=\"$1\" mode=\"widthFix\"></image>"
+    ],
+    "description": "WXML: image"
+  },
   "TMS: template": {
     "prefix": "wxml-template",
     "body": [
