@@ -2,7 +2,7 @@
  * @Author: Wong septwong@foxmail.com
  * @Date: 2024-10-14 17:59:26
  * @LastEditors: Wong septwong@foxmail.com
- * @LastEditTime: 2024-11-08 15:20:06
+ * @LastEditTime: 2024-11-08 15:54:19
  * @FilePath: /tdesign-miniprogram-snippets/src/extension.ts
  * @Description: 
  */
@@ -64,7 +64,7 @@ export function activate(context: vscode.ExtensionContext) {
 		createPageListener(enableCreatePage, context);
 		// 注册创建组件命令
 		createComponentListener(enableCreateComponent, context);
-		// 在 wxml 页面，'alt + 点击自定义组件的标签名'跳转到相对应的组件页面
+		// 在 wxml 页面，'alt + 点击自定义组件的标签名'跳转到对应的组件页面
 		jumpCompListener(enableJumpComponent, context);
 		// 高亮组件
 		highlightCompListener(enableHighlightComponent, context);

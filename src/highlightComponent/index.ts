@@ -1,3 +1,11 @@
+/*
+ * @Author: Wong septwong@foxmail.com
+ * @Date: 2024-11-07 15:55:25
+ * @LastEditors: Wong septwong@foxmail.com
+ * @LastEditTime: 2024-11-08 15:55:03
+ * @FilePath: /tdesign-miniprogram-snippets/src/highlightComponent/index.ts
+ * @Description: 组件高亮，支持自定义颜色，支持配置不需要高亮的组件
+ */
 import * as vscode from 'vscode';
 import { Config, config } from "../config";
 import {

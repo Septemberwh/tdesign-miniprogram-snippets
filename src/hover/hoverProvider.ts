@@ -2,9 +2,9 @@
  * @Author: Wong septwong@foxmail.com
  * @Date: 2024-10-14 16:02:24
  * @LastEditors: Wong septwong@foxmail.com
- * @LastEditTime: 2024-11-06 16:54:15
+ * @LastEditTime: 2024-11-08 15:54:44
  * @FilePath: /tdesign-miniprogram-snippets/src/hover/hoverProvider.ts
- * @Description: 
+ * @Description: 悬停提示
  */
 import * as vscode from 'vscode';
 import { schemes } from '../utils';

@@ -2,9 +2,9 @@
  * @Author: Wong septwong@foxmail.com
  * @Date: 2024-11-07 14:48:49
  * @LastEditors: Wong septwong@foxmail.com
- * @LastEditTime: 2024-11-07 15:38:49
+ * @LastEditTime: 2024-11-08 15:54:23
  * @FilePath: /tdesign-miniprogram-snippets/src/jumpComponent/jumpComponentProvider.ts
- * @Description: 在 wxml 页面，'alt + 点击自定义组件的标签名'跳转到相对应的组件页面
+ * @Description: 在 wxml 页面，'alt + 点击自定义组件的标签名'跳转到对应的组件页面
  */
 import * as vscode from "vscode";
 import * as fs from "fs";

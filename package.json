@@ -196,7 +196,7 @@
         },
         "tdesign-miniprogram-snippets.enableJumpComponent": {
           "type": "boolean",
-          "description": "启用或禁用 'alt + 点击自定义组件的标签名' 跳转到相对应的组件页面",
+          "description": "启用或禁用 'alt + 点击自定义组件的标签名' 跳转到对应的组件页面",
           "default": false
         },
         "tdesign-miniprogram-snippets.highlightComponent.enableHighlightComponent": {

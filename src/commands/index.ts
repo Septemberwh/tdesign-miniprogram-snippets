@@ -2,9 +2,9 @@
  * @Author: Wong septwong@foxmail.com
  * @Date: 2024-11-05 18:26:31
  * @LastEditors: Wong septwong@foxmail.com
- * @LastEditTime: 2024-11-06 16:45:42
+ * @LastEditTime: 2024-11-08 15:56:12
  * @FilePath: /tdesign-miniprogram-snippets/src/commands/index.ts
- * @Description: 
+ * @Description: 指令
  */
 import * as vscode from 'vscode';
 import * as path from 'path';
