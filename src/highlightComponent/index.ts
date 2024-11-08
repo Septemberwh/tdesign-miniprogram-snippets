@@ -58,12 +58,12 @@ export default class HighlightComponent {
     if (!editor) {
       return;
     }
-    if (this.config.activeDisable) {
+    if (!this.config.enableHighlightComponent) {
       return;
     }
     const { languageId, fileName } = editor.document;
     if (languageId === "wxml") {
-      const { color, ...tag } = this.config.activeColor as any;
+      const { color, ...tag } = this.config.editTagName as any;
       tag["color"] = {};
       for (let i in tag) {
         let cache = this.decorationCache[fileName + "-cnyballk-" + i];
@@ -99,7 +99,7 @@ export default class HighlightComponent {
     let doc = editor.document;
     let text = doc.getText();
     let comments = getRanges(text, COMMENT_REGEXP, doc, []);
-    const { color, ...tag } = this.config.activeColor as any;
+    const { color, ...tag } = this.config.editTagName as any;
     for (let i in tag) {
       let TAG_REGEXP_POINTER = new RegExp(`</?(${i}\\w*)`, "g");
       let ranges = [...getRanges(text, TAG_REGEXP_POINTER, doc, comments, i)];
@@ -154,7 +154,7 @@ function getRanges(
       if (regexp === COMMENT_REGEXP) {
         word = match[0];
       } else {
-        if (config.tagNoActiveArray.indexOf(word) !== -1) {
+        if (config.ignoreHighlightComponentArray.indexOf(word) !== -1) {
           continue;
         }
         index += match[0].indexOf(word);
@@ -197,11 +197,11 @@ function shouldCreateRange(word: string) {
 
 /**
  *  VSCode  context
- * @param activeDisable  Component
+ * @param enableHighlightComponent  Component
  * @param context VSCode  context
  */
 export function highlightCompListener(
-  activeDisable: boolean,
+  enableHighlightComponent: boolean,
   context: vscode.ExtensionContext
 ) {
   let tid: NodeJS.Timer = null as any;

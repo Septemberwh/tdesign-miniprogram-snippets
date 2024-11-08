@@ -2,7 +2,7 @@
  * @Author: Wong septwong@foxmail.com
  * @Date: 2024-10-14 17:59:26
  * @LastEditors: Wong septwong@foxmail.com
- * @LastEditTime: 2024-11-07 16:45:13
+ * @LastEditTime: 2024-11-08 15:20:06
  * @FilePath: /tdesign-miniprogram-snippets/src/extension.ts
  * @Description: 
  */
@@ -48,7 +48,7 @@ export function activate(context: vscode.ExtensionContext) {
       enableCreatePage,
       enableCreateComponent,
       enableJumpComponent,
-      activeDisable,
+      enableHighlightComponent,
     } = configs;
     console.log(
       "🚀 ~ listenerFunc ~ :",
@@ -56,7 +56,7 @@ export function activate(context: vscode.ExtensionContext) {
       enableCreatePage,
       enableCreateComponent,
       enableJumpComponent,
-			activeDisable,
+			enableHighlightComponent,
     );
 		// hover 悬停
 		hoverListener(enableHover, context);
@@ -67,7 +67,7 @@ export function activate(context: vscode.ExtensionContext) {
 		// 在 wxml 页面，'alt + 点击自定义组件的标签名'跳转到相对应的组件页面
 		jumpCompListener(enableJumpComponent, context);
 		// 高亮组件
-		highlightCompListener(activeDisable, context);
+		highlightCompListener(enableHighlightComponent, context);
 	}
 }
 

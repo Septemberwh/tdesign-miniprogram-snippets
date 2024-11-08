@@ -2,7 +2,7 @@
  * @Author: Wong septwong@foxmail.com
  * @Date: 2024-11-06 11:39:45
  * @LastEditors: Wong septwong@foxmail.com
- * @LastEditTime: 2024-11-07 16:50:59
+ * @LastEditTime: 2024-11-08 15:41:25
  * @FilePath: /tdesign-miniprogram-snippets/src/config/index.ts
  * @Description: 
  */
@@ -27,9 +27,9 @@ export interface Config {
   //
   enableJumpComponent: boolean;
   // 组件高亮
-  activeColor: object;
-  activeDisable: Boolean;
-  tagNoActiveArray: string[];
+  editTagName: object;
+  enableHighlightComponent: Boolean;
+  ignoreHighlightComponentArray: string[];
   cache: Boolean;
 }
 
@@ -49,9 +49,9 @@ export const config: Config = {
   //
   enableJumpComponent: false,
   // 组件高亮
-  activeColor: {},
-  activeDisable: false,
-  tagNoActiveArray: [],
+  editTagName: {},
+  enableHighlightComponent: false,
+  ignoreHighlightComponentArray: [],
   cache: false,
   //
 };
@@ -77,9 +77,9 @@ function getAllConfig(e?: vscode.ConfigurationChangeEvent, cb?: ((config: Config
   //
   config.enableJumpComponent = TMS.get('enableJumpComponent', false);
   //
-  config.activeColor = TMS.get('activeColor', {});
-  config.activeDisable = TMS.get('activeDisable', false);
-  config.tagNoActiveArray = TMS.get('tagNoActiveArray', []);
+  config.editTagName = TMS.get('highlightComponent.editTagName', {});
+  config.enableHighlightComponent = TMS.get('highlightComponent.enableHighlightComponent', false);
+  config.ignoreHighlightComponentArray = TMS.get('highlightComponent.ignoreHighlightComponentArray', []);
   config.cache = false;
 
   // console.log("🚀 ~ getAllConfig ~ config:", JSON.stringify(config));

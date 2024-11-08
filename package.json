@@ -199,21 +199,21 @@
           "description": "启用或禁用 'alt + 点击自定义组件的标签名' 跳转到相对应的组件页面",
           "default": false
         },
-        "tdesign-miniprogram-snippets.activeDisable": {
+        "tdesign-miniprogram-snippets.highlightComponent.enableHighlightComponent": {
           "type": "boolean",
-          "description": "是否禁用高亮组件",
+          "description": "启用或禁用高亮组件",
           "default": false
         },
-        "tdesign-miniprogram-snippets.activeColor": {
+        "tdesign-miniprogram-snippets.highlightComponent.editTagName": {
           "type": "object",
           "description": "高亮的颜色，可设置每个组件的自定义颜色, [tagName]:color",
           "default": {
             "color": "#e5c07b"
           }
         },
-        "tdesign-miniprogram-snippets.tagNoActiveArray": {
+        "tdesign-miniprogram-snippets.highlightComponent.ignoreHighlightComponentArray": {
           "type": "array",
-          "description": "高亮所忽略的组件数组",
+          "description": "忽略高亮的组件数组",
           "default": [
             "view",
             "button",
