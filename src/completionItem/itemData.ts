@@ -1691,6 +1691,27 @@ export const CompletionData: CompletionObject = {
   "t-color-picker": {
     attrs: [
       {
+        name: "style",
+        type: "Object",
+        default: "-",
+        desc: "样式",
+        required: "N",
+      },
+      {
+        name: "custom-style",
+        type: "Object",
+        default: "-",
+        desc: "样式，一般用于开启虚拟化组件节点场景",
+        required: "N",
+      },
+      {
+        name: "auto-close",
+        type: "Boolean",
+        default: "true",
+        desc: "自动关闭。在点击遮罩层时自动关闭，不需要手动设置 visible",
+        required: "N",
+      },
+      {
         name: "enable-alpha",
         type: "Boolean",
         default: "false",
@@ -1705,6 +1726,13 @@ export const CompletionData: CompletionObject = {
         required: "N",
       },
       {
+        name: "popup-props",
+        type: "Object",
+        default: "{}",
+        desc: "popupProps透传。TS 类型：`PopupProps`，[Popup API Documents](./popup?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/color-picker/type.ts)",
+        required: "N",
+      },
+      {
         name: "swatch-colors",
         type: "Array",
         default: "-",
@@ -1715,9 +1743,16 @@ export const CompletionData: CompletionObject = {
         name: "type",
         type: "String",
         default: "base",
-        desc: "颜色选择器类型。（base 表示仅展示系统预设内容; multiple 表示展示色板和系统预设内容。。可选项：base/multiple。TS 类型：`TypeEnum ` `type TypeEnum = 'base' \\",
+        desc: "颜色选择器类型。（base 表示仅展示系统预设内容; multiple 表示展示色板和系统预设内容。可选项：base/multiple。TS 类型：`TypeEnum ` `type TypeEnum = 'base' \\",
         required:
           "'multiple'`。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/color-picker/type.ts)",
+      },
+      {
+        name: "use-popup",
+        type: "Boolean",
+        default: "false",
+        desc: "是否使用弹出层包裹颜色选择器",
+        required: "N",
       },
       {
         name: "value",
@@ -1731,6 +1766,13 @@ export const CompletionData: CompletionObject = {
         type: "String",
         default: "undefined",
         desc: "色值。非受控属性",
+        required: "N",
+      },
+      {
+        name: "visible",
+        type: "Boolean",
+        default: "false",
+        desc: "是否显示颜色选择器。`usePopup` 为 true 时有效",
         required: "N",
       },
     ],
@@ -1749,6 +1791,13 @@ export const CompletionData: CompletionObject = {
         type: "Object",
         default: "-",
         desc: "样式，一般用于开启虚拟化组件节点场景",
+        required: "N",
+      },
+      {
+        name: "auto-close",
+        type: "Boolean",
+        default: "false",
+        desc: "自动关闭；在确认、取消、点击遮罩层自动关闭，不需要手动设置 visible",
         required: "N",
       },
       {
@@ -2082,8 +2131,8 @@ export const CompletionData: CompletionObject = {
       {
         name: "readonly",
         type: "Boolean",
-        default: "false",
-        desc: "【开发中】只读状态",
+        default: "undefined",
+        desc: "只读状态",
         required: "N",
       },
       {
