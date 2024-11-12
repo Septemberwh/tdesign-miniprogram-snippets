@@ -2,7 +2,7 @@
  * @Author: Wong septwong@foxmail.com
  * @Date: 2024-10-14 16:02:24
  * @LastEditors: Wong septwong@foxmail.com
- * @LastEditTime: 2024-11-08 17:58:27
+ * @LastEditTime: 2024-11-12 13:22:10
  * @FilePath: /tdesign-miniprogram-snippets/src/hover/hoverProvider.ts
  * @Description: 悬停提示
  */
@@ -84,13 +84,14 @@ export class wxmlHoverProvider implements vscode.HoverProvider {
  * @param context vscode  context
  */
 export function hoverListener(
-  e: vscode.ConfigurationChangeEvent,
   enableHover: boolean,
-  context: vscode.ExtensionContext
+  context: vscode.ExtensionContext,
+  e?: vscode.ConfigurationChangeEvent,
 ) {
+  console.log("🚀 ~ affectsConfiguration: enableHover: ", enableHover, e && !e.affectsConfiguration('tdesign-miniprogram-snippets.enableHover'));
   // 检查是否影响了需要的配置项
-  if (!e.affectsConfiguration('tdesign-miniprogram-snippets.enableHover')) {
-    console.log("🚀 ~ affectsConfiguration: enableHover");
+  if (e && !e.affectsConfiguration('tdesign-miniprogram-snippets.enableHover')) {
+    // console.log("🚀 ~ affectsConfiguration: enableHover");
     return;
   }
   const { languages } = vscode;

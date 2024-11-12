@@ -2,7 +2,7 @@
  * @Author: Wong septwong@foxmail.com
  * @Date: 2024-11-06 11:39:45
  * @LastEditors: Wong septwong@foxmail.com
- * @LastEditTime: 2024-11-08 17:56:15
+ * @LastEditTime: 2024-11-12 14:03:06
  * @FilePath: /tdesign-miniprogram-snippets/src/config/index.ts
  * @Description: 配置项
  */
@@ -15,9 +15,10 @@ let listener: vscode.Disposable;
 export interface Config {
   getResolveRoots: (doc: vscode.TextDocument) => string[];
   resolveRoots: string[]; // 解析自定义组件的根目录
-  disableAutoConfig: boolean; // /** 默认在启动时会自动相关文件关联的配置项，配置成功后会将此配置自动设置成 true，避免下次启动再重新配置 */
   documentSelector: string[]; /** 关联类型 */
   enableFormatWxml: boolean;
+  disableAutoConfig: boolean; // /** 默认在启动时会自动相关文件关联的配置项，配置成功后会将此配置自动设置成 true，避免下次启动再重新配置 */
+  showSuggestionOnEnter: boolean, /** 是否在按下 Enter 键后出自动补全 */
   //
   enableHover: boolean; // 启用或禁用悬停提示
   //
@@ -37,9 +38,10 @@ export interface Config {
 export const config: Config = {
   getResolveRoots,
   resolveRoots: [],
-  disableAutoConfig: false,
   documentSelector: ['wxml'],
   enableFormatWxml: false,
+  disableAutoConfig: false,
+  showSuggestionOnEnter: false,
   //
   enableHover: true,
   //
@@ -65,9 +67,10 @@ function getAllConfig(e?: vscode.ConfigurationChangeEvent, cb?: (e?: vscode.Conf
   const TMS = vscode.workspace.getConfiguration('tdesign-miniprogram-snippets');
   //
   config.resolveRoots = TMS.get('resolveRoots', ['src', 'node_modules']);
-  config.disableAutoConfig = TMS.get('disableAutoConfig', false);
   config.documentSelector = TMS.get('documentSelector', ['wxml']);
   config.enableFormatWxml = TMS.get('enableFormatWxml', false);
+  config.disableAutoConfig = TMS.get('others.disableAutoConfig', false);
+  config.showSuggestionOnEnter = TMS.get('others.showSuggestionOnEnter', false);
   //
   config.enableHover = TMS.get('enableHover', true);
   //
@@ -99,12 +102,13 @@ function getResolveRoots(doc: vscode.TextDocument) {
 }
 
 export function configActivate(cb?: (e?: vscode.ConfigurationChangeEvent, config?: Config | undefined) => void) {
-  // 防抖
   try {
+    listener && listener.dispose();
+    // 防抖
     listener = vscode.workspace.onDidChangeConfiguration(debounce((e: vscode.ConfigurationChangeEvent) => {
       getAllConfig(e, cb);
     }, 150));
-    getAllConfig();
+    getAllConfig(undefined, cb);
   } catch (error) {
     console.error("🚀 ~ Error in async operation:", error);
   }

@@ -2,7 +2,7 @@
  * @Author: Wong septwong@foxmail.com
  * @Date: 2024-11-05 18:26:31
  * @LastEditors: Wong septwong@foxmail.com
- * @LastEditTime: 2024-11-08 17:46:30
+ * @LastEditTime: 2024-11-12 13:23:04
  * @FilePath: /tdesign-miniprogram-snippets/src/commands/index.ts
  * @Description: 指令
  */
@@ -127,12 +127,13 @@ export const Commands = {
  * @param context - The VSCode extension context for managing disposables.
  */
 export function createPageListener(
-  e: vscode.ConfigurationChangeEvent,
   enableCreatePage: boolean,
-  context: vscode.ExtensionContext
+  context: vscode.ExtensionContext,
+  e?: vscode.ConfigurationChangeEvent,
 ) {
-  if (!e.affectsConfiguration('tdesign-miniprogram-snippets.enableCreatePage')) {
-    console.log("🚀 ~ affectsConfiguration: enableCreatePage");
+  console.log("🚀 ~ affectsConfiguration: enableCreatePage: ", enableCreatePage, e && !e.affectsConfiguration('tdesign-miniprogram-snippets.enableCreatePage'));
+  if (e && !e.affectsConfiguration('tdesign-miniprogram-snippets.enableCreatePage')) {
+    // console.log("🚀 ~ affectsConfiguration: enableCreatePage");
     return;
   }
   if (enableCreatePage) {
@@ -170,12 +171,13 @@ export function createPageListener(
  * @param context - The VSCode extension context for managing disposables.
  */
 export function createComponentListener(
-  e: vscode.ConfigurationChangeEvent,
   enableCreateComponent: boolean,
-  context: vscode.ExtensionContext
+  context: vscode.ExtensionContext,
+  e?: vscode.ConfigurationChangeEvent,
 ) {
-  if (!e.affectsConfiguration('tdesign-miniprogram-snippets.enableCreateComponent')) {
-    console.log("🚀 ~ affectsConfiguration: enableCreateComponent");
+  console.log("🚀 ~ affectsConfiguration: enableCreateComponent: ", enableCreateComponent, e && !e.affectsConfiguration('tdesign-miniprogram-snippets.enableCreateComponent'));
+  if (e && !e.affectsConfiguration('tdesign-miniprogram-snippets.enableCreateComponent')) {
+    // console.log("🚀 ~ affectsConfiguration: enableCreateComponent");
     return;
   }
   if (enableCreateComponent) {

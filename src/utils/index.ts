@@ -2,7 +2,7 @@
  * @Author: Wong septwong@foxmail.com
  * @Date: 2024-11-05 13:08:32
  * @LastEditors: Wong septwong@foxmail.com
- * @LastEditTime: 2024-11-08 17:18:59
+ * @LastEditTime: 2024-11-12 13:45:43
  * @FilePath: /tdesign-miniprogram-snippets/src/utils/index.ts
  * @Description: 
  */
@@ -26,7 +26,6 @@ export function autoConfig() {
       },
     },
   ];
-
   updates.forEach(({ key, map }) => {
     let oldMap = c.get(key, {}) as any;
     let appendMap: any = {};
@@ -39,8 +38,7 @@ export function autoConfig() {
       c.update(key, { ...oldMap, ...appendMap }, true);
     }
   });
-
-  c.update('tdesign-miniprogram-snippets.disableAutoConfig', true, true);
+  c.update('tdesign-miniprogram-snippets.others.disableAutoConfig', true, true);
 }
 export function schemes(key: string) {
   return { scheme: 'file', language: key };

@@ -182,38 +182,43 @@
         "tdesign-miniprogram-snippets.enableHover": {
           "type": "boolean",
           "default": true,
+          "scope": "window",
           "description": "启用或禁用悬停提示"
         },
         "tdesign-miniprogram-snippets.enableCreatePage": {
           "type": "boolean",
-          "description": "启用或禁用右键创建小程序页面",
-          "default": false
+          "default": false,
+          "scope": "window",
+          "description": "启用或禁用右键创建小程序页面"
         },
         "tdesign-miniprogram-snippets.enableCreateComponent": {
           "type": "boolean",
-          "description": "启用或禁用右键创建小程序组件",
-          "default": false
+          "default": false,
+          "scope": "window",
+          "description": "启用或禁用右键创建小程序组件"
         },
         "tdesign-miniprogram-snippets.enableJumpComponent": {
           "type": "boolean",
-          "description": "启用或禁用 'alt + 点击自定义组件的标签名' 跳转到对应的组件页面",
-          "default": false
+          "default": false,
+          "scope": "window",
+          "description": "启用或禁用 'alt + 点击自定义组件的标签名' 跳转到对应的组件页面"
         },
         "tdesign-miniprogram-snippets.highlightComponent.enableHighlightComponent": {
           "type": "boolean",
-          "description": "启用或禁用高亮组件",
-          "default": false
+          "default": false,
+          "scope": "window",
+          "description": "启用或禁用高亮组件"
         },
         "tdesign-miniprogram-snippets.highlightComponent.editTagName": {
           "type": "object",
-          "description": "高亮的颜色，可设置每个组件的自定义颜色, [tagName]:color",
           "default": {
             "color": "#e5c07b"
-          }
+          },
+          "scope": "window",
+          "description": "高亮的颜色，可设置每个组件的自定义颜色, [tagName]:color"
         },
         "tdesign-miniprogram-snippets.highlightComponent.ignoreHighlightComponentArray": {
           "type": "array",
-          "description": "忽略高亮的组件数组",
           "default": [
             "view",
             "button",
@@ -228,7 +233,21 @@
             "form",
             "camera",
             "textarea"
-          ]
+          ],
+          "scope": "window",
+          "description": "忽略高亮的组件数组"
+        },
+        "tdesign-miniprogram-snippets.others.showSuggestionOnEnter": {
+          "type": "boolean",
+          "default": false,
+          "scope": "window",
+          "description": "是否在按下 Enter 键后出自动补全（更新此配置后需要重启 vscode 才能生效）"
+        },
+        "tdesign-miniprogram-snippets.others.disableAutoConfig": {
+          "type": "boolean",
+          "default": false,
+          "scope": "window",
+          "description": "默认在启动时会自动相关文件关联的配置项，配置成功后会将此配置自动设置成 true，避免下次启动再重新配置"
         }
       }
     }
