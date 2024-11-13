@@ -2,7 +2,7 @@
  * @Author: Wong septwong@foxmail.com
  * @Date: 2024-10-19 15:20:37
  * @LastEditors: Wong septwong@foxmail.com
- * @LastEditTime: 2024-11-12 14:11:38
+ * @LastEditTime: 2024-11-13 11:25:38
  * @FilePath: /tdesign-miniprogram-snippets/README.md
  * @Description: 
 -->
@@ -42,17 +42,18 @@
   - WXML 片段：
     - 输入 `t-button`，`t-icon` 等 `t-` 开头的关键字即可提示代码片段模板
     - 组件中输入 `空格` 可触发属性值自动补全
-    - 所有标签中输入 `wx:` 开头的关键字即可提示代码片段模板
   - JSON 片段：
     - 输入 `t-button`，`t-icon` 等 `t-` 开头的关键字即可提示代码片段模板，适用于 `usingComponents` 中的组件引用
   - JS 片段：
     - 输入 `t-dialog`，`t-message` 等 `t-` 开头的关键字即可提示代码片段模板
-    - 输入 `wx-onLoad`, `wx-onShow` 等 `wx-` 开头的关键字即可提示代码片段模板
-    - 小程序通用代码片段 - *待开发*
   - WXSS 片段：*待开发*
 - **其他功能：**
-  - `wxml`：TDesign 组件标签悬停提示：快捷打开该组件官网
-  - `wxml`：`alt + 点击自定义组件的标签名` 跳转到对应的组件页面 (默认关闭，可在插件 `设置` 中开启) 
+  - `wxml`：
+    - 所有标签中输入 `wx:` 开头的关键字即可提示代码片段模板
+    - TDesign 组件标签悬停提示：快捷打开该组件官网
+    - `alt + 点击自定义组件的标签名` 跳转到对应的组件页面 (默认关闭，可在插件 `设置` 中开启) 
+  - `js`：
+    - 输入 `wx-onLoad`, `wx-onShow` 等 `wx-` 开头的关键字即可提示代码片段模板
   - 支持`语法高亮`
   - 支持`组件高亮` (默认关闭，可在插件 `设置` 中开启) 
   - 资源管理器中右键目录，新增两个菜单: `创建小程序页面` , `创建小程序组件` (默认关闭，可在插件 `设置` 中开启) 
