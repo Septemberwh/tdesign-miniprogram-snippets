@@ -1325,6 +1325,13 @@ export const CompletionData: CompletionObject = {
         required: "'disabled' \\",
       },
       {
+        name: "locale-text",
+        type: "Object",
+        default: "-",
+        desc: "国际化文案。TS 类型：`CalendarLocaleText` `interface CalendarLocaleText {title?: string; weekdays?: string[]; monthTitle?: string; months?: string[]; confirm?: string;}`。[详细类型定义](https://github.com/Tencent/tdesign-miniprogram/tree/develop/src/calendar/type.ts)",
+        required: "N",
+      },
+      {
         name: "max-date",
         type: "Number",
         default: "-",
@@ -1341,8 +1348,8 @@ export const CompletionData: CompletionObject = {
       {
         name: "title",
         type: "String / Slot",
-        default: "'请选择日期'",
-        desc: "标题。[通用类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts)",
+        default: "-",
+        desc: "标题，不传默认为“请选择日期”。[通用类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts)",
         required: "N",
       },
       {

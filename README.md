@@ -1,11 +1,3 @@
-<!--
- * @Author: Wong septwong@foxmail.com
- * @Date: 2024-10-19 15:20:37
- * @LastEditors: Wong septwong@foxmail.com
- * @LastEditTime: 2024-11-13 11:25:38
- * @FilePath: /tdesign-miniprogram-snippets/README.md
- * @Description: 
--->
 <img align="right" width="90px" src="https://free2.yunpng.top/2024/10/17/6710e29ecc275.png" alt="TDesign logo" />
 
 # TDesign Miniprogram Snippets
