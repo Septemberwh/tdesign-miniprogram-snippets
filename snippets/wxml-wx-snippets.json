@@ -2,14 +2,14 @@
   "TMS: view": {
     "prefix": "view",
     "body": [
-      "<view>$1</view>"
+      "<view class=\"$1\">$2</view>"
     ],
     "description": "WXML: view"
   },
   "TMS: text": {
     "prefix": "text",
     "body": [
-      "<text>$1</text>"
+      "<text class=\"$1\">$2</text>"
     ],
     "description": "WXML: text"
   },
