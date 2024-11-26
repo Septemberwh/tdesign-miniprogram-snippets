@@ -4,6 +4,11 @@
   "description": "TDesign 微信小程序组件库的代码片段",
   "version": "1.0.2",
   "publisher": "SeptWong",
+  "icon": "assets/images/logo.png",
+  "galleryBanner": {
+    "color": "#1e1f22",
+    "theme": "dark"
+  },
   "engines": {
     "vscode": "^1.90.0"
   },
@@ -14,7 +19,6 @@
   "bugs": {
     "url": "https://github.com/septwong/tdesign-miniprogram-snippets/issues"
   },
-  "icon": "assets/images/logo.png",
   "license": "MIT",
   "categories": [
     "Snippets"
