@@ -83,7 +83,7 @@ function createCompletionItem(
     desc + (required ? "\n\n**是否必填**: " + required : '')
   );
   // 设置插入的文本 
-  const snippet = `${name}=${defaultValue === '-' ? "''" : `'${defaultValue}'`}`;
+  const snippet = `${name}=${defaultValue === '-' ? "'${1}'" : `'${defaultValue}'`}`;
   item.insertText = new vscode.SnippetString(snippet);
   return item;
 }
@@ -111,7 +111,7 @@ function createWxmlCompletionItem(
     item.documentation = new vscode.MarkdownString(
       desc + (required ? "\n\n**是否必填**: " + required : '')
     );
-    snippet = `${name}=${defaultValue === '-' ? "''" : `'${defaultValue}'`}`;
+    snippet = `${name}=${defaultValue === '-' ? "'${1}'" : `'${defaultValue}'`}`;
   }
   item.insertText = new vscode.SnippetString(snippet);
   return item;
