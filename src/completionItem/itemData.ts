@@ -1726,10 +1726,24 @@ export const CompletionData: CompletionObject = {
         required: "N",
       },
       {
+        name: "footer",
+        type: "Slot",
+        default: "-",
+        desc: "底部插槽，仅在 `usePopup` 为 `true` 时有效。[通用类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts)",
+        required: "N",
+      },
+      {
         name: "format",
         type: "String",
         default: "RGB",
         desc: "格式化色值。`enableAlpha` 为真时，`RGBA/HSLA/HSVA` 等值有效。可选项：RGB/RGBA/HSL/HSLA/HSB/HSV/HSVA/HEX/CMYK/CSS",
+        required: "N",
+      },
+      {
+        name: "header",
+        type: "Slot",
+        default: "-",
+        desc: "顶部插槽，仅在 `usePopup` 为 `true` 时有效。[通用类型定义](https://github.com/Tencent/tdesign-miniprogram/blob/develop/src/common/common.ts)",
         required: "N",
       },
       {
