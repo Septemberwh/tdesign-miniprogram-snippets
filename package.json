@@ -124,6 +124,14 @@
         "path": "./snippets/json-snippets.json"
       },
       {
+        "language": "jsonc",
+        "path": "./snippets/json-snippets.json"
+      },
+      {
+        "language": "jsonl",
+        "path": "./snippets/json-snippets.json"
+      },
+      {
         "language": "javascript",
         "path": "./snippets/js-snippets.json"
       },
