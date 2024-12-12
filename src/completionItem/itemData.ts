@@ -1346,6 +1346,13 @@ export const CompletionData: CompletionObject = {
         required: "N",
       },
       {
+        name: "switch-mode",
+        type: "String",
+        default: "none",
+        desc: "切换模式。 `none` 表示水平方向平铺展示所有月份； `month` 表示支持按月切换， `year-month` 表示既按年切换，也支持按月切换。可选项：none/month/year-month",
+        required: "N",
+      },
+      {
         name: "title",
         type: "String / Slot",
         default: "-",
@@ -1410,6 +1417,13 @@ export const CompletionData: CompletionObject = {
         type: "Object",
         default: "-",
         desc: "样式，一般用于开启虚拟化组件节点场景",
+        required: "N",
+      },
+      {
+        name: "check-strictly",
+        type: "Boolean",
+        default: "false",
+        desc: "父子节点选中状态不再关联，可各自选中或取消",
         required: "N",
       },
       {
@@ -5516,6 +5530,13 @@ export const CompletionData: CompletionObject = {
         type: "String",
         default: "columns",
         desc: "已废弃。选项排列；不再支持 tree 布局，可与 treeSelect 配合使用",
+        required: "N",
+      },
+      {
+        name: "placement",
+        type: "String",
+        default: "left",
+        desc: "复选框和内容相对位置，仅单选菜单栏有效。可选项：left/right",
         required: "N",
       },
       {
