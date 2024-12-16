@@ -7,9 +7,9 @@
 ![Marketplace Installs](https://img.shields.io/visual-studio-marketplace/i/septwong.tdesign-miniprogram-snippets)&nbsp;
 ![Marketplace Rating](https://img.shields.io/visual-studio-marketplace/r/septwong.tdesign-miniprogram-snippets)&nbsp;
 [![License](https://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://raw.githubusercontent.com/septwong/tdesign-miniprogram-snippets/main/LICENSE)&nbsp;
-<a href="https://github.com/septwong/tdesign-miniprogram-snippets">
+<!-- <a href="https://github.com/septwong/tdesign-miniprogram-snippets">
     <img alt="tdesign-miniprogram-snippets Repo stars" src="https://img.shields.io/github/stars/septwong/tdesign-miniprogram-snippets">
-</a>
+</a> -->
 
 > A TDesign WeChat MiniProgram code snippets plugin for VS Code.
 <!-- providing autocompletion for TDesign components in WeChat MiniProgram projects. -->
